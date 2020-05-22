@@ -17,12 +17,7 @@ jobs:
       # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
       - name: Setup MSBuild.exe
         uses: microsoft/setup-msbuild@v1            
-
-      # Install the .NET Core workload
-      - name: Install .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 3.1.101      
+   
 
       # Install Silverlight Toolkit
       #- name: Install Silverlight Toolkit
@@ -32,30 +27,32 @@ jobs:
       #   run: msiexec /i silverlight.msi ALLUSERS=2 /qn /LiV Silverlight5.log
       #   working-directory: ExternalBinaries
 
-      #- name: Sleep for 60s
-      #   uses: juliangruber/sleep-action@v1
-      #   with:
-      #     time: 60s
-
-      #- name: Check SilverLight Install
-      #  run: type Silverlight5.log
-      #  working-directory: ExternalBinaries          
-
       # call dotnet restore
-      - name: install silverlight
+      - name: Install Silverlight SDK
         run: choco install -y silverlight5sdk  
 
-      #- name: Restore NuGet Packages
-      #  run: nuget restore PMO-006\packages.config -PackagesDirectory packages\
+      # Build the SL website
       - name: MRS Solution Build
         run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True -p:PackageAsSingleFile=true -p:IgnoreDeployManagedRuntimeVersion=True -p:PackageFileName=$env:TargetPkgFileName
         env:
           Solution_Path: Metricon.Silverlight.MetriconRetailSystem.Host/Metricon.Silverlight.MetriconRetailSystem.Host.csproj
           TargetPkgFileName: MRS-SilverLight-${{ github.run_id }}.zip 
 
-      # Upload the MSIX package: https://github.com/marketplace/actions/upload-artifact
-      - name: Upload MRS build artifacts
+      - name: Upload MRS Silverlight build artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: MRS Package ${{ github.run_id }}
-          path: Metricon.WCF.MetriconRetailSystem.Host\MRS-SilverLight-${{ github.run_id }}.*        
+          name: MRS Silverlight Package ${{ github.run_id }}
+          path: Metricon.Silverlight.MetriconRetailSystem.Host\MRS-SilverLight-${{ github.run_id }}.*
+
+      # Build the SL website
+      - name: MRS Solution Build
+        run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True -p:PackageAsSingleFile=true -p:IgnoreDeployManagedRuntimeVersion=True -p:PackageFileName=$env:TargetPkgFileName
+        env:
+          Solution_Path: Metricon.WCF.MetriconRetailSystem.Host/Metricon.WCF.MetriconRetailSystem.Host.csproj
+          TargetPkgFileName: MRS-WCF-${{ github.run_id }}.zip 
+
+      - name: Upload MRS WCF build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: MRS WCF Package ${{ github.run_id }}
+          path: Metricon.WCF.MetriconRetailSystem.Host\MRS-WCF-${{ github.run_id }}.*
