@@ -43,7 +43,7 @@ jobs:
 
       # call dotnet restore
       - name: install silverlight
-        run: choco -y install silverlight  
+        run: choco install -y silverlight  
 
       #- name: Restore NuGet Packages
       #  run: nuget restore PMO-006\packages.config -PackagesDirectory packages\
