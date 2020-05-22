@@ -2,8 +2,6 @@ name: MRS Build
 
 on:
   push:
-    branches: [ XIRUS ]
-  pull_request:
     branches: [ master ]
 
 jobs:
