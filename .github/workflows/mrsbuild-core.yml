@@ -50,12 +50,12 @@ jobs:
       - name: MRS Solution Build
         run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True -p:PackageAsSingleFile=true -p:IgnoreDeployManagedRuntimeVersion=True -p:PackageFileName=$env:TargetPkgFileName
         env:
-          Solution_Path: MetriconRetailSystem.sln
-          TargetPkgFileName: MRS-${{ github.run_id }}.zip 
+          Solution_Path: Metricon.Silverlight.MetriconRetailSystem.Host/Metricon.Silverlight.MetriconRetailSystem.Host.csproj
+          TargetPkgFileName: MRS-SilverLight-${{ github.run_id }}.zip 
 
       # Upload the MSIX package: https://github.com/marketplace/actions/upload-artifact
       - name: Upload MRS build artifacts
         uses: actions/upload-artifact@v2
         with:
           name: MRS Package ${{ github.run_id }}
-          path: Metricon.WCF.MetriconRetailSystem.Host\MRS-${{ github.run_id }}.*        
+          path: Metricon.WCF.MetriconRetailSystem.Host\MRS-SilverLight-${{ github.run_id }}.*        
