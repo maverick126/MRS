@@ -1,0 +1,125 @@
+﻿<navigation:Page x:Class="Metricon.Silverlight.MetriconRetailSystem.Dashboard" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"                 
+           d:DesignWidth="1000" d:DesignHeight="480"
+           Title="Dashboard Page">
+    <telerik:RadBusyIndicator x:Name="BusyIndicator1" BusyContent="Validating Account....">
+        <Grid x:Name="LayoutRoot" HorizontalAlignment="Stretch">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <!--<RowDefinition Height="150" />
+                    <RowDefinition Height="3" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />-->
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="2"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid x:Name="NavigationGrid" Style="{StaticResource NavigationGridStyle}" Grid.Row="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="520"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel x:Name="BrandingStackPanel" Style="{StaticResource BrandingStackPanelStyle}">
+                            <HyperlinkButton x:Name="homebtn" TargetName="MainFrame" Style="{StaticResource LinkStyle}">
+                                <ContentControl Style="{StaticResource LogoIcon}"/>
+                            </HyperlinkButton>
+                            <TextBlock x:Name="ApplicationNameTextBlock" Style="{StaticResource ApplicationNameStyle}" Text="  Metricon Retail System"/>
+
+                        </StackPanel>
+                        <Grid x:Name="logongrid" Style="{StaticResource NavigationGridStyle}" Grid.Row="0" Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition  Height="10"></RowDefinition>
+                                <RowDefinition  Height="20"></RowDefinition>
+                                <RowDefinition  Height="20"></RowDefinition>
+                                <RowDefinition  Height="20"></RowDefinition>
+                                <RowDefinition  Height="10"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120"></ColumnDefinition>
+                                <ColumnDefinition Width="80"></ColumnDefinition>
+                                <ColumnDefinition Width="120"></ColumnDefinition>
+                                <ColumnDefinition Width="190"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="3" Grid.Column="2" Text="Primary Role :" Style="{StaticResource LoginNameStyle}"/>
+                            <TextBlock Name="txtFullName" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"  Style="{StaticResource LoginNameStyle}"/>
+                            <telerik:RadComboBox Name="cmbUserRole" Grid.Row="3" Grid.Column="3" Width="180" SelectionChanged="cmbUserRole_SelectionChanged"
+                                  DisplayMemberPath="RoleName"
+                                  SelectedValuePath="RoleId"/>
+                            <TextBlock x:Name="txtVersion" Text="Software Version" Grid.Row="1" Grid.Column="2" Style="{StaticResource LoginNameStyle}"></TextBlock>
+                            <Button Name="buttonOnlinePriceBook" Grid.Row="3" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Content="Online Price Book" VerticalAlignment="Top" Margin="0,0,10,0" Click="buttonOnlinePriceBook_Click" />
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1" Background="#989898"/>
+                <Grid Grid.Row="2" >
+                    <Canvas>
+                        <Canvas.Background>
+                            <ImageBrush ImageSource="images/page-shading.png" Stretch="None" AlignmentY="Top"/>
+                        </Canvas.Background>
+                    </Canvas>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                        <telerik:RadBusyIndicator Name="BusyIndicator2" BusyContent="Loading..." IsBusy="{Binding IsBusy}">
+                            <StackPanel Orientation="Vertical" Margin="20,0,0,0" HorizontalAlignment="Left">
+                                <StackPanel x:Name="AppointmentPanel" Orientation="Horizontal" Margin="80,20,0,0" Visibility="Collapsed">
+                                    <Image Source="images/calendar.png" Margin="0,0,20,0"/>
+                                    <TextBlock FontSize="20" Foreground="#585858" Margin="0,0,10,0">You have</TextBlock>
+                                    <HyperlinkButton x:Name="HlnkAppointment" Click="ShortcutsLink_Click" FontSize="20">Appointments for today</HyperlinkButton>
+                                </StackPanel>
+                                <StackPanel x:Name="NewJobsPanel" Orientation="Horizontal" Margin="80,20,0,0" Visibility="Collapsed">
+                                    <Image Source="images/add.png" Margin="0,0,20,0"/>
+                                    <TextBlock FontSize="20" Foreground="#585858" Margin="0,0,10,0">You have</TextBlock>
+                                    <HyperlinkButton x:Name="HlnkNewJobs" Click="ShortcutsLink_Click" FontSize="20">New Jobs</HyperlinkButton>
+                                </StackPanel>
+                                <StackPanel x:Name="WorkspacePanel" Orientation="Horizontal" Margin="80,20,0,0" Visibility="Collapsed">
+                                    <Image Source="images/book_edit.png" Margin="0,0,20,0"/>
+                                    <TextBlock FontSize="20" Foreground="#585858" Margin="0,0,10,0">You have</TextBlock>
+                                    <HyperlinkButton x:Name="HlnkWorkspace" Click="ShortcutsLink_Click" FontSize="20">Work In Progress Jobs</HyperlinkButton>
+                                </StackPanel>
+                                <StackPanel x:Name="AcceptedPanel" Orientation="Horizontal" Margin="80,20,0,0" Visibility="Collapsed">
+                                    <Image Source="images/accept.png" Margin="0,0,20,0"/>
+                                    <TextBlock FontSize="20" Foreground="#585858" Margin="0,0,10,0">You have</TextBlock>
+                                    <HyperlinkButton x:Name="HlnkAccepted" Click="ShortcutsLink_Click" FontSize="20">Completed Jobs</HyperlinkButton>
+                                </StackPanel>
+                                <StackPanel x:Name="RejectedPanel" Orientation="Horizontal" Margin="80,20,0,0" Visibility="Collapsed">
+                                    <Image Source="images/exclamation.png" Margin="0,0,20,0"/>
+                                    <TextBlock FontSize="20" Foreground="#585858" Margin="0,0,10,0">You have</TextBlock>
+                                    <HyperlinkButton x:Name="HlnkRejected" Click="ShortcutsLink_Click" FontSize="20">Rejected Jobs</HyperlinkButton>
+                                </StackPanel>
+                                <StackPanel x:Name="OnHoldPanel" Orientation="Horizontal" Margin="80,20,0,0" Visibility="Collapsed">
+                                    <Image Source="images/control_pause_blue.png" Margin="0,0,20,0"/>
+                                    <TextBlock FontSize="20" Foreground="#585858" Margin="0,0,10,0">You have</TextBlock>
+                                    <HyperlinkButton x:Name="HlnkOnHold" Click="ShortcutsLink_Click" FontSize="20">On Hold Jobs</HyperlinkButton>
+                                </StackPanel>
+                                <StackPanel x:Name="CancelledPanel" Orientation="Horizontal" Margin="80,20,0,0" Visibility="Collapsed">
+                                    <Image Source="images/close.png" Margin="0,0,20,0"/>
+                                    <TextBlock FontSize="20" Foreground="#585858" Margin="0,0,10,0">You have</TextBlock>
+                                    <HyperlinkButton x:Name="HlnkCancelled" Click="ShortcutsLink_Click" FontSize="20">Cancelled Jobs</HyperlinkButton>
+                                </StackPanel>
+                            </StackPanel>
+                        </telerik:RadBusyIndicator>
+                    </StackPanel>
+                </Grid>
+                <Grid x:Name="AlertPanel" Grid.Row="3" Background="#FFFFBB" Height="75" HorizontalAlignment="Stretch" Visibility="Collapsed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="15"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid HorizontalAlignment="Right" Grid.Row="0">
+                        <HyperlinkButton x:Name="LinkCloseAlert" HorizontalAlignment="Right" FontSize="10" Click="LinkCloseAlert_Click">Close</HyperlinkButton>
+                    </Grid>
+                    <Grid HorizontalAlignment="Center" Grid.Row="1">
+                        <TextBlock Grid.Row="1" x:Name="txtAlert" Foreground="#585858" Text="Alert" Margin="20,0,0,0"></TextBlock>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </telerik:RadBusyIndicator>
+</navigation:Page>

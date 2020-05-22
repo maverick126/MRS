@@ -1,0 +1,122 @@
+﻿<controls:ChildWindow x:Class="Metricon.Silverlight.MetriconRetailSystem.ChildWindows.CompareEstimates"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="1700" Height="700" VerticalAlignment="Top"
+           Title="Comparing Estimate {0} Revisions">
+    <telerik:RadBusyIndicator Name="BusyIndicator1" BusyContent="Loading...">
+        <Grid x:Name="LayoutRoot" Margin="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" Width="Auto">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="170"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+
+                <TextBlock Text="Source : " Margin="10,5,0,0" Grid.Row="0" HorizontalAlignment="Left" Width="100"></TextBlock>
+                <telerik:RadComboBox x:Name="cmbRevision1" Height="25" Width="280"
+                                     DisplayMemberPath="RevisionDetails"
+                                     SelectedValuePath="RecordId"
+                                     SelectionChanged="cmbRevisions_SelectionChanged" Margin="80,0,966,0" HorizontalAlignment="Left"/>
+               <TextBlock Text="Destination : " Margin="399,6,857,169" Grid.RowSpan="2" HorizontalAlignment="Left"></TextBlock>
+                <telerik:RadComboBox x:Name="cmbRevision2" 
+                                     Width="272" 
+                                     Height="25" 
+                                     DisplayMemberPath="RevisionDetails"
+                                     SelectedValuePath="RecordId" 
+                                     SelectionChanged="cmbRevisions_SelectionChanged" Margin="500,0,590,0" HorizontalAlignment="Left"/>
+            <telerik:RadButton x:Name="btnCompare" Width="100" Height="23" Click="btnCompare_Click" Margin="805,0,0,0" HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="../images/compare.png" Height="16" Width="16"></Image>
+                        <TextBlock Margin="10 0 0 0">Compare</TextBlock>
+                    </StackPanel>
+                </telerik:RadButton>
+            <telerik:RadButton x:Name="btnPrint"  Width="100" Height="23" Margin="915,0,0,0" HorizontalAlignment="Left" Click="btnPrint_Click" IsEnabled="False">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="../images/printer.png" Height="16" Width="16"></Image>
+                        <TextBlock Margin="10 0 0 0">Print</TextBlock>
+                    </StackPanel>
+                </telerik:RadButton>
+            <telerik:RadButton x:Name="btnClear"  Width="100" Height="23" Margin="1026,0,0,0" HorizontalAlignment="Left" Click="btnClear_Click" IsEnabled="True">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="../images/arrow_rotate_clockwise.png" Height="16" Width="16"></Image>
+                        <TextBlock Margin="10 0 0 0">Clear</TextBlock>
+                    </StackPanel>
+                </telerik:RadButton>
+
+
+            <telerik:RadGridView Grid.Row="1" x:Name="HeaderCompareGrid" ShowGroupPanel="False" AutoGenerateColumns="False" Margin="0,10,0,0" RowIndicatorVisibility="Collapsed" MinHeight="170" Height="Auto" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <telerik:RadGridView.Columns>
+                        <telerik:GridViewDataColumn DataMemberBinding="{Binding FieldName, Mode=OneWay}" Header="Field" HeaderTextAlignment="Center" Width="150" IsReadOnly="True"/>
+                        <telerik:GridViewDataColumn DataMemberBinding="{Binding ValueA, Mode=OneWay}" Header="Source" HeaderTextAlignment="Center" Width="200" IsReadOnly="True" Background="AliceBlue"/>
+                        <telerik:GridViewDataColumn DataMemberBinding="{Binding ValueB, Mode=OneWay}" Header="Destination" HeaderTextAlignment="Center" Width="200" IsReadOnly="True" Background="Beige"/>
+                    </telerik:RadGridView.Columns>
+                </telerik:RadGridView>
+                <telerik:RadGridView x:Name="HeaderGrid" ShowGroupPanel="False" AutoGenerateColumns="False" Margin="0,0,0,0" RowIndicatorVisibility="Collapsed" Grid.Row="2">
+                    <telerik:RadGridView.Columns>
+                        <telerik:GridViewDataColumn Header="" HeaderTextAlignment="Center" Width="200" IsReadOnly="True"/>
+                        <telerik:GridViewDataColumn Header="Source" HeaderTextAlignment="Center" Width="690" IsReadOnly="True"/>
+                        <telerik:GridViewDataColumn Header="Destination" HeaderTextAlignment="Center" Width="690" IsReadOnly="True"/>
+                    </telerik:RadGridView.Columns>
+                </telerik:RadGridView>                
+                <telerik:RadGridView Grid.Row="3" x:Name="CompareGrid" ShowGroupPanel="False" AutoGenerateColumns="False" Margin="0,0,0,0" RowIndicatorVisibility="Collapsed" MinHeight="0" MaxHeight="550" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <!--<telerik:RadGridView.GroupDescriptors>
+                    <telerik:GroupDescriptor Member="AreaName" SortDirection="Ascending"/>
+                    <telerik:GroupDescriptor Member="GroupName" SortDirection="Ascending" />
+                </telerik:RadGridView.GroupDescriptors>-->
+                <telerik:RadGridView.Columns>
+                    <telerik:GridViewDataColumn DataMemberBinding="{Binding AreaName, Mode=OneWay}" Header="Area" HeaderTextAlignment="Center" Width="100" IsReadOnly="True" TextWrapping="Wrap" Background="White" />
+                    <telerik:GridViewDataColumn DataMemberBinding="{Binding GroupName, Mode=OneWay}" Header="Group" HeaderTextAlignment="Center" Width="100" IsReadOnly="True" TextWrapping="Wrap" Background="White" />
+                    <telerik:GridViewDataColumn Header="Product" HeaderTextAlignment="Center" Width="200" Background="AliceBlue" IsReadOnly="True">
+                            <telerik:GridViewDataColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock MaxHeight="100" TextWrapping="Wrap" TextTrimming="WordEllipsis" Text="{Binding ProductNameA, Mode=OneWay}" />
+                                </DataTemplate>
+                            </telerik:GridViewDataColumn.CellTemplate>
+                        </telerik:GridViewDataColumn>
+                    <telerik:GridViewDataColumn Header="Product Description" HeaderTextAlignment="Center" Width="250" Background="AliceBlue" IsReadOnly="True">
+                        <telerik:GridViewDataColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock MaxHeight="200" TextWrapping="Wrap" TextTrimming="WordEllipsis" Text="{Binding ProductDescriptionA, Mode=OneWay}" />
+                            </DataTemplate>
+                        </telerik:GridViewDataColumn.CellTemplate>
+                    </telerik:GridViewDataColumn>
+                    <telerik:GridViewDataColumn DataMemberBinding="{Binding UomA, Mode=OneWay}" Header="UOM" HeaderTextAlignment="Center" Width="60" IsReadOnly="True" Background="AliceBlue" />
+                        <telerik:GridViewDataColumn DataMemberBinding="{Binding QuantityA, Mode=OneWay}" Header="Qty" HeaderTextAlignment="Center" Width="80" IsReadOnly="True" Background="AliceBlue" />
+                        <telerik:GridViewDataColumn DataMemberBinding="{Binding PriceA, Mode=OneWay}" Header="Price" HeaderTextAlignment="Center" Width="100" IsReadOnly="True" Background="AliceBlue" />
+                        <telerik:GridViewDataColumn Header="Product" HeaderTextAlignment="Center" Width="200" Background="Beige" IsReadOnly="True">
+                            <telerik:GridViewDataColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock MaxHeight="100" TextWrapping="Wrap" TextTrimming="WordEllipsis" Text="{Binding ProductNameB, Mode=OneWay}" />
+                                </DataTemplate>
+                            </telerik:GridViewDataColumn.CellTemplate>
+                        </telerik:GridViewDataColumn>
+                    <telerik:GridViewDataColumn Header="Product Description" HeaderTextAlignment="Center" Width="250" Background="AliceBlue" IsReadOnly="True">
+                        <telerik:GridViewDataColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock MaxHeight="200" TextWrapping="Wrap" TextTrimming="WordEllipsis" Text="{Binding ProductDescriptionB, Mode=OneWay}" />
+                            </DataTemplate>
+                        </telerik:GridViewDataColumn.CellTemplate>
+                    </telerik:GridViewDataColumn>                    
+                        <telerik:GridViewDataColumn DataMemberBinding="{Binding UomB, Mode=OneWay}" Header="UOM" HeaderTextAlignment="Center" Width="60" IsReadOnly="True" Background="Beige" />
+                        <telerik:GridViewDataColumn DataMemberBinding="{Binding QuantityB, Mode=OneWay}" Header="Qty" HeaderTextAlignment="Center" Width="80" IsReadOnly="True" Background="Beige"/>
+                        <telerik:GridViewDataColumn DataMemberBinding="{Binding PriceB, Mode=OneWay}" Header="Price" HeaderTextAlignment="Center" Width="100" IsReadOnly="True" Background="Beige" />
+                    <telerik:GridViewDataColumn DataMemberBinding="{Binding Changes, Mode=OneWay}" Header="Changes" HeaderTextAlignment="Center" Width="60" TextWrapping="Wrap" IsReadOnly="True"  Background="White" />
+                    <telerik:GridViewDataColumn DataMemberBinding="{Binding Reason, Mode=OneWay}" Header="Reason" HeaderTextAlignment="Center" Width="120" TextWrapping="Wrap" IsReadOnly="True" Background="White"  />
+                    </telerik:RadGridView.Columns>
+                </telerik:RadGridView>
+
+         
+                <telerik:RadButton x:Name="OKButton" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,0,0,0" Grid.Row="4">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="../images/close.png" Height="16" Width="16"></Image>
+                        <TextBlock Margin="10 0 0 0">Close</TextBlock>
+                    </StackPanel>                    
+                </telerik:RadButton>
+        
+        </Grid>
+         
+    </telerik:RadBusyIndicator>
+</controls:ChildWindow>

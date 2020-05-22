@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Service="Metricon.WCF.MetriconRetailSystem.Services.RetailSystem" %>

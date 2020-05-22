@@ -1,0 +1,2636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" />
+  <xs:import schemaLocation="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:element name="GetContractDraftActionAvailability">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContractDraftActionAvailabilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetContractDraftActionAvailabilityResult" nillable="true" type="q1:ContractDraftActionAvailability" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinalContractActionAvailability">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="contractNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinalContractActionAvailabilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetFinalContractActionAvailabilityResult" nillable="true" type="q2:FinalContractActionAvailability" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerSupportActionAvailability">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="contractNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerSupportActionAvailabilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetCustomerSupportActionAvailabilityResult" nillable="true" type="q3:CustomerSupportActionAvailability" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesEstimatorActionAvailability">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesEstimatorActionAvailabilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetSalesEstimatorActionAvailabilityResult" nillable="true" type="q4:SalesEstimatorActionAvailability" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContractDraftCreationVisibility">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContractDraftCreationVisibilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContractDraftCreationVisibilityResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinalContractCreationVisibility">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFinalContractCreationVisibilityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFinalContractCreationVisibilityResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateRevisionStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="status" type="q5:EstimateRevisionStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateRevisionStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSplitStudioMRevisions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="revisionTypeIds" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="assignedToUserIds" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="createdbyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSplitStudioMRevisionsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MergeStudioMRevisions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="createdbyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MergeStudioMRevisionsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateContractDraft">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="createdbyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateContractDraftResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateFinalContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="createdbyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateFinalContractResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCscVariation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="createdbyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCscVariationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateStudioMRevision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="ownerId" type="xs:int" />
+        <xs:element minOccurs="0" name="appointmentDateTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="revisionTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="createdbyId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateStudioMRevisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateStudioMRevisionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateSetEstimateStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="nextRevisionTypeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateSetEstimateStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateSetEstimateStatusResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerDocumentType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerDocumentTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCustomerDocumentTypeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCustomerDocumentDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="document" nillable="true" type="q6:CustomerDocumentDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCustomerDocumentDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateCustomerDocumentDetailsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerDocumentDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerDocumentDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetCustomerDocumentDetailsResult" nillable="true" type="q7:CustomerDocumentDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelevantPAGFromOnePAG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimatedetailsid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="revisionid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelevantPAGFromOnePAGResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetRelevantPAGFromOnePAGResult" nillable="true" type="q8:ArrayOfSimplePAG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateVariation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="revisionTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateVariationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RejectVariation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RejectVariationResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSelectedItemsFromOptionTreeToEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="optionidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="standardinclusionidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="revisionid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studiomanswer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="action" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="derivedcost" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="costbtpexcgststring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="costbtpoverwriteflagstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="costdbcexcgststring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="costdbcoverwriteflagstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantitystring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pricestring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isacceptedstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pricedisplaycodestring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="issiteworkstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productdescriptionstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="additionalnotestring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="extradescriptionstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="internaldescriptionstring" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSelectedItemsFromOptionTreeToEstimateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="SaveSelectedItemsFromOptionTreeToEstimateResult" nillable="true" type="q9:ArrayOfEstimateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReplaceSaveSelectedItemsFromOptionTreeToEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sourceEstimateRevisionDetailsId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="optionidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="standardinclusionidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="revisionid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studiomanswer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="action" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="derivedcost" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="costbtpexcgst" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="costdbcexcgst" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quantitystring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pricestring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isacceptedstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupidstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pricedisplaycodestring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="issiteworkstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productdescriptionstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="additionalnotestring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="extradescriptionstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="internaldescriptionstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="copyquantity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="copyadditionalnotes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="copyextradescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="copyinternalnotes" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReplaceSaveSelectedItemsFromOptionTreeToEstimateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="ReplaceSaveSelectedItemsFromOptionTreeToEstimateResult" nillable="true" type="q10:ArrayOfEstimateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckRevisionTypeAllowToAddNSR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisontypeid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckRevisionTypeAllowToAddNSRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="CheckRevisionTypeAllowToAddNSRResult" nillable="true" type="q11:RevisionTypePermission" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAcceptFlagForRevision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimaterevisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="userroleid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAcceptFlagForRevisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="ValidateAcceptFlagForRevisionResult" nillable="true" type="q12:ArrayOfValidationErrorMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateStudioMRevisions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimaterevisionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateStudioMRevisionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="ValidateStudioMRevisionsResult" nillable="true" type="q13:ArrayOfValidationErrorMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAppointmentDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimaterevisionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAppointmentDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateAppointmentDateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextEstimateRevision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="statusId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextEstimateRevisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetNextEstimateRevisionResult" nillable="true" type="q14:ArrayOfNextRevision" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuditLogs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="revisiondetailid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuditLogsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetAuditLogsResult" nillable="true" type="q15:ArrayOfAuditLog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeletedItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="resulttype" type="q16:RESULT_TYPE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeletedItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetDeletedItemsResult" nillable="true" type="q17:ArrayOfDeletedItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReAddDeletedEstimateItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sourceEstimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="targetEstimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="OptionId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReAddDeletedEstimateItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReAddDeletedEstimateItemResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReAddDeletedMasterPromotionEstimateItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="OptionId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReAddDeletedMasterPromotionEstimateItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReAddDeletedMasterPromotionEstimateItemResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFacadeFromRevisonID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFacadeFromRevisonIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetAllFacadeFromRevisonIDResult" nillable="true" type="q18:ArrayOfSQSHome" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAvailableHomeByState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="searchText" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="showdisplayhomes" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAvailableHomeByStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetAllAvailableHomeByStateResult" nillable="true" type="q19:ArrayOfSQSHome" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHomeFullNameByState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHomeFullNameByStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetHomeFullNameByStateResult" nillable="true" type="q20:ArrayOfSQSHome" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAreaNameWithAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAreaNameWithAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetAreaNameWithAllResult" nillable="true" type="q21:ArrayOfSQSArea" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupNameWithAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupNameWithAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetGroupNameWithAllResult" nillable="true" type="q22:ArrayOfSQSGroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckFacadeConfigurationDifference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="newfacadehomeid" type="xs:int" />
+        <xs:element minOccurs="0" name="effectivedate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckFacadeConfigurationDifferenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="CheckFacadeConfigurationDifferenceResult" nillable="true" type="q23:ArrayOfValidationErrorMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckHomeConfigurationDifference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="newfacadehomeid" type="xs:int" />
+        <xs:element minOccurs="0" name="effectivedate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckHomeConfigurationDifferenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="CheckHomeConfigurationDifferenceResult" nillable="true" type="q24:ArrayOfValidationErrorMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeFacade">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="newfacadehomeid" type="xs:int" />
+        <xs:element minOccurs="0" name="detailIDsSelected" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="detailOptionsSeleced" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="detailPricesSeleced" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectivedate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeFacadeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChangeFacadeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="newfacadehomeid" type="xs:int" />
+        <xs:element minOccurs="0" name="detailIDsSelected" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="detailOptionsSeleced" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="detailPricesSeleced" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="effectivedate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeHomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChangeHomeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContractType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="configCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContractTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetContractTypeResult" nillable="true" type="q25:ArrayOfContractType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateContractType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="contracttype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="jobflowtype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateContractTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateContractTypeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHomeName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHomeNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHomeNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateHomeName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="homename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateHomeNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateHomeNameResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyEstimateCheckDifference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sourceEstimatenumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="destinationEstimatenumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyEstimateCheckDifferenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="CopyEstimateCheckDifferenceResult" nillable="true" type="q26:ArrayOfValidationErrorMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sourceEstimatenumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="destinationEstimatenumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyEstimateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CopyEstimateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAreaSurcharge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAreaSurchargeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetAreaSurchargeResult" nillable="true" type="q27:ArrayOfdecimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimaterevisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="optionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetPagByIDResult" nillable="true" type="q28:EstimateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUpgradeOptionListForStandardInclusion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimaterevisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="originateoptionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUpgradeOptionListForStandardInclusionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetUpgradeOptionListForStandardInclusionResult" nillable="true" type="q29:ArrayOfSimplePAG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudioMQandA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="optionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudioMQandAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStudioMQandAResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sharepoint_GetFileList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="opportunityid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractnumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sharepoint_GetFileListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="Sharepoint_GetFileListResult" nillable="true" type="q30:ArrayOfSharepointDoc" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sharepoint_SharepointUploadFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contents" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="oldname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="opportunityid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doccategory" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctype" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sharepoint_SharepointUploadFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Sharepoint_SharepointUploadFileResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sharepoint_DeleteFileFromSharepointLibrary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="doc" nillable="true" type="q31:SharepointDoc" />
+        <xs:element minOccurs="0" name="opportunityid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractnumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sharepoint_DeleteFileFromSharepointLibraryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Sharepoint_DeleteFileFromSharepointLibraryResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sharepoint_GetSalesDocumentType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Sharepoint_GetSalesDocumentTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="Sharepoint_GetSalesDocumentTypeResult" nillable="true" type="q32:ArrayOfSharepointDocumentType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendNotificationEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templateobjectid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actionuserfullname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="recipientfullname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractnumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="templateobjecttype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailtype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estimatenumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="revisionnumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comments" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendNotificationEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendNotificationEmailResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendCrmEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="contractId" type="q33:guid" />
+        <xs:element minOccurs="0" name="recipientId" type="xs:int" />
+        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="body" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendCrmEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendCrmEmailResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudioMQuestionForAProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pproductid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudioMQuestionForAProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStudioMQuestionForAProductResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInLieuStandardPromotionItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimaterevisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="originateoptionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInLieuStandardPromotionItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetInLieuStandardPromotionItemsResult" nillable="true" type="q34:ArrayOfPAG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoleAccessModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoleAccessModuleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetRoleAccessModuleResult" nillable="true" type="q35:RoleAccessModule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemRemoveReason">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemRemoveReasonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetItemRemoveReasonResult" nillable="true" type="q36:ArrayOfItemRemoveReason" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemsNeedSetDefaultAnswer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemsNeedSetDefaultAnswerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetItemsNeedSetDefaultAnswerResult" nillable="true" type="q37:ArrayOfStudioMItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDefaultAnswerForEstimateRevision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studiomstring" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usercode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDefaultAnswerForEstimateRevisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetDefaultAnswerForEstimateRevisionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="action" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterEventResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudioMAppointmentTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contractNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="eventNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStudioMAppointmentTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStudioMAppointmentTimeResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateDetailsDescription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="items" nillable="true" type="q38:ArrayOfEstimateDetails" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateDetailsDescriptionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveEstimateDetailItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionDetailsIdSource" type="xs:int" />
+        <xs:element minOccurs="0" name="revisionDetailsIdTarget" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveEstimateDetailItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MoveEstimateDetailItemResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocuSign_GetDocumentInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estimateid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocuSign_GetDocumentInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="DocuSign_GetDocumentInfoResult" nillable="true" type="q39:ArrayOfDocuSignDocStatusInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocuSign_PushDocumentToTheProcessQueue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="printtype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documenttype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocuSign_PushDocumentToTheProcessQueueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocuSign_PushDocumentToTheProcessQueueResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPromotionProductByMasterPromotionRevisionDetailsID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisiondetailsid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPromotionProductByMasterPromotionRevisionDetailsIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetPromotionProductByMasterPromotionRevisionDetailsIDResult" nillable="true" type="q40:ArrayOfEstimateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExistingPromotionProductByMasterPromotionRevisionDetailsID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisiondetailsid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExistingPromotionProductByMasterPromotionRevisionDetailsIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetExistingPromotionProductByMasterPromotionRevisionDetailsIDResult" nillable="true" type="q41:ArrayOfPromotionPAG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateDetailsByIDString">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedrevisiondetailsid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateDetailsByIDStringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetEstimateDetailsByIDStringResult" nillable="true" type="q42:ArrayOfEstimateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMasterPromotionItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="masterpromotionitemid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="selectedpromotionitemids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMasterPromotionItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteMasterPromotionItemResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocuSign_RemoveDocumentFromTheProcessQueue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="integrationid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocuSign_RemoveDocumentFromTheProcessQueueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocuSign_RemoveDocumentFromTheProcessQueueResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCRMContactForAccountAsSigner">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="accountid" type="q43:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCRMContactForAccountAsSignerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetCRMContactForAccountAsSignerResult" nillable="true" type="q44:ArrayOfCRMContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocuSign_GetEnvelopeHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="envelopeid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocuSign_GetEnvelopeHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="DocuSign_GetEnvelopeHistoryResult" nillable="true" type="q45:ArrayOfDocuSignHistory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocuSign_GetEnvelopeHistoryByRevision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="versiontype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="printtype" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocuSign_GetEnvelopeHistoryByRevisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="DocuSign_GetEnvelopeHistoryByRevisionResult" nillable="true" type="q46:ArrayOfDocuSignHistory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocuSign_ValidateSignerAndDocuemnt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="versionnumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="recipientname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="recipienttype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="recipientaction" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocuSign_ValidateSignerAndDocuemntResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocuSign_ValidateSignerAndDocuemntResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchSpecificJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customernumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractnumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SelectedSalesConsultantId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LotNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StreetName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Suburb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessUnit" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchSpecificJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="SearchSpecificJobResult" nillable="true" type="q47:ArrayOfEstimateGridItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetEditEstimateUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="editEstimateUserID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetEditEstimateUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResetEditEstimateUserIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApplyRounding">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApplyRoundingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApplyRoundingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateDisclaimerUpdateDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateDisclaimerUpdateDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetEstimateDisclaimerUpdateDetailsResult" nillable="true" type="q48:EstimateDisclaimerUpdateDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDisclaimerUpdateDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="typeId" type="xs:int" />
+        <xs:element minOccurs="0" name="disclaimerNewId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDisclaimerUpdateDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveDisclaimerUpdateDetailsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessUnits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="regionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessUnitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetBusinessUnitsResult" nillable="true" type="q49:ArrayOfGenericClassCodeName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBCForecastDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bcContractNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBCForecastDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBCForecastDateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AcceptOriginalEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AcceptOriginalEstimateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignQueuedEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queueId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="ownerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignQueuedEstimateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AssignQueuedEstimateResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignWorkingEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="ownerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignWorkingEstimateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompleteEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="statusId" type="xs:int" />
+        <xs:element minOccurs="0" name="statusReasonId" type="xs:int" />
+        <xs:element minOccurs="0" name="revisionTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="ownerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompleteEstimateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQueuedEstimates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="regionId" type="xs:int" />
+        <xs:element minOccurs="0" name="roleId" type="xs:int" />
+        <xs:element minOccurs="0" name="customerNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="salesConsultantId" type="xs:int" />
+        <xs:element minOccurs="0" name="lotNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="streetName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="suburb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessUnit" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQueuedEstimatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetQueuedEstimatesResult" nillable="true" type="q50:ArrayOfEstimateGridItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssignedEstimates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="roleId" type="xs:int" />
+        <xs:element minOccurs="0" name="statusId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="regionId" type="xs:int" />
+        <xs:element minOccurs="0" name="customerNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="salesConsultantId" type="xs:int" />
+        <xs:element minOccurs="0" name="lotNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="streetName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="suburb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessUnit" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssignedEstimatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetAssignedEstimatesResult" nillable="true" type="q51:ArrayOfEstimateGridItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateHeaderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetEstimateHeaderResult" nillable="true" type="q52:EstimateHeader" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetEstimateDetailsResult" nillable="true" type="q53:ArrayOfEstimateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimatesRevisions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimatesRevisionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetEstimatesRevisionsResult" nillable="true" type="q54:ArrayOfEstimateHeader" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoThisRevision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bcContractNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="estimateId" type="xs:int" />
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="reasonComment" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoThisRevisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UndoThisRevisionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoThisRevisionValidate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateId" type="xs:int" />
+        <xs:element minOccurs="0" name="bcContractNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoThisRevisionValidateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="UndoThisRevisionValidateResult" nillable="true" type="q55:ArrayOfEstimateHeader" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoCurrentMilestone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="reasonComment" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoCurrentMilestoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UndoCurrentMilestoneResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoSetAsContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="reasonComment" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoSetAsContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UndoSetAsContractResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionDetailsId" type="xs:int" />
+        <xs:element minOccurs="0" name="price" type="xs:decimal" />
+        <xs:element minOccurs="0" name="quantity" type="xs:decimal" />
+        <xs:element minOccurs="0" name="totalprice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="productDescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="extraDescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="internalDescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="additionalnotes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="studioManswer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemaccepted" type="xs:int" />
+        <xs:element minOccurs="0" name="categoryid" type="xs:int" />
+        <xs:element minOccurs="0" name="groupid" type="xs:int" />
+        <xs:element minOccurs="0" name="pricedisplayid" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="applyanswertoallgroup" type="xs:int" />
+        <xs:element minOccurs="0" name="selectedimageid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="issiteworkitem" type="xs:boolean" />
+        <xs:element minOccurs="0" name="costbtp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="costdbc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateDetailsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionDetailsId" type="xs:int" />
+        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reasonid" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="DeleteProductResult" nillable="true" type="q56:EstimateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertCommentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateComment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+        <xs:element minOccurs="0" name="variationnumber" type="xs:int" />
+        <xs:element minOccurs="0" name="variationsummary" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCommentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="statusId" type="xs:int" />
+        <xs:element minOccurs="0" name="statusReasonId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateDifficultyRating">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="difficultyRatingId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateDifficultyRatingResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateQueueDifficultyRating">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queueId" type="xs:int" />
+        <xs:element minOccurs="0" name="difficultyRatingId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateQueueDifficultyRatingResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarginReport_SaveDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="titledLand" type="xs:int" />
+        <xs:element minOccurs="0" name="titledLandDays" type="xs:int" />
+        <xs:element minOccurs="0" name="basePriceExtensionDays" type="xs:int" />
+        <xs:element minOccurs="0" name="effectiveDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="bpeCharge" type="xs:double" />
+        <xs:element minOccurs="0" name="requiredBPEChargeType" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarginReport_SaveDetailsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarginReport_GetDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MarginReport_GetDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="MarginReport_GetDetailsResult" nillable="true" type="q57:MarginReportDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateDueDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="duedate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateDueDateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateAppointmentTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="appointmentTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateAppointmentTimeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateQueueDueDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queueId" type="xs:int" />
+        <xs:element minOccurs="0" name="duedate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateQueueDueDateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateEffectiveDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="priceId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEstimateEffectiveDateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByRegionAndRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="regionId" type="xs:int" />
+        <xs:element minOccurs="0" name="roleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByRegionAndRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetUsersByRegionAndRoleResult" nillable="true" type="q58:ArrayOfUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByRegionAndRevisionType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="regionId" type="xs:int" />
+        <xs:element minOccurs="0" name="revisionTypeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByRegionAndRevisionTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetUsersByRegionAndRevisionTypeResult" nillable="true" type="q59:ArrayOfUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loginName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetCurrentUserResult" nillable="true" type="q60:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetUserRolesResult" nillable="true" type="q61:ArrayOfUserRole" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateStatuses">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateStatusesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetEstimateStatusesResult" nillable="true" type="q62:ArrayOfEstimateStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusReasons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="statusId" type="xs:int" />
+        <xs:element minOccurs="0" name="revisionTypeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusReasonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetStatusReasonsResult" nillable="true" type="q63:ArrayOfStatusReason" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDifficultyRatings">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDifficultyRatingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetDifficultyRatingsResult" nillable="true" type="q64:ArrayOfDifficultyRating" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRevisionTypeAccess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRevisionTypeAccessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetRevisionTypeAccessResult" nillable="true" type="q65:ArrayOfRevisionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHomePrices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHomePricesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetHomePricesResult" nillable="true" type="q66:ArrayOfHomePrice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuditTrail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuditTrailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetAuditTrailResult" nillable="true" type="q67:ArrayOfAuditLog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompareEstimateDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionIdA" type="xs:int" />
+        <xs:element minOccurs="0" name="estimateRevisionIdB" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompareEstimateDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="CompareEstimateDetailsResult" nillable="true" type="q68:ArrayOfEstimateDetailsComparison" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompareEstimateHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateRevisionIdA" type="xs:int" />
+        <xs:element minOccurs="0" name="estimateRevisionIdB" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompareEstimateHeaderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="CompareEstimateHeaderResult" nillable="true" type="q69:ArrayOfEstimateHeaderComparison" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLatestEstimateRevisionId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLatestEstimateRevisionIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLatestEstimateRevisionIdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResubmittedEstimateCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="regionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResubmittedEstimateCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetResubmittedEstimateCountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOptionTreeFromMasterHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="regionid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="homeid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOptionTreeFromMasterHomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetOptionTreeFromMasterHomeResult" nillable="true" type="q70:ArrayOfOptionTreeProducts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckValidProductByRevision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="productId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckValidProductByRevisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckValidProductByRevisionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOptionTreeAsOptionTreeProductsForEstimateItemReplace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOptionTreeAsOptionTreeProductsForEstimateItemReplaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetOptionTreeAsOptionTreeProductsForEstimateItemReplaceResult" nillable="true" type="q71:ArrayOfOptionTreeProducts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOptionTreeAsOptionTreeProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOptionTreeAsOptionTreeProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetOptionTreeAsOptionTreeProductsResult" nillable="true" type="q72:ArrayOfOptionTreeProducts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOptionTreeFromAllProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="regionid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchText" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOptionTreeFromAllProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetOptionTreeFromAllProductsResult" nillable="true" type="q73:ArrayOfOptionTreeProducts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOptionTreeFromAllProductsExtended">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="regionid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="homeid" type="xs:int" />
+        <xs:element minOccurs="0" name="productname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productdesc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaid" type="xs:int" />
+        <xs:element minOccurs="0" name="groupid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOptionTreeFromAllProductsExtendedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetOptionTreeFromAllProductsExtendedResult" nillable="true" type="q74:ArrayOfOptionTreeProducts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSelectedPAG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="revisionnumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSelectedPAGResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetSelectedPAGResult" nillable="true" type="q75:ArrayOfPAG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommentsForAnEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommentsForAnEstimateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetCommentsForAnEstimateResult" nillable="true" type="q76:ArrayOfEstimateComments" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessPermission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="roleid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccessPermissionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAccessPermissionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="roleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstimateCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetEstimateCountResult" nillable="true" type="q77:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSelectedItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedid" type="xs:int" />
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="pagid" type="xs:int" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSelectedItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveSelectedItemResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEditItemDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedid" type="xs:int" />
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="qty" type="xs:decimal" />
+        <xs:element minOccurs="0" name="sellprice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="productdescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="extradescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="internaldescription" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEditItemDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveEditItemDetailsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedid" type="xs:int" />
+        <xs:element minOccurs="0" name="estimateid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveItemResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyItemFromOptionTreeToEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimatedetailsid" type="xs:int" />
+        <xs:element minOccurs="0" name="revisiondetailsid" type="xs:int" />
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="productareagroupid" type="xs:int" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyItemFromOptionTreeToEstimateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="CopyItemFromOptionTreeToEstimateResult" nillable="true" type="q78:EstimateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyItemFromMasterHomeToEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="regionid" type="xs:int" />
+        <xs:element minOccurs="0" name="optionid" type="xs:int" />
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyItemFromMasterHomeToEstimateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="CopyItemFromMasterHomeToEstimateResult" nillable="true" type="q79:EstimateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyItemFromAllProductsToEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="regionid" type="xs:int" />
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyItemFromAllProductsToEstimateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="CopyItemFromAllProductsToEstimateResult" nillable="true" type="q80:EstimateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeNewOptionToEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeNewOptionToEstimateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SynchronizeNewOptionToEstimateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdditionalNotesTemplateAndProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdditionalNotesTemplateAndProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetAdditionalNotesTemplateAndProductsResult" nillable="true" type="q81:ArrayOfEstimateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdditionalNotesTemplateAndProductsByRegion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templatename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subregionid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+        <xs:element minOccurs="0" name="active" type="xs:int" />
+        <xs:element minOccurs="0" name="selectedroleid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdditionalNotesTemplateAndProductsByRegionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetAdditionalNotesTemplateAndProductsByRegionResult" nillable="true" type="q82:ArrayOfEstimateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNoteTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templateid" type="xs:int" />
+        <xs:element minOccurs="0" name="templatename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" type="xs:int" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+        <xs:element minOccurs="0" name="action" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNoteTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateNoteTemplateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckNewNoteTemplateNameExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templateid" type="xs:int" />
+        <xs:element minOccurs="0" name="templatename" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckNewNoteTemplateNameExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckNewNoteTemplateNameExistsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAdditonalNotesTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templatename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAdditonalNotesTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddAdditonalNotesTemplateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSQSConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="configCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codeValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSQSConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetSQSConfigurationResult" nillable="true" type="q83:ArrayOfSQSConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesRegionByState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesRegionByStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetSalesRegionByStateResult" nillable="true" type="q84:ArrayOfSQSSalesRegion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceRegionByState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceRegionByStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetPriceRegionByStateResult" nillable="true" type="q85:ArrayOfSQSSalesRegion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSalesEstimateLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="action" type="q86:MRSLogAction" />
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element minOccurs="0" name="extraDescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reasonCode" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSalesEstimateLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateSalesEstimateLogResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetContractStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estimateRevisionId" type="xs:int" />
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="status" type="q87:ContractStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetContractStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetContractStatusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveItemFromNotesTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productareagroupid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveItemFromNotesTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveItemFromNotesTemplateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableItemsForNotesTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchtext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableItemsForNotesTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetAvailableItemsForNotesTemplateResult" nillable="true" type="q88:ArrayOfEstimateDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddItemToNotesTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="selecteditemids" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddItemToNotesTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddItemToNotesTemplateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewNotesTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templatename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="regionid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewNotesTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddNewNotesTemplateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveNotesTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveNotesTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveNotesTemplateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyNotesTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templatename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="regionid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+        <xs:element minOccurs="0" name="templateid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyNotesTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CopyNotesTemplateResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateTaskForContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contractid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="revisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="duedate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="notes" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateTaskForContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateTaskForContractResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotesTemplateItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templateid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productareagroupid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="quanitity" type="xs:decimal" />
+        <xs:element minOccurs="0" name="price" type="xs:decimal" />
+        <xs:element minOccurs="0" name="extradescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="internaldescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="additionalinfo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+        <xs:element minOccurs="0" name="usedefaultquantity" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotesTemplateItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateNotesTemplateItemResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchroniseCustomerDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contractNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchroniseCustomerDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SynchroniseCustomerDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonstandardCategory">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonstandardCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetNonstandardCategoryResult" nillable="true" type="q89:ArrayOfNonStandardCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonstandardCategoryByState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="selectedareaid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonstandardCategoryByStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetNonstandardCategoryByStateResult" nillable="true" type="q90:ArrayOfNonStandardCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonstandardGroups">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedareaid" type="xs:int" />
+        <xs:element minOccurs="0" name="stateid" type="xs:int" />
+        <xs:element minOccurs="0" name="selectedgroupid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNonstandardGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetNonstandardGroupsResult" nillable="true" type="q91:ArrayOfNonStandardGroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceDisplayCodes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceDisplayCodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetPriceDisplayCodesResult" nillable="true" type="q92:ArrayOfPriceDisplayCode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductImages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="supplierid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductImagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="GetProductImagesResult" nillable="true" type="q93:ArrayOfProductImage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckEstimateLockStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimaterevisionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckEstimateLockStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckEstimateLockStatusResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlockEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimaterevisionid" type="xs:int" />
+        <xs:element minOccurs="0" name="type" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlockEstimateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateStudioMEstimate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estimaterevisionid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateStudioMEstimateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" minOccurs="0" name="ValidateStudioMEstimateResult" nillable="true" type="q94:ArrayOfValidationErrorMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateItemAcceptance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="revisionestimatedetailsid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accepted" type="xs:int" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateItemAcceptanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateItemAcceptanceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

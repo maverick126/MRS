@@ -1,0 +1,45 @@
+﻿<controls:ChildWindow x:Class="Metricon.Silverlight.MetriconRetailSystem.ChildWindows.CustomerPrintSelection"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+           Width="680" Height="225" 
+           Title="Print Selection">
+    <Grid x:Name="LayoutRoot" Margin="2" Height="Auto">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="35" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <RadioButton Grid.Row="1" GroupName="printversion" VerticalAlignment="Top" Margin="30,0,0,0" Name="rdlump">Lump Sum</RadioButton>
+        <TextBlock Grid.Row="1"  Text="Estimate header only shows total price. All products list without price." FontWeight="Bold" VerticalAlignment="Top" Margin="165,0,0,0"></TextBlock>
+        <RadioButton Grid.Row="2" GroupName="printversion" VerticalAlignment="Top" Margin="30,0,0,0" Name="rdsummary" IsChecked="True">Full Summary</RadioButton>
+        <TextBlock Grid.Row="2"  Text="Estimate header shows all details. All products price are listed." FontWeight="Bold" VerticalAlignment="Top" Margin="165,0,0,0"></TextBlock>
+        <RadioButton Grid.Row="3" GroupName="printversion" VerticalAlignment="Top" Margin="30,0,0,0" Name="rdfull">Full Estimate Total</RadioButton>
+        <TextBlock Grid.Row="3"  Text="Estimate header shows lump sum total. All products price are listed." FontWeight="Bold" VerticalAlignment="Top" Margin="165,0,0,0"></TextBlock>
+        <CheckBox Grid.Row="4" Name="chkIncludeSTD" IsChecked="False" Margin="30,0,0,0" Height="20" VerticalAlignment="Top" Visibility="Collapsed">Include colours selection and standard specification</CheckBox>
+        <StackPanel Name="stackPanelUpdateDisclaimer" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="5" Margin="30,0" Orientation="Horizontal">
+            <CheckBox Name="checkBoxUpdateNewDisclaimer" IsChecked="False" Margin="0,0">Update New Disclaimer</CheckBox>
+            <Button Name="buttonViewNewDisclaimer" Margin="15 0 0 0" Content="View New Disclaimer" Click="buttonViewNewDisclaimer_Click" />
+            <Button Name="buttonViewCurrentDisclaimer" Margin="15 0 0 0" Content="View Current Disclaimer" Click="buttonViewCurrentDisclaimer_Click" />
+        </StackPanel>
+        <StackPanel Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="top" Margin="165,0,0,0" Orientation="Horizontal">
+            <telerik:RadButton x:Name="ExternalPrintButton" Click="OKButton_Click" Width="90" Height="23">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../images/printer.png" Height="16" Width="16"></Image>
+                    <TextBlock Margin="10 0 0 0">Print</TextBlock>
+                </StackPanel>
+            </telerik:RadButton>
+            <telerik:RadButton x:Name="CancelButton"  Click="CancelButton_Click" Width="90" Height="23" Margin="10,0,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../images/cancel.png" Height="16" Width="16"></Image>
+                    <TextBlock Margin="10 0 0 0">Cancel</TextBlock>
+                </StackPanel>
+            </telerik:RadButton>
+        </StackPanel>
+    </Grid>
+</controls:ChildWindow>

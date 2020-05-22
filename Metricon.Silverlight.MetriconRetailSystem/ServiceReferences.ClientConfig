@@ -1,0 +1,26 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <customBinding>
+                <binding name="dxWsBinding" closeTimeout="00:30:00" openTimeout="00:30:00"
+                    receiveTimeout="00:30:00" sendTimeout="00:30:00">
+                    <textMessageEncoding messageVersion="Default" writeEncoding="utf-8" />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="dxWsBinding1">
+                    <textMessageEncoding messageVersion="Default" writeEncoding="utf-8" />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="dxWsBinding2">
+                    <textMessageEncoding messageVersion="Default" writeEncoding="utf-8" />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:3638/RetailSystemService.svc"
+                binding="customBinding" bindingConfiguration="dxWsBinding1"
+                contract="MRSService.IRetailSystem" name="dxWsBinding" />
+        </client>
+    </system.serviceModel>
+</configuration>

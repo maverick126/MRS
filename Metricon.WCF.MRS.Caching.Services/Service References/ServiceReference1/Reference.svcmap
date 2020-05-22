@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0d34d789-9531-42c9-bb5e-6bdf33994f59" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vm-crmapppre09:3639/RetailSystemService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RetailSystemService.xsd" MetadataType="Schema" ID="ab3758a2-34a5-4e29-9096-583c360f15d0" SourceId="1" SourceUrl="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc?xsd=xsd3" />
+    <MetadataFile FileName="RetailSystemService.disco" MetadataType="Disco" ID="29446796-7b33-470c-94a5-a96eb169030d" SourceId="1" SourceUrl="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc?disco" />
+    <MetadataFile FileName="RetailSystemService1.xsd" MetadataType="Schema" ID="5b20eb64-2701-4748-b7a2-08080859ca6d" SourceId="1" SourceUrl="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RetailSystemService2.xsd" MetadataType="Schema" ID="0fdde40b-a350-44c0-a046-7d8baddaff59" SourceId="1" SourceUrl="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RetailSystemService3.xsd" MetadataType="Schema" ID="23b8f148-80cd-4a9f-be6e-f66197efec02" SourceId="1" SourceUrl="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RetailSystem.wsdl" MetadataType="Wsdl" ID="63e56914-93a3-4489-aa1c-466e1a811938" SourceId="1" SourceUrl="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

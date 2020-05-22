@@ -1,0 +1,45 @@
+﻿using System;
+using System.ServiceModel.Description;
+using System.ServiceModel.Dispatcher;
+using Microsoft.ApplicationInsights;
+
+namespace Metricon.WCF.MRS.Caching.Services
+{
+    public class AiLogExceptionAttribute : Attribute, IErrorHandler, IServiceBehavior
+        {
+            public void AddBindingParameters(ServiceDescription serviceDescription,
+                System.ServiceModel.ServiceHostBase serviceHostBase,
+                System.Collections.ObjectModel.Collection<ServiceEndpoint> endpoints,
+                System.ServiceModel.Channels.BindingParameterCollection bindingParameters)
+            {
+            }
+
+            public void ApplyDispatchBehavior(ServiceDescription serviceDescription,
+                System.ServiceModel.ServiceHostBase serviceHostBase)
+            {
+                foreach (ChannelDispatcher disp in serviceHostBase.ChannelDispatchers)
+                {
+                    disp.ErrorHandlers.Add(this);
+                }
+            }
+
+            public void Validate(ServiceDescription serviceDescription,
+                System.ServiceModel.ServiceHostBase serviceHostBase)
+            {
+            }
+
+            bool IErrorHandler.HandleError(Exception error)
+            {//or reuse instance (recommended!). see note above
+                var ai = new TelemetryClient();
+
+                ai.TrackException(error);
+                return false;
+            }
+
+            void IErrorHandler.ProvideFault(Exception error,
+                System.ServiceModel.Channels.MessageVersion version,
+                ref System.ServiceModel.Channels.Message fault)
+            {
+            }
+        }
+}

@@ -1,0 +1,53 @@
+﻿using System.Runtime.Serialization;
+
+namespace Metricon.WCF.MetriconRetailSystem.Contracts
+{
+    [DataContract]
+    public enum MRSLogAction
+    {
+        [EnumMember]
+        Accept,
+        [EnumMember]
+        Assign,
+        [EnumMember]
+        AssignToMe,
+        [EnumMember]
+        Reject,
+        [EnumMember]
+        ModifyEffectiveDate,
+        [EnumMember]
+        OnHold,
+        [EnumMember]
+        Cancel,
+        [EnumMember]
+        Reactivate,
+        [EnumMember]
+        ChangeJobFlow,
+        [EnumMember]
+        ChangeContractType,
+        [EnumMember]
+        ChangeFacade,
+        [EnumMember]
+        UpdateAppointment,
+        [EnumMember]
+        SkipRSTM,
+        [EnumMember]
+        ChangeHomeName,
+        [EnumMember]
+        ChangeHome,
+        [EnumMember]
+        CopyEstimate,
+        [EnumMember]
+        UndoRevision,
+        [EnumMember]
+        UndoSetAsContract,
+        [EnumMember]
+        UndoCurrentMilestone,
+        [EnumMember]
+        UpdateNewDisclaimer,
+        [EnumMember]
+        CurrentMilestone,
+        [EnumMember]
+        UpdateMarginReportSettings,
+    }
+}

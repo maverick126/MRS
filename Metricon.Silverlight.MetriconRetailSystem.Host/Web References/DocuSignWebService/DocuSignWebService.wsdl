@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="DocuSign_CreateAndSendEnvelope">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pdf" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagenumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="estimateID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="versiontype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="printtype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="versionnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="signerpara" type="tns:ArrayOfSignerParameter" />
+            <s:element minOccurs="0" maxOccurs="1" name="anchorXOffset" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="anchorYOffset" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="application" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documenttype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clientuserid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailsubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailbody" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractnumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSignerParameter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SignerParameter" nillable="true" type="tns:SignerParameter" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SignerParameter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SignerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SignerEmail" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RoutingOrder" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SortOrder" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Action" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DocuSign_CreateAndSendEnvelopeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocuSign_CreateAndSendEnvelopeResult" type="tns:EnvelopeResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EnvelopeResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ModelBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EnvelopeId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Uri" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="StatusDateTime" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ModelBase" />
+      <s:element name="DocuSign_SignInOffice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pdf" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagenumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="estimateID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="versiontype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="printtype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="versionnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="signerpara" type="tns:ArrayOfSignerParameter" />
+            <s:element minOccurs="0" maxOccurs="1" name="anchorXOffset" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="anchorYOffset" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="application" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="documenttype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailsubject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="emailbody" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractnumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocuSign_SignInOfficeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocuSign_SignInOfficeResult" type="tns:EnvelopeResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocuSign_GetRecipientViewRest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="envelopeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="re" type="tns:EmbeddedSignerRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EmbeddedSignerRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ModelBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="RecipientId" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="EnvelopeId" type="s1:guid" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ClientUserId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AuthenticationMethod" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AuthenticationInstant" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReturnUrl" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DocuSign_GetRecipientViewRestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocuSign_GetRecipientViewRestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocuSign_GetRecipientOfEnvelope">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="envelopeid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocuSign_GetRecipientOfEnvelopeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocuSign_GetRecipientOfEnvelopeResult" type="tns:GetRecipientResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetRecipientResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="signers" type="tns:ArrayOfSigner" />
+          <s:element minOccurs="0" maxOccurs="1" name="recipientCount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="currentRoutingOrder" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSigner">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Signer" nillable="true" type="tns:Signer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Signer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="recipientId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="clientUserId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="accessCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tabs" type="tns:Tabs" />
+          <s:element minOccurs="0" maxOccurs="1" name="embeddedRecipientStartURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="emailNotification" type="tns:EmailNotification" />
+          <s:element minOccurs="1" maxOccurs="1" name="routingOrder" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="deliveryMethod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="deliveredDateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="signedDateTime" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Tabs">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="signHereTabs" type="tns:ArrayOfSignHereTab" />
+          <s:element minOccurs="0" maxOccurs="1" name="initialHereTabs" type="tns:ArrayOfInitialHereTab" />
+          <s:element minOccurs="0" maxOccurs="1" name="fullNameTabs" type="tns:ArrayOfFullNameTab" />
+          <s:element minOccurs="0" maxOccurs="1" name="dateSignedTabs" type="tns:ArrayOfDateSignedTab" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSignHereTab">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SignHereTab" nillable="true" type="tns:SignHereTab" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SignHereTab">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="anchorString" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="anchorXOffset" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="anchorYOffset" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInitialHereTab">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InitialHereTab" nillable="true" type="tns:InitialHereTab" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InitialHereTab">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="anchorString" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="anchorXOffset" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="anchorYOffset" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFullNameTab">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FullNameTab" nillable="true" type="tns:FullNameTab" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FullNameTab">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="anchorString" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="anchorXOffset" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="anchorYOffset" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDateSignedTab">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DateSignedTab" nillable="true" type="tns:DateSignedTab" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DateSignedTab">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="anchorString" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="anchorXOffset" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="anchorYOffset" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EmailNotification">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="emailBody" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="emailSubject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="supportedLanguage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DocuSign_VoidEnvelopeRest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="envelope" type="tns:Envelope" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Envelope">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="envelopeid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="recipients" type="tns:Recipients" />
+          <s:element minOccurs="0" maxOccurs="1" name="emailSubject" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="emailBlurb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="documents" type="tns:ArrayOfDocument" />
+          <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="customfields" type="tns:CustomFields" />
+          <s:element minOccurs="0" maxOccurs="1" name="allowReassign" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notification" type="tns:Notification" />
+          <s:element minOccurs="0" maxOccurs="1" name="voidedreason" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Recipients">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="signers" type="tns:ArrayOfSigner" />
+          <s:element minOccurs="0" maxOccurs="1" name="inpersonsigners" type="tns:ArrayOfInPersonSigner" />
+          <s:element minOccurs="0" maxOccurs="1" name="certifieddeliveries" type="tns:ArrayOfCertifiedDeliveries" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInPersonSigner">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InPersonSigner" nillable="true" type="tns:InPersonSigner" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InPersonSigner">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="signerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="hostEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="hostName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="recipientId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="clientUserId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="accessCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="routingOrder" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="tabs" type="tns:Tabs" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCertifiedDeliveries">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CertifiedDeliveries" nillable="true" type="tns:CertifiedDeliveries" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CertifiedDeliveries">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="recipientId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="routingOrder" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDocument">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Document" nillable="true" type="tns:Document" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Document">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="documentId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentBase64" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomFields">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="textCustomFields" type="tns:ArrayOfTextCustomField" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTextCustomField">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TextCustomField" nillable="true" type="tns:TextCustomField" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TextCustomField">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Notification">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="useAccountDefaults" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="reminders" type="tns:Reminders" />
+          <s:element minOccurs="0" maxOccurs="1" name="expirations" type="tns:Expirations" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Reminders">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="reminderEnabled" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="reminderDelay" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="reminderFrequency" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Expirations">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="expireEnabled" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="expireAfter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="expireWarn" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DocuSign_VoidEnvelopeRestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocuSign_VoidEnvelopeRestResult" type="tns:EnvelopeResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocuSign_DownloadDocumentForEnvelope">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="envelopeid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocuSign_DownloadDocumentForEnvelopeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocuSign_DownloadDocumentForEnvelopeResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DocuSign_CreateAndSendEnvelopeSoapIn">
+    <wsdl:part name="parameters" element="tns:DocuSign_CreateAndSendEnvelope" />
+  </wsdl:message>
+  <wsdl:message name="DocuSign_CreateAndSendEnvelopeSoapOut">
+    <wsdl:part name="parameters" element="tns:DocuSign_CreateAndSendEnvelopeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocuSign_SignInOfficeSoapIn">
+    <wsdl:part name="parameters" element="tns:DocuSign_SignInOffice" />
+  </wsdl:message>
+  <wsdl:message name="DocuSign_SignInOfficeSoapOut">
+    <wsdl:part name="parameters" element="tns:DocuSign_SignInOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocuSign_GetRecipientViewRestSoapIn">
+    <wsdl:part name="parameters" element="tns:DocuSign_GetRecipientViewRest" />
+  </wsdl:message>
+  <wsdl:message name="DocuSign_GetRecipientViewRestSoapOut">
+    <wsdl:part name="parameters" element="tns:DocuSign_GetRecipientViewRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocuSign_GetRecipientOfEnvelopeSoapIn">
+    <wsdl:part name="parameters" element="tns:DocuSign_GetRecipientOfEnvelope" />
+  </wsdl:message>
+  <wsdl:message name="DocuSign_GetRecipientOfEnvelopeSoapOut">
+    <wsdl:part name="parameters" element="tns:DocuSign_GetRecipientOfEnvelopeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocuSign_VoidEnvelopeRestSoapIn">
+    <wsdl:part name="parameters" element="tns:DocuSign_VoidEnvelopeRest" />
+  </wsdl:message>
+  <wsdl:message name="DocuSign_VoidEnvelopeRestSoapOut">
+    <wsdl:part name="parameters" element="tns:DocuSign_VoidEnvelopeRestResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocuSign_DownloadDocumentForEnvelopeSoapIn">
+    <wsdl:part name="parameters" element="tns:DocuSign_DownloadDocumentForEnvelope" />
+  </wsdl:message>
+  <wsdl:message name="DocuSign_DownloadDocumentForEnvelopeSoapOut">
+    <wsdl:part name="parameters" element="tns:DocuSign_DownloadDocumentForEnvelopeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DocuSignWebServiceSoap">
+    <wsdl:operation name="DocuSign_CreateAndSendEnvelope">
+      <wsdl:input message="tns:DocuSign_CreateAndSendEnvelopeSoapIn" />
+      <wsdl:output message="tns:DocuSign_CreateAndSendEnvelopeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_SignInOffice">
+      <wsdl:input message="tns:DocuSign_SignInOfficeSoapIn" />
+      <wsdl:output message="tns:DocuSign_SignInOfficeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_GetRecipientViewRest">
+      <wsdl:input message="tns:DocuSign_GetRecipientViewRestSoapIn" />
+      <wsdl:output message="tns:DocuSign_GetRecipientViewRestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_GetRecipientOfEnvelope">
+      <wsdl:input message="tns:DocuSign_GetRecipientOfEnvelopeSoapIn" />
+      <wsdl:output message="tns:DocuSign_GetRecipientOfEnvelopeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_VoidEnvelopeRest">
+      <wsdl:input message="tns:DocuSign_VoidEnvelopeRestSoapIn" />
+      <wsdl:output message="tns:DocuSign_VoidEnvelopeRestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_DownloadDocumentForEnvelope">
+      <wsdl:input message="tns:DocuSign_DownloadDocumentForEnvelopeSoapIn" />
+      <wsdl:output message="tns:DocuSign_DownloadDocumentForEnvelopeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DocuSignWebServiceSoap" type="tns:DocuSignWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DocuSign_CreateAndSendEnvelope">
+      <soap:operation soapAction="http://tempuri.org/DocuSign_CreateAndSendEnvelope" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_SignInOffice">
+      <soap:operation soapAction="http://tempuri.org/DocuSign_SignInOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_GetRecipientViewRest">
+      <soap:operation soapAction="http://tempuri.org/DocuSign_GetRecipientViewRest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_GetRecipientOfEnvelope">
+      <soap:operation soapAction="http://tempuri.org/DocuSign_GetRecipientOfEnvelope" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_VoidEnvelopeRest">
+      <soap:operation soapAction="http://tempuri.org/DocuSign_VoidEnvelopeRest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_DownloadDocumentForEnvelope">
+      <soap:operation soapAction="http://tempuri.org/DocuSign_DownloadDocumentForEnvelope" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DocuSignWebServiceSoap12" type="tns:DocuSignWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DocuSign_CreateAndSendEnvelope">
+      <soap12:operation soapAction="http://tempuri.org/DocuSign_CreateAndSendEnvelope" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_SignInOffice">
+      <soap12:operation soapAction="http://tempuri.org/DocuSign_SignInOffice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_GetRecipientViewRest">
+      <soap12:operation soapAction="http://tempuri.org/DocuSign_GetRecipientViewRest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_GetRecipientOfEnvelope">
+      <soap12:operation soapAction="http://tempuri.org/DocuSign_GetRecipientOfEnvelope" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_VoidEnvelopeRest">
+      <soap12:operation soapAction="http://tempuri.org/DocuSign_VoidEnvelopeRest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_DownloadDocumentForEnvelope">
+      <soap12:operation soapAction="http://tempuri.org/DocuSign_DownloadDocumentForEnvelope" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocuSignWebService">
+    <wsdl:port name="DocuSignWebServiceSoap" binding="tns:DocuSignWebServiceSoap">
+      <soap:address location="http://localhost:50085/PMO-006WebService/DocuSignWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DocuSignWebServiceSoap12" binding="tns:DocuSignWebServiceSoap12">
+      <soap12:address location="http://localhost:50085/PMO-006WebService/DocuSignWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

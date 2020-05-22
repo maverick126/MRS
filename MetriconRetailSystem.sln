@@ -1,0 +1,107 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metricon.WCF.MetriconRetailSystem.Contracts", "Metricon.WCF.MetriconRetailSystem.Contracts\Metricon.WCF.MetriconRetailSystem.Contracts.csproj", "{1ED57225-68B3-44E2-A99F-D2802EC1180B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metricon.DAL.MetriconRetailSystem", "Metricon.DAL.MetriconRetailSystem\Metricon.DAL.MetriconRetailSystem.csproj", "{050B1FF6-DE26-4F87-8285-502FE6651ECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metricon.WCF.MetriconRetailSystem.Services", "Metricon.WCF.MetriconRetailSystem.Services\Metricon.WCF.MetriconRetailSystem.Services.csproj", "{DBC744EA-6F21-4527-8F1F-D4C162C7A3F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metricon.WCF.MetriconRetailSystem.Host", "Metricon.WCF.MetriconRetailSystem.Host\Metricon.WCF.MetriconRetailSystem.Host.csproj", "{7A499880-8A8F-4E35-935F-9C1C3499EC9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metricon.Silverlight.MetriconRetailSystem", "Metricon.Silverlight.MetriconRetailSystem\Metricon.Silverlight.MetriconRetailSystem.csproj", "{8ACD2E48-3ECA-4B3E-8C9A-EAEBD85C0601}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metricon.WCF.MRS.Caching.Services", "Metricon.WCF.MRS.Caching.Services\Metricon.WCF.MRS.Caching.Services.csproj", "{DBC744EA-1111-4527-8F1F-D4C162C7A3F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metricon.WCF.MRS.Caching.Host", "Metricon.WCF.MRS.Caching.Host\Metricon.WCF.MRS.Caching.Host.csproj", "{7A499880-2222-4E35-935F-9C1C3499EC9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1ED57225-68B3-44E2-A99F-D2802EC1180B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED57225-68B3-44E2-A99F-D2802EC1180B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED57225-68B3-44E2-A99F-D2802EC1180B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ED57225-68B3-44E2-A99F-D2802EC1180B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{050B1FF6-DE26-4F87-8285-502FE6651ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{050B1FF6-DE26-4F87-8285-502FE6651ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{050B1FF6-DE26-4F87-8285-502FE6651ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{050B1FF6-DE26-4F87-8285-502FE6651ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBC744EA-6F21-4527-8F1F-D4C162C7A3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBC744EA-6F21-4527-8F1F-D4C162C7A3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBC744EA-6F21-4527-8F1F-D4C162C7A3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBC744EA-6F21-4527-8F1F-D4C162C7A3F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A499880-8A8F-4E35-935F-9C1C3499EC9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A499880-8A8F-4E35-935F-9C1C3499EC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A499880-8A8F-4E35-935F-9C1C3499EC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A499880-8A8F-4E35-935F-9C1C3499EC9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ACD2E48-3ECA-4B3E-8C9A-EAEBD85C0601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ACD2E48-3ECA-4B3E-8C9A-EAEBD85C0601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ACD2E48-3ECA-4B3E-8C9A-EAEBD85C0601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ACD2E48-3ECA-4B3E-8C9A-EAEBD85C0601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBC744EA-1111-4527-8F1F-D4C162C7A3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBC744EA-1111-4527-8F1F-D4C162C7A3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBC744EA-1111-4527-8F1F-D4C162C7A3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBC744EA-1111-4527-8F1F-D4C162C7A3F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBEF4C7D-C844-4913-8ED3-D9694717B0DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBEF4C7D-C844-4913-8ED3-D9694717B0DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBEF4C7D-C844-4913-8ED3-D9694717B0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBEF4C7D-C844-4913-8ED3-D9694717B0DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A499880-2222-4E35-935F-9C1C3499EC9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A499880-2222-4E35-935F-9C1C3499EC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A499880-2222-4E35-935F-9C1C3499EC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A499880-2222-4E35-935F-9C1C3499EC9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://metriconhomes.visualstudio.com/
+		SccProjectUniqueName0 = Metricon.WCF.MetriconRetailSystem.Contracts\\Metricon.WCF.MetriconRetailSystem.Contracts.csproj
+		SccProjectName0 = Metricon.WCF.MetriconRetailSystem.Contracts
+		SccAuxPath0 = https://metriconhomes.visualstudio.com
+		SccLocalPath0 = Metricon.WCF.MetriconRetailSystem.Contracts
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = Metricon.DAL.MetriconRetailSystem\\Metricon.DAL.MetriconRetailSystem.csproj
+		SccProjectName1 = Metricon.DAL.MetriconRetailSystem
+		SccAuxPath1 = https://metriconhomes.visualstudio.com
+		SccLocalPath1 = Metricon.DAL.MetriconRetailSystem
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = Metricon.WCF.MetriconRetailSystem.Services\\Metricon.WCF.MetriconRetailSystem.Services.csproj
+		SccProjectName2 = Metricon.WCF.MetriconRetailSystem.Services
+		SccAuxPath2 = https://metriconhomes.visualstudio.com
+		SccLocalPath2 = Metricon.WCF.MetriconRetailSystem.Services
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = Metricon.WCF.MetriconRetailSystem.Host\\Metricon.WCF.MetriconRetailSystem.Host.csproj
+		SccProjectName3 = Metricon.WCF.MetriconRetailSystem.Host
+		SccAuxPath3 = https://metriconhomes.visualstudio.com
+		SccLocalPath3 = Metricon.WCF.MetriconRetailSystem.Host
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = Metricon.Silverlight.MetriconRetailSystem\\Metricon.Silverlight.MetriconRetailSystem.csproj
+		SccProjectName4 = Metricon.Silverlight.MetriconRetailSystem
+		SccAuxPath4 = https://metriconhomes.visualstudio.com
+		SccLocalPath4 = Metricon.Silverlight.MetriconRetailSystem
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName5 = Metricon.WCF.MRS.Caching.Services\\Metricon.WCF.MRS.Caching.Services.csproj
+		SccProjectName5 = Metricon.WCF.MRS.Caching.Services
+		SccAuxPath5 = https://metriconhomes.visualstudio.com
+		SccLocalPath5 = Metricon.WCF.MRS.Caching.Services
+		SccProvider5 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName6 = Metricon.Silverlight.MetriconRetailSystem.Host\\Metricon.Silverlight.MetriconRetailSystem.Host.csproj
+		SccProjectName6 = Metricon.Silverlight.MetriconRetailSystem.Host
+		SccAuxPath6 = https://metriconhomes.visualstudio.com
+		SccLocalPath6 = Metricon.Silverlight.MetriconRetailSystem.Host
+		SccProvider6 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName7 = Metricon.WCF.MRS.Caching.Host\\Metricon.WCF.MRS.Caching.Host.csproj
+		SccProjectName7 = Metricon.WCF.MRS.Caching.Host
+		SccAuxPath7 = https://metriconhomes.visualstudio.com
+		SccLocalPath7 = Metricon.WCF.MRS.Caching.Host
+		SccProvider7 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

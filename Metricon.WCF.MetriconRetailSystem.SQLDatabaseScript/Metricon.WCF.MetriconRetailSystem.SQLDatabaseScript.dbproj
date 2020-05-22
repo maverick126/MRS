@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>Metricon.WCF.MetriconRetailSystem.SQLDatabaseScript</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.0</ProjectVersion>
+    <ProjectGuid>{67cbc824-a49e-4e9b-a947-360f3dfe65c3}</ProjectGuid>
+    <DSP>Microsoft.Data.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ShowWizard>False</ShowWizard>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchema</DefaultFileStructure>
+    <DeployToDatabaseAddToServerExplorer>True</DeployToDatabaseAddToServerExplorer>
+    <DeployToScript>True</DeployToScript>
+    <CatalogPropertiesFile>Properties\Database.sqlsettings</CatalogPropertiesFile>
+    <LoadSqlClrTypes>True</LoadSqlClrTypes>
+    <RootNamespace>Metricon.WCF.MetriconRetailSystem.SQLDatabaseScript</RootNamespace>
+    <DefaultSchema>dbo</DefaultSchema>
+    <PreviousProjectVersion>4.0</PreviousProjectVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>.\sql\release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>.\sql\debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <!--Import the settings-->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\TeamData\Microsoft.Data.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Data Generation Plans" />
+    <Folder Include="Schema Comparisons" />
+    <Folder Include="Properties\" />
+    <Folder Include="Schema Objects\" />
+    <Folder Include="Schema Objects\Schemas\" />
+    <Folder Include="Schema Objects\Schemas\dbo\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Defaults\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Functions\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Rules\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Data Types\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Types CLR\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Table Types\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\XML Schema Collections\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Service Broker\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Service Broker\Queues\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Synonyms\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Constraints\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Keys\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Statistics\" />
+    <Folder Include="Schema Objects\Database Level Objects\" />
+    <Folder Include="Schema Objects\Database Level Objects\Assemblies\" />
+    <Folder Include="Schema Objects\Database Level Objects\Database Triggers\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Schemas\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Users\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Certificates\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Asymmetric Keys\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Master Keys\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Signatures\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Symmetric Keys\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Database Encryption Keys\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Database Audit Specification\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\Application Roles\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\Database Roles\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Broker Priorities\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Contracts\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Event Notifications\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Message Types\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Remote Service Binding\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Routes\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Services\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Full Text Stoplists\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Filegroups\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Files\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Full Text Catalogs\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Partition Functions\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Partition Schemes\" />
+    <Folder Include="StoredProcedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertiesFile Include="Properties\Database.sqlsettings">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqldeployment">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqlcmdvars">
+    </PropertiesFile>
+    <Build Include="Properties\Database.sqlpermissions">
+      <ModelBuilderType>Permissions</ModelBuilderType>
+    </Build>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql">
+      <SubType>Code</SubType>
+    </PreDeploy>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql">
+      <SubType>Code</SubType>
+    </PostDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <BuildContributorArgument Include="OutDir=$(OutDir)" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetAdditionalNotesAndProductsByRegion.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_UpdateNotesTemplate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CheckNotesTemplateNameExists.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetPagByID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_SaveSelectedItemsFromOptionTreeToEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetUpgradeOptionsForStandardInclusion.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_SynchronizeNewOptions.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetMRSDisclaimer.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetPrintPDFTemplate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CreateStudioMEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_ValidateAppointmentDate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CreateContractDraft.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CreateFinalContract.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetAllRelevantPAGFromOnePAG.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetStudioMQandA.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetEstimateDetails.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetEstimateHeader.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetEstimateDetailsForPrinting.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetEstimateHeaderForPrinting.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_ChangeFacade.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetEstimateRevisions.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_SendAlertEmail.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_PopulateTreeForEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetAuditTrail.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CreateEstimateFromOriginalEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CreateEstimateFromPreviousRevision.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CreateVariation.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_UpdateEstimateDetails.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetAvailableItemsForNotesTemplate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetAdditionalNotesAndProducts.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CopyDescriptionToNonstandardOption.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_AddAddtionalNotesTemplate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetQueuedEstimates.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetAssignedEstimates.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetEstimateCount.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetStudioMQuestionForAProduct.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetDerivedPercentageForEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetItemCostPriceForEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetNextEstimateRevisionType.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CompleteEstimateRevision.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CreateCscVariation.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_AcceptOriginalEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetRoleAccessModule.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_AddStandardInclusions.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_ValidateAcceptFlagForRevision.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_ValidateSetEstimateStatus.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetEstimateTotalCost.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetCustomerDocumentType.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetCustomerDocumentDetails.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_UpdateCustomerDocumentDetails.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_RejectVariation.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetCustomerSupportActions.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetSalesEstimatorActions.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_MergeStudioMRevisions.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetItemRemoveReason.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_DeleteEstimateDetails_1.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetDeletedItems.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_AddStandardInclusions_1.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetEstimateDetailsForVariation.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetPreviousRevisonForVariation.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_UpdateItemAcceptance.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetEstimateHeaderForLogging.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_UpdateEstimateStatus.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_InsertEstimateDetails.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetProductGroups.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CompareSaleEstimateDetails.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_StudioM_IPAD_RemoveItemFromEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_StudioM_IPAD_InsertItemToEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CheckValidProductByRevision.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_StudioM_IPAD_GetProductsForEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetExcludedAreaAndGroupForStudioMRevision.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetContractDraftActions.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CheckFacadeConfigurationDifference.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CheckEstimateLockStatus.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_DeleteEstimateDetails.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetContactsOfCustomer.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetEstimateCustomer.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_UnlockEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_StudioM_IPAD_UpdateItemInEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_StudioM_IPAD_GetCustomerList.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_StudioM_IPAD_GetNonStandardAreaAndGroup.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_ValidateStudioMRevisions.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_AddNewNotesTemplate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CopyNotesTemplate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetAreasByState.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetItemsNeedSetDefaultAnswer.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_SetDefaultAnswerForEstimateRevision.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetPermissionForEditFields.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetAreaSurcharge.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_DeleteMasterPromotion.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetEstimateAmount.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetEstimateDetailsByIDString.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetExistingPromotionProductByMasterPromotionRevisionDetailsID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetHomeDisplayName.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetPromotionProductByMasterPromotionRevisionDetailsID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetSelectedPromotions.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_StudioMValidateEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_UpdateHomeDisplayName.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetEstimateVariationForEventIntegration.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CreateEstimateEventRegister.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_SearchSpecificJob.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_AssignWorkingSalesEstimate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_UpdateEstimateComment.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetContractEventFromRevisonID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetUserIDFromUserCode.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetAvailableHomesByState.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetPriceRegion.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_PopulateTreeFromMasterHome.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_CopyDescriptionFromOtherHomeToNonstandardOption.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetUserByLoginName.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_PopulateBcEventProcessingQueue.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_UpdateEstimateDetailsDescription.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="StoredProcedures\sp_SalesEstimate_GetUserRoles.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+  </ItemGroup>
+</Project>

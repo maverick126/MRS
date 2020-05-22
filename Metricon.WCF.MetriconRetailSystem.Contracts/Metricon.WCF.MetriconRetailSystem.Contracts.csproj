@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1ED57225-68B3-44E2-A99F-D2802EC1180B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Metricon.WCF.MetriconRetailSystem.Contracts</RootNamespace>
+    <AssemblyName>Metricon.WCF.MetriconRetailSystem.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalBinaries\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContracts\AuditLog.cs" />
+    <Compile Include="DataContracts\ComparisonFilter.cs" />
+    <Compile Include="DataContracts\ContextMenuVisibility.cs" />
+    <Compile Include="DataContracts\ContractDraftActionAvailability.cs" />
+    <Compile Include="DataContracts\DisclaimerUpdateDetail.cs" />
+    <Compile Include="DataContracts\GenericClassCodeName.cs" />
+    <Compile Include="DataContracts\MarginReportDetail.cs" />
+    <Compile Include="DataContracts\SQSGroup.cs" />
+    <Compile Include="DataContracts\SQSConfiguration.cs" />
+    <Compile Include="DataContracts\ContractType.cs" />
+    <Compile Include="DataContracts\CRMContact.cs.cs" />
+    <Compile Include="DataContracts\CustomerDocumentDetails.cs" />
+    <Compile Include="DataContracts\CustomerSupportActionAvailability.cs" />
+    <Compile Include="DataContracts\DeletedItem.cs" />
+    <Compile Include="DataContracts\DifficultyRating.cs" />
+    <Compile Include="DataContracts\DocuSignDocStatusInfo.cs" />
+    <Compile Include="DataContracts\DocuSignHistory.cs" />
+    <Compile Include="DataContracts\EstimateBase.cs" />
+    <Compile Include="DataContracts\EstimateComments.cs" />
+    <Compile Include="DataContracts\EstimateDetailsComparison.cs" />
+    <Compile Include="DataContracts\EstimateGridItem.cs" />
+    <Compile Include="DataContracts\EstimateDetails.cs" />
+    <Compile Include="DataContracts\EstimateHeader.cs" />
+    <Compile Include="DataContracts\EstimateHeaderComparison.cs" />
+    <Compile Include="DataContracts\EstimateStatus.cs" />
+    <Compile Include="DataContracts\FinalContractActionAvailability.cs" />
+    <Compile Include="DataContracts\ItemRemoveReason.cs" />
+    <Compile Include="DataContracts\OptionTreeProducts.cs" />
+    <Compile Include="DataContracts\PriceDisplayCode.cs" />
+    <Compile Include="DataContracts\PromotionPAG.cs" />
+    <Compile Include="DataContracts\RoleAccessModule.cs" />
+    <Compile Include="DataContracts\SalesEstimatorActionAvailability.cs" />
+    <Compile Include="DataContracts\SharepointDoc.cs" />
+    <Compile Include="DataContracts\SharepointDocumentType.cs" />
+    <Compile Include="DataContracts\SQSArea.cs" />
+    <Compile Include="DataContracts\SQSHome.cs" />
+    <Compile Include="DataContracts\HomePrice.cs" />
+    <Compile Include="DataContracts\NextRevision.cs" />
+    <Compile Include="DataContracts\NonStandardCategory.cs" />
+    <Compile Include="DataContracts\NonStandardGroup.cs" />
+    <Compile Include="DataContracts\PAG.cs" />
+    <Compile Include="DataContracts\Product.cs" />
+    <Compile Include="DataContracts\ProductImage.cs" />
+    <Compile Include="DataContracts\RevisionType.cs" />
+    <Compile Include="DataContracts\RevisionTypePermission.cs" />
+    <Compile Include="DataContracts\SimplePAG.cs" />
+    <Compile Include="DataContracts\SQSSalesRegion.cs" />
+    <Compile Include="DataContracts\StandardInlusionAndUpgradeOption.cs" />
+    <Compile Include="DataContracts\StatusReason.cs" />
+    <Compile Include="DataContracts\StudioMItem.cs" />
+    <Compile Include="DataContracts\User.cs" />
+    <Compile Include="DataContracts\UserRole.cs" />
+    <Compile Include="DataContracts\ValidationErrorMessage.cs" />
+    <Compile Include="Enums\ContractStatus.cs" />
+    <Compile Include="Enums\EstimateRevisionStatus.cs" />
+    <Compile Include="Enums\MRSLogAction.cs" />
+    <Compile Include="Enums\Priority.cs" />
+    <Compile Include="Enums\RevisionTypeCode.cs" />
+    <Compile Include="IRetailSystem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Readme\Elmah.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

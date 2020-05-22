@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="Metricon.Silverlight.MetriconRetailSystem.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"             
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+    xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="2"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid x:Name="NavigationGrid" Style="{StaticResource NavigationGridStyle}" Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="500"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                    <StackPanel x:Name="BrandingStackPanel" Style="{StaticResource BrandingStackPanelStyle}">
+                    <HyperlinkButton x:Name="homebtn" Click="homebtn_Click" TargetName="MainFrame" Style="{StaticResource LinkStyle}">
+                            <ContentControl Style="{StaticResource LogoIcon}"/>
+                        </HyperlinkButton>
+                        <TextBlock x:Name="ApplicationNameTextBlock" Style="{StaticResource ApplicationNameStyle}" Text="  Metricon Retail System"/>
+
+                    </StackPanel>
+
+                <Grid x:Name="logongrid" Style="{StaticResource NavigationGridStyle}" Grid.Row="0" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="10"></RowDefinition>
+                        <RowDefinition  Height="20"></RowDefinition>
+                        <RowDefinition  Height="20"></RowDefinition>
+                        <RowDefinition  Height="20"></RowDefinition>
+                        <RowDefinition  Height="5"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="120"></ColumnDefinition>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="190"></ColumnDefinition>
+                        
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBlock Grid.Row="1" Grid.Column="0" Text="Logged In :" Style="{StaticResource LoginNameStyle}"/>
+                    <TextBlock Name="txtFullName" Grid.Row="1" Grid.Column="1" Width="120"  Style="{StaticResource LoginNameStyle}"/>
+                    
+                    <TextBlock Grid.Row="2" Grid.Column="0" Text="Region :" Style="{StaticResource LoginNameStyle}"/>
+                    <TextBlock Name="txtRegion" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Style="{StaticResource LoginNameStyle}"/>
+
+                    <Button Name="buttonOnlinePriceBook" Grid.Row="3" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Content="Online Price Book" Margin="0,5,10,0" Click="buttonOnlinePriceBook_Click" />
+
+                    <TextBlock Grid.Row="1" Grid.Column="2" Text="Role :" Style="{StaticResource LoginNameStyle}"/>
+                    <telerik:RadComboBox Name="cmbUserRole" Grid.Row="1" Grid.Column="3" Width="180" SelectionChanged="cmbUserRole_SelectionChanged"
+                        DisplayMemberPath="RoleName"
+                        SelectedValuePath="RoleId"/>
+
+                    <TextBlock Grid.Row="2" Grid.Column="2" Text="Revision Type :" Style="{StaticResource LoginNameStyle}"/>
+                    <telerik:RadComboBox Name="cmbRevisionType" Grid.Row="2" Grid.Column="3" Width="180" SelectionChanged="cmbRevisionType_SelectionChanged"                     
+                        DisplayMemberPath="RevisionTypeName"
+                        SelectedValuePath="RevisionTypeId"/>
+
+                    <TextBlock Grid.Row="3" Grid.Column="2" Text="Status :" Style="{StaticResource LoginNameStyle}"/>
+                    <telerik:RadComboBox Name="cmbStatus" Grid.Row="3" Grid.Column="3" Width="180" SelectionChanged="cmbStatus_SelectionChanged" 
+                        DisplayMemberPath="StatusName"
+                        SelectedValuePath="StatusId"/>
+
+                </Grid>
+            </Grid>
+        </Grid>
+        <navigation:Frame x:Name="MainFrame" Grid.Row="2">
+            <navigation:Frame.UriMapper>
+                <uriMapper:UriMapper>
+                    <uriMapper:UriMapping Uri="" MappedUri="/UserValidation.xaml"/>
+                    <uriMapper:UriMapping Uri="/{pageName}" MappedUri="/{pageName}"/>
+                </uriMapper:UriMapper>
+            </navigation:Frame.UriMapper>
+        </navigation:Frame>
+
+
+    </Grid>
+</UserControl>

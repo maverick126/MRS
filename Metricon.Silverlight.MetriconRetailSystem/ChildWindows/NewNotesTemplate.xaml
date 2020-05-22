@@ -1,0 +1,49 @@
+﻿<controls:ChildWindow x:Class="Metricon.Silverlight.MetriconRetailSystem.ChildWindows.NewNotesTemplate"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+           xmlns:vm="clr-namespace:Metricon.Silverlight.MetriconRetailSystem.ViewModels" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="400" Height="250" 
+           >
+    <controls:ChildWindow.Resources>
+        <vm:NotesTemplateViewModel x:Key="notesVM"></vm:NotesTemplateViewModel>
+    </controls:ChildWindow.Resources>
+    <Grid x:Name="LayoutRoot" Margin="2" DataContext="{Binding Source={StaticResource notesVM}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="23"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+            <ColumnDefinition Width="130"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Template Name:" FontWeight="Bold"></TextBlock>
+        <TextBox Text="{Binding NewTemplateName, Mode=TwoWay}" Grid.Row="1" Grid.Column="3" Name="txtTempaltename"></TextBox>
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="Region:" FontWeight="Bold"></TextBlock>
+        <telerik:RadComboBox Name="cmbSalesRegion"  Grid.Row="3" Grid.Column="3" 
+                                          ItemsSource="{Binding Path=SalesRegions, Mode=OneWay}" 
+                                          SelectedValue="{Binding Path=SelectedRegionId, Mode=TwoWay}"                                                     
+                                          DisplayMemberPath="RegionName"
+                                          SelectedValuePath="RegionId"/>
+        <telerik:RadButton x:Name="CancelButton" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="5" Grid.Column="3" >
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../images/cancel.png" Height="16" Width="16"></Image>
+                <TextBlock Margin="10 0 0 0">Cancel</TextBlock>
+            </StackPanel>
+        </telerik:RadButton>
+        <!--<telerik:RadButton x:Name="OKButton" Content="OK" Command="{Binding SaveNewTemplateCommand}" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="5" Grid.Column="3"/>-->
+        <telerik:RadButton x:Name="OKButton"  Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="5" Grid.Column="3">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../images/save.png" Height="16" Width="16"></Image>
+                <TextBlock Margin="10 0 0 0">Save</TextBlock>
+            </StackPanel>
+        </telerik:RadButton>
+    </Grid>
+</controls:ChildWindow>

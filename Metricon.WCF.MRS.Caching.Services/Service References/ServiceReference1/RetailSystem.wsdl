@@ -1,0 +1,3243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RetailSystem" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="dxWsBinding_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Metricon.WCF.MetriconRetailSystem.Contracts" />
+      <xsd:import schemaLocation="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRetailSystem_GetContractDraftActionAvailability_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractDraftActionAvailability" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetContractDraftActionAvailability_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractDraftActionAvailabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetFinalContractActionAvailability_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinalContractActionAvailability" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetFinalContractActionAvailability_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinalContractActionAvailabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetCustomerSupportActionAvailability_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerSupportActionAvailability" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetCustomerSupportActionAvailability_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerSupportActionAvailabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetSalesEstimatorActionAvailability_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesEstimatorActionAvailability" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetSalesEstimatorActionAvailability_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesEstimatorActionAvailabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetContractDraftCreationVisibility_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractDraftCreationVisibility" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetContractDraftCreationVisibility_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractDraftCreationVisibilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetFinalContractCreationVisibility_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinalContractCreationVisibility" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetFinalContractCreationVisibility_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFinalContractCreationVisibilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateRevisionStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateRevisionStatus" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateRevisionStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateRevisionStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateSplitStudioMRevisions_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSplitStudioMRevisions" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateSplitStudioMRevisions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSplitStudioMRevisionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_MergeStudioMRevisions_InputMessage">
+    <wsdl:part name="parameters" element="tns:MergeStudioMRevisions" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_MergeStudioMRevisions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MergeStudioMRevisionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateContractDraft_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContractDraft" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateContractDraft_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContractDraftResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateFinalContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFinalContract" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateFinalContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFinalContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateCscVariation_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCscVariation" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateCscVariation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCscVariationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateStudioMRevision_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateStudioMRevision" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateStudioMRevision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateStudioMRevisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ValidateSetEstimateStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateSetEstimateStatus" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ValidateSetEstimateStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateSetEstimateStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetCustomerDocumentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerDocumentType" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetCustomerDocumentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerDocumentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateCustomerDocumentDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomerDocumentDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateCustomerDocumentDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomerDocumentDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetCustomerDocumentDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerDocumentDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetCustomerDocumentDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerDocumentDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetRelevantPAGFromOnePAG_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelevantPAGFromOnePAG" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetRelevantPAGFromOnePAG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelevantPAGFromOnePAGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateVariation_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVariation" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateVariation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateVariationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_RejectVariation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RejectVariation" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_RejectVariation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RejectVariationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SaveSelectedItemsFromOptionTreeToEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSelectedItemsFromOptionTreeToEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SaveSelectedItemsFromOptionTreeToEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSelectedItemsFromOptionTreeToEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ReplaceSaveSelectedItemsFromOptionTreeToEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReplaceSaveSelectedItemsFromOptionTreeToEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ReplaceSaveSelectedItemsFromOptionTreeToEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReplaceSaveSelectedItemsFromOptionTreeToEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CheckRevisionTypeAllowToAddNSR_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckRevisionTypeAllowToAddNSR" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CheckRevisionTypeAllowToAddNSR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckRevisionTypeAllowToAddNSRResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ValidateAcceptFlagForRevision_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAcceptFlagForRevision" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ValidateAcceptFlagForRevision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAcceptFlagForRevisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ValidateStudioMRevisions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateStudioMRevisions" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ValidateStudioMRevisions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateStudioMRevisionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ValidateAppointmentDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAppointmentDate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ValidateAppointmentDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAppointmentDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetNextEstimateRevision_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextEstimateRevision" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetNextEstimateRevision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextEstimateRevisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAuditLogs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuditLogs" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAuditLogs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuditLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetDeletedItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeletedItems" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetDeletedItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeletedItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ReAddDeletedEstimateItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReAddDeletedEstimateItem" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ReAddDeletedEstimateItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReAddDeletedEstimateItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ReAddDeletedMasterPromotionEstimateItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReAddDeletedMasterPromotionEstimateItem" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ReAddDeletedMasterPromotionEstimateItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReAddDeletedMasterPromotionEstimateItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAllFacadeFromRevisonID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFacadeFromRevisonID" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAllFacadeFromRevisonID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFacadeFromRevisonIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAllAvailableHomeByState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAvailableHomeByState" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAllAvailableHomeByState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAvailableHomeByStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetHomeFullNameByState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeFullNameByState" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetHomeFullNameByState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeFullNameByStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAreaNameWithAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAreaNameWithAll" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAreaNameWithAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAreaNameWithAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetGroupNameWithAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupNameWithAll" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetGroupNameWithAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupNameWithAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CheckFacadeConfigurationDifference_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckFacadeConfigurationDifference" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CheckFacadeConfigurationDifference_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckFacadeConfigurationDifferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CheckHomeConfigurationDifference_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckHomeConfigurationDifference" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CheckHomeConfigurationDifference_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckHomeConfigurationDifferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ChangeFacade_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeFacade" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ChangeFacade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeFacadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ChangeHome_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeHome" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ChangeHome_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeHomeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetContractType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractType" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetContractType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateContractType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContractType" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateContractType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContractTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetHomeName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeName" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetHomeName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateHomeName_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHomeName" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateHomeName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateHomeNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CopyEstimateCheckDifference_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyEstimateCheckDifference" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CopyEstimateCheckDifference_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyEstimateCheckDifferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CopyEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CopyEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAreaSurcharge_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAreaSurcharge" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAreaSurcharge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAreaSurchargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetPagByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagByID" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetPagByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetUpgradeOptionListForStandardInclusion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpgradeOptionListForStandardInclusion" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetUpgradeOptionListForStandardInclusion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpgradeOptionListForStandardInclusionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetStudioMQandA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudioMQandA" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetStudioMQandA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudioMQandAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_Sharepoint_GetFileList_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sharepoint_GetFileList" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_Sharepoint_GetFileList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sharepoint_GetFileListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_Sharepoint_SharepointUploadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sharepoint_SharepointUploadFile" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_Sharepoint_SharepointUploadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sharepoint_SharepointUploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_Sharepoint_DeleteFileFromSharepointLibrary_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sharepoint_DeleteFileFromSharepointLibrary" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_Sharepoint_DeleteFileFromSharepointLibrary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sharepoint_DeleteFileFromSharepointLibraryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_Sharepoint_GetSalesDocumentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sharepoint_GetSalesDocumentType" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_Sharepoint_GetSalesDocumentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Sharepoint_GetSalesDocumentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SendNotificationEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendNotificationEmail" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SendNotificationEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendNotificationEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SendCrmEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendCrmEmail" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SendCrmEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendCrmEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetStudioMQuestionForAProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudioMQuestionForAProduct" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetStudioMQuestionForAProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudioMQuestionForAProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetInLieuStandardPromotionItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInLieuStandardPromotionItems" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetInLieuStandardPromotionItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInLieuStandardPromotionItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetRoleAccessModule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleAccessModule" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetRoleAccessModule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleAccessModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetItemRemoveReason_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemRemoveReason" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetItemRemoveReason_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemRemoveReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetItemsNeedSetDefaultAnswer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemsNeedSetDefaultAnswer" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetItemsNeedSetDefaultAnswer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemsNeedSetDefaultAnswerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SetDefaultAnswerForEstimateRevision_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDefaultAnswerForEstimateRevision" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SetDefaultAnswerForEstimateRevision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDefaultAnswerForEstimateRevisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_RegisterEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterEvent" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_RegisterEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetStudioMAppointmentTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudioMAppointmentTime" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetStudioMAppointmentTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudioMAppointmentTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateDetailsDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateDetailsDescription" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateDetailsDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateDetailsDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_MoveEstimateDetailItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveEstimateDetailItem" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_MoveEstimateDetailItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoveEstimateDetailItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DocuSign_GetDocumentInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocuSign_GetDocumentInfo" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DocuSign_GetDocumentInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocuSign_GetDocumentInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DocuSign_PushDocumentToTheProcessQueue_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocuSign_PushDocumentToTheProcessQueue" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DocuSign_PushDocumentToTheProcessQueue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocuSign_PushDocumentToTheProcessQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetPromotionProductByMasterPromotionRevisionDetailsID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromotionProductByMasterPromotionRevisionDetailsID" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetPromotionProductByMasterPromotionRevisionDetailsID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPromotionProductByMasterPromotionRevisionDetailsIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetExistingPromotionProductByMasterPromotionRevisionDetailsID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExistingPromotionProductByMasterPromotionRevisionDetailsID" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetExistingPromotionProductByMasterPromotionRevisionDetailsID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExistingPromotionProductByMasterPromotionRevisionDetailsIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateDetailsByIDString_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateDetailsByIDString" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateDetailsByIDString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateDetailsByIDStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DeleteMasterPromotionItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMasterPromotionItem" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DeleteMasterPromotionItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMasterPromotionItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DocuSign_RemoveDocumentFromTheProcessQueue_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocuSign_RemoveDocumentFromTheProcessQueue" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DocuSign_RemoveDocumentFromTheProcessQueue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocuSign_RemoveDocumentFromTheProcessQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetCRMContactForAccountAsSigner_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCRMContactForAccountAsSigner" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetCRMContactForAccountAsSigner_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCRMContactForAccountAsSignerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DocuSign_GetEnvelopeHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocuSign_GetEnvelopeHistory" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DocuSign_GetEnvelopeHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocuSign_GetEnvelopeHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DocuSign_GetEnvelopeHistoryByRevision_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocuSign_GetEnvelopeHistoryByRevision" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DocuSign_GetEnvelopeHistoryByRevision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocuSign_GetEnvelopeHistoryByRevisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DocuSign_ValidateSignerAndDocuemnt_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocuSign_ValidateSignerAndDocuemnt" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DocuSign_ValidateSignerAndDocuemnt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocuSign_ValidateSignerAndDocuemntResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SearchSpecificJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSpecificJob" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SearchSpecificJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchSpecificJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ResetEditEstimateUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetEditEstimateUserID" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ResetEditEstimateUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetEditEstimateUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ApplyRounding_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyRounding" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ApplyRounding_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyRoundingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateDisclaimerUpdateDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateDisclaimerUpdateDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateDisclaimerUpdateDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateDisclaimerUpdateDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SaveDisclaimerUpdateDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDisclaimerUpdateDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SaveDisclaimerUpdateDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDisclaimerUpdateDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetBusinessUnits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessUnits" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetBusinessUnits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessUnitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetBCForecastDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBCForecastDate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetBCForecastDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBCForecastDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_AcceptOriginalEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AcceptOriginalEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_AcceptOriginalEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AcceptOriginalEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_AssignQueuedEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignQueuedEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_AssignQueuedEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignQueuedEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_AssignWorkingEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignWorkingEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_AssignWorkingEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignWorkingEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CompleteEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CompleteEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetQueuedEstimates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueuedEstimates" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetQueuedEstimates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueuedEstimatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAssignedEstimates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignedEstimates" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAssignedEstimates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignedEstimatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateHeader_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateHeader" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateHeader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimatesRevisions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimatesRevisions" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimatesRevisions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimatesRevisionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UndoThisRevision_InputMessage">
+    <wsdl:part name="parameters" element="tns:UndoThisRevision" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UndoThisRevision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UndoThisRevisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UndoThisRevisionValidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UndoThisRevisionValidate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UndoThisRevisionValidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UndoThisRevisionValidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UndoCurrentMilestone_InputMessage">
+    <wsdl:part name="parameters" element="tns:UndoCurrentMilestone" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UndoCurrentMilestone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UndoCurrentMilestoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UndoSetAsContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:UndoSetAsContract" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UndoSetAsContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UndoSetAsContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DeleteProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProduct" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_DeleteProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_InsertComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertComment" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_InsertComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateComment" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateStatus" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateDifficultyRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateDifficultyRating" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateDifficultyRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateDifficultyRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateQueueDifficultyRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQueueDifficultyRating" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateQueueDifficultyRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQueueDifficultyRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_MarginReport_SaveDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarginReport_SaveDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_MarginReport_SaveDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarginReport_SaveDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_MarginReport_GetDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarginReport_GetDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_MarginReport_GetDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarginReport_GetDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateDueDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateDueDate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateDueDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateDueDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateAppointmentTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateAppointmentTime" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateAppointmentTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateAppointmentTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateQueueDueDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQueueDueDate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateQueueDueDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQueueDueDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateEffectiveDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateEffectiveDate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateEstimateEffectiveDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstimateEffectiveDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetUsersByRegionAndRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByRegionAndRole" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetUsersByRegionAndRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByRegionAndRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetUsersByRegionAndRevisionType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByRegionAndRevisionType" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetUsersByRegionAndRevisionType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByRegionAndRevisionTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetCurrentUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentUser" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetCurrentUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetUserRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRoles" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetUserRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateStatuses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateStatuses" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateStatuses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateStatusesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetStatusReasons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusReasons" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetStatusReasons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusReasonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetDifficultyRatings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDifficultyRatings" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetDifficultyRatings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDifficultyRatingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetRevisionTypeAccess_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRevisionTypeAccess" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetRevisionTypeAccess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRevisionTypeAccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetHomePrices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomePrices" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetHomePrices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomePricesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAuditTrail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuditTrail" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAuditTrail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuditTrailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CompareEstimateDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompareEstimateDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CompareEstimateDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompareEstimateDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CompareEstimateHeader_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompareEstimateHeader" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CompareEstimateHeader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompareEstimateHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetLatestEstimateRevisionId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestEstimateRevisionId" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetLatestEstimateRevisionId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestEstimateRevisionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetResubmittedEstimateCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResubmittedEstimateCount" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetResubmittedEstimateCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResubmittedEstimateCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetOptionTreeFromMasterHome_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionTreeFromMasterHome" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetOptionTreeFromMasterHome_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionTreeFromMasterHomeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CheckValidProductByRevision_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckValidProductByRevision" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CheckValidProductByRevision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckValidProductByRevisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetOptionTreeAsOptionTreeProductsForEstimateItemReplace_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionTreeAsOptionTreeProductsForEstimateItemReplace" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetOptionTreeAsOptionTreeProductsForEstimateItemReplace_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionTreeAsOptionTreeProductsForEstimateItemReplaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetOptionTreeAsOptionTreeProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionTreeAsOptionTreeProducts" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetOptionTreeAsOptionTreeProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionTreeAsOptionTreeProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetOptionTreeFromAllProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionTreeFromAllProducts" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetOptionTreeFromAllProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionTreeFromAllProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetOptionTreeFromAllProductsExtended_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionTreeFromAllProductsExtended" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetOptionTreeFromAllProductsExtended_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOptionTreeFromAllProductsExtendedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetSelectedPAG_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectedPAG" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetSelectedPAG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectedPAGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetCommentsForAnEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsForAnEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetCommentsForAnEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommentsForAnEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAccessPermission_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccessPermission" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAccessPermission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccessPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateCount" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetEstimateCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstimateCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SaveSelectedItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSelectedItem" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SaveSelectedItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSelectedItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SaveEditItemDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEditItemDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SaveEditItemDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEditItemDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_RemoveItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveItem" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_RemoveItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CopyItemFromOptionTreeToEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyItemFromOptionTreeToEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CopyItemFromOptionTreeToEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyItemFromOptionTreeToEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CopyItemFromMasterHomeToEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyItemFromMasterHomeToEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CopyItemFromMasterHomeToEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyItemFromMasterHomeToEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CopyItemFromAllProductsToEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyItemFromAllProductsToEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CopyItemFromAllProductsToEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyItemFromAllProductsToEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SynchronizeNewOptionToEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeNewOptionToEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SynchronizeNewOptionToEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeNewOptionToEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAdditionalNotesTemplateAndProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdditionalNotesTemplateAndProducts" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAdditionalNotesTemplateAndProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdditionalNotesTemplateAndProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAdditionalNotesTemplateAndProductsByRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdditionalNotesTemplateAndProductsByRegion" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAdditionalNotesTemplateAndProductsByRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdditionalNotesTemplateAndProductsByRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateNoteTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNoteTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateNoteTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNoteTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CheckNewNoteTemplateNameExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckNewNoteTemplateNameExists" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CheckNewNoteTemplateNameExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckNewNoteTemplateNameExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_AddAdditonalNotesTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAdditonalNotesTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_AddAdditonalNotesTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAdditonalNotesTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetSQSConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSQSConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetSQSConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSQSConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetSalesRegionByState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesRegionByState" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetSalesRegionByState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesRegionByStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetPriceRegionByState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceRegionByState" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetPriceRegionByState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceRegionByStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateSalesEstimateLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSalesEstimateLog" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateSalesEstimateLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSalesEstimateLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SetContractStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetContractStatus" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SetContractStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetContractStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_RemoveItemFromNotesTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveItemFromNotesTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_RemoveItemFromNotesTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveItemFromNotesTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAvailableItemsForNotesTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableItemsForNotesTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetAvailableItemsForNotesTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableItemsForNotesTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_AddItemToNotesTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemToNotesTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_AddItemToNotesTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemToNotesTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_AddNewNotesTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewNotesTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_AddNewNotesTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewNotesTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_RemoveNotesTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveNotesTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_RemoveNotesTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveNotesTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CopyNotesTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyNotesTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CopyNotesTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyNotesTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateTaskForContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTaskForContract" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CreateTaskForContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTaskForContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateNotesTemplateItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNotesTemplateItem" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateNotesTemplateItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNotesTemplateItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SynchroniseCustomerDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchroniseCustomerDetails" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_SynchroniseCustomerDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchroniseCustomerDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetNonstandardCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonstandardCategory" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetNonstandardCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonstandardCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetNonstandardCategoryByState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonstandardCategoryByState" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetNonstandardCategoryByState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonstandardCategoryByStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetNonstandardGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonstandardGroups" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetNonstandardGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNonstandardGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetPriceDisplayCodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceDisplayCodes" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetPriceDisplayCodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPriceDisplayCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetProductImages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductImages" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_GetProductImages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CheckEstimateLockStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckEstimateLockStatus" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_CheckEstimateLockStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckEstimateLockStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UnlockEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UnlockEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnlockEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ValidateStudioMEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateStudioMEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_ValidateStudioMEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateStudioMEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateItemAcceptance_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateItemAcceptance" />
+  </wsdl:message>
+  <wsdl:message name="IRetailSystem_UpdateItemAcceptance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateItemAcceptanceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRetailSystem">
+    <wsdl:operation name="GetContractDraftActionAvailability">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetContractDraftActionAvailability" message="tns:IRetailSystem_GetContractDraftActionAvailability_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetContractDraftActionAvailabilityResponse" message="tns:IRetailSystem_GetContractDraftActionAvailability_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinalContractActionAvailability">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetFinalContractActionAvailability" message="tns:IRetailSystem_GetFinalContractActionAvailability_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetFinalContractActionAvailabilityResponse" message="tns:IRetailSystem_GetFinalContractActionAvailability_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerSupportActionAvailability">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetCustomerSupportActionAvailability" message="tns:IRetailSystem_GetCustomerSupportActionAvailability_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetCustomerSupportActionAvailabilityResponse" message="tns:IRetailSystem_GetCustomerSupportActionAvailability_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesEstimatorActionAvailability">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetSalesEstimatorActionAvailability" message="tns:IRetailSystem_GetSalesEstimatorActionAvailability_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetSalesEstimatorActionAvailabilityResponse" message="tns:IRetailSystem_GetSalesEstimatorActionAvailability_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractDraftCreationVisibility">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetContractDraftCreationVisibility" message="tns:IRetailSystem_GetContractDraftCreationVisibility_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetContractDraftCreationVisibilityResponse" message="tns:IRetailSystem_GetContractDraftCreationVisibility_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinalContractCreationVisibility">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetFinalContractCreationVisibility" message="tns:IRetailSystem_GetFinalContractCreationVisibility_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetFinalContractCreationVisibilityResponse" message="tns:IRetailSystem_GetFinalContractCreationVisibility_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateRevisionStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateRevisionStatus" message="tns:IRetailSystem_GetEstimateRevisionStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateRevisionStatusResponse" message="tns:IRetailSystem_GetEstimateRevisionStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSplitStudioMRevisions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CreateSplitStudioMRevisions" message="tns:IRetailSystem_CreateSplitStudioMRevisions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CreateSplitStudioMRevisionsResponse" message="tns:IRetailSystem_CreateSplitStudioMRevisions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MergeStudioMRevisions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/MergeStudioMRevisions" message="tns:IRetailSystem_MergeStudioMRevisions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/MergeStudioMRevisionsResponse" message="tns:IRetailSystem_MergeStudioMRevisions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateContractDraft">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CreateContractDraft" message="tns:IRetailSystem_CreateContractDraft_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CreateContractDraftResponse" message="tns:IRetailSystem_CreateContractDraft_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFinalContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CreateFinalContract" message="tns:IRetailSystem_CreateFinalContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CreateFinalContractResponse" message="tns:IRetailSystem_CreateFinalContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCscVariation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CreateCscVariation" message="tns:IRetailSystem_CreateCscVariation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CreateCscVariationResponse" message="tns:IRetailSystem_CreateCscVariation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateStudioMRevision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CreateStudioMRevision" message="tns:IRetailSystem_CreateStudioMRevision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CreateStudioMRevisionResponse" message="tns:IRetailSystem_CreateStudioMRevision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateSetEstimateStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/ValidateSetEstimateStatus" message="tns:IRetailSystem_ValidateSetEstimateStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/ValidateSetEstimateStatusResponse" message="tns:IRetailSystem_ValidateSetEstimateStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDocumentType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetCustomerDocumentType" message="tns:IRetailSystem_GetCustomerDocumentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetCustomerDocumentTypeResponse" message="tns:IRetailSystem_GetCustomerDocumentType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerDocumentDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateCustomerDocumentDetails" message="tns:IRetailSystem_UpdateCustomerDocumentDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateCustomerDocumentDetailsResponse" message="tns:IRetailSystem_UpdateCustomerDocumentDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDocumentDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetCustomerDocumentDetails" message="tns:IRetailSystem_GetCustomerDocumentDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetCustomerDocumentDetailsResponse" message="tns:IRetailSystem_GetCustomerDocumentDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRelevantPAGFromOnePAG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetRelevantPAGFromOnePAG" message="tns:IRetailSystem_GetRelevantPAGFromOnePAG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetRelevantPAGFromOnePAGResponse" message="tns:IRetailSystem_GetRelevantPAGFromOnePAG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateVariation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CreateVariation" message="tns:IRetailSystem_CreateVariation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CreateVariationResponse" message="tns:IRetailSystem_CreateVariation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RejectVariation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/RejectVariation" message="tns:IRetailSystem_RejectVariation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/RejectVariationResponse" message="tns:IRetailSystem_RejectVariation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSelectedItemsFromOptionTreeToEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/SaveSelectedItemsFromOptionTreeToEstimate" message="tns:IRetailSystem_SaveSelectedItemsFromOptionTreeToEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/SaveSelectedItemsFromOptionTreeToEstimateResponse" message="tns:IRetailSystem_SaveSelectedItemsFromOptionTreeToEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceSaveSelectedItemsFromOptionTreeToEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/ReplaceSaveSelectedItemsFromOptionTreeToEstimate" message="tns:IRetailSystem_ReplaceSaveSelectedItemsFromOptionTreeToEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/ReplaceSaveSelectedItemsFromOptionTreeToEstimateResponse" message="tns:IRetailSystem_ReplaceSaveSelectedItemsFromOptionTreeToEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckRevisionTypeAllowToAddNSR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CheckRevisionTypeAllowToAddNSR" message="tns:IRetailSystem_CheckRevisionTypeAllowToAddNSR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CheckRevisionTypeAllowToAddNSRResponse" message="tns:IRetailSystem_CheckRevisionTypeAllowToAddNSR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAcceptFlagForRevision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/ValidateAcceptFlagForRevision" message="tns:IRetailSystem_ValidateAcceptFlagForRevision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/ValidateAcceptFlagForRevisionResponse" message="tns:IRetailSystem_ValidateAcceptFlagForRevision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateStudioMRevisions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/ValidateStudioMRevisions" message="tns:IRetailSystem_ValidateStudioMRevisions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/ValidateStudioMRevisionsResponse" message="tns:IRetailSystem_ValidateStudioMRevisions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAppointmentDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/ValidateAppointmentDate" message="tns:IRetailSystem_ValidateAppointmentDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/ValidateAppointmentDateResponse" message="tns:IRetailSystem_ValidateAppointmentDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextEstimateRevision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetNextEstimateRevision" message="tns:IRetailSystem_GetNextEstimateRevision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetNextEstimateRevisionResponse" message="tns:IRetailSystem_GetNextEstimateRevision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuditLogs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetAuditLogs" message="tns:IRetailSystem_GetAuditLogs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetAuditLogsResponse" message="tns:IRetailSystem_GetAuditLogs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletedItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetDeletedItems" message="tns:IRetailSystem_GetDeletedItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetDeletedItemsResponse" message="tns:IRetailSystem_GetDeletedItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReAddDeletedEstimateItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/ReAddDeletedEstimateItem" message="tns:IRetailSystem_ReAddDeletedEstimateItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/ReAddDeletedEstimateItemResponse" message="tns:IRetailSystem_ReAddDeletedEstimateItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReAddDeletedMasterPromotionEstimateItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/ReAddDeletedMasterPromotionEstimateItem" message="tns:IRetailSystem_ReAddDeletedMasterPromotionEstimateItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/ReAddDeletedMasterPromotionEstimateItemResponse" message="tns:IRetailSystem_ReAddDeletedMasterPromotionEstimateItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFacadeFromRevisonID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetAllFacadeFromRevisonID" message="tns:IRetailSystem_GetAllFacadeFromRevisonID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetAllFacadeFromRevisonIDResponse" message="tns:IRetailSystem_GetAllFacadeFromRevisonID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAvailableHomeByState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetAllAvailableHomeByState" message="tns:IRetailSystem_GetAllAvailableHomeByState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetAllAvailableHomeByStateResponse" message="tns:IRetailSystem_GetAllAvailableHomeByState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeFullNameByState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetHomeFullNameByState" message="tns:IRetailSystem_GetHomeFullNameByState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetHomeFullNameByStateResponse" message="tns:IRetailSystem_GetHomeFullNameByState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaNameWithAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetAreaNameWithAll" message="tns:IRetailSystem_GetAreaNameWithAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetAreaNameWithAllResponse" message="tns:IRetailSystem_GetAreaNameWithAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupNameWithAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetGroupNameWithAll" message="tns:IRetailSystem_GetGroupNameWithAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetGroupNameWithAllResponse" message="tns:IRetailSystem_GetGroupNameWithAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckFacadeConfigurationDifference">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CheckFacadeConfigurationDifference" message="tns:IRetailSystem_CheckFacadeConfigurationDifference_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CheckFacadeConfigurationDifferenceResponse" message="tns:IRetailSystem_CheckFacadeConfigurationDifference_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckHomeConfigurationDifference">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CheckHomeConfigurationDifference" message="tns:IRetailSystem_CheckHomeConfigurationDifference_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CheckHomeConfigurationDifferenceResponse" message="tns:IRetailSystem_CheckHomeConfigurationDifference_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeFacade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/ChangeFacade" message="tns:IRetailSystem_ChangeFacade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/ChangeFacadeResponse" message="tns:IRetailSystem_ChangeFacade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeHome">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/ChangeHome" message="tns:IRetailSystem_ChangeHome_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/ChangeHomeResponse" message="tns:IRetailSystem_ChangeHome_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetContractType" message="tns:IRetailSystem_GetContractType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetContractTypeResponse" message="tns:IRetailSystem_GetContractType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContractType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateContractType" message="tns:IRetailSystem_UpdateContractType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateContractTypeResponse" message="tns:IRetailSystem_UpdateContractType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetHomeName" message="tns:IRetailSystem_GetHomeName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetHomeNameResponse" message="tns:IRetailSystem_GetHomeName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHomeName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateHomeName" message="tns:IRetailSystem_UpdateHomeName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateHomeNameResponse" message="tns:IRetailSystem_UpdateHomeName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyEstimateCheckDifference">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CopyEstimateCheckDifference" message="tns:IRetailSystem_CopyEstimateCheckDifference_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CopyEstimateCheckDifferenceResponse" message="tns:IRetailSystem_CopyEstimateCheckDifference_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CopyEstimate" message="tns:IRetailSystem_CopyEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CopyEstimateResponse" message="tns:IRetailSystem_CopyEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaSurcharge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetAreaSurcharge" message="tns:IRetailSystem_GetAreaSurcharge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetAreaSurchargeResponse" message="tns:IRetailSystem_GetAreaSurcharge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPagByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetPagByID" message="tns:IRetailSystem_GetPagByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetPagByIDResponse" message="tns:IRetailSystem_GetPagByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpgradeOptionListForStandardInclusion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetUpgradeOptionListForStandardInclusion" message="tns:IRetailSystem_GetUpgradeOptionListForStandardInclusion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetUpgradeOptionListForStandardInclusionResponse" message="tns:IRetailSystem_GetUpgradeOptionListForStandardInclusion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudioMQandA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetStudioMQandA" message="tns:IRetailSystem_GetStudioMQandA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetStudioMQandAResponse" message="tns:IRetailSystem_GetStudioMQandA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sharepoint_GetFileList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/Sharepoint_GetFileList" message="tns:IRetailSystem_Sharepoint_GetFileList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/Sharepoint_GetFileListResponse" message="tns:IRetailSystem_Sharepoint_GetFileList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sharepoint_SharepointUploadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/Sharepoint_SharepointUploadFile" message="tns:IRetailSystem_Sharepoint_SharepointUploadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/Sharepoint_SharepointUploadFileResponse" message="tns:IRetailSystem_Sharepoint_SharepointUploadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sharepoint_DeleteFileFromSharepointLibrary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/Sharepoint_DeleteFileFromSharepointLibrary" message="tns:IRetailSystem_Sharepoint_DeleteFileFromSharepointLibrary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/Sharepoint_DeleteFileFromSharepointLibraryResponse" message="tns:IRetailSystem_Sharepoint_DeleteFileFromSharepointLibrary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sharepoint_GetSalesDocumentType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/Sharepoint_GetSalesDocumentType" message="tns:IRetailSystem_Sharepoint_GetSalesDocumentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/Sharepoint_GetSalesDocumentTypeResponse" message="tns:IRetailSystem_Sharepoint_GetSalesDocumentType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendNotificationEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/SendNotificationEmail" message="tns:IRetailSystem_SendNotificationEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/SendNotificationEmailResponse" message="tns:IRetailSystem_SendNotificationEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCrmEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/SendCrmEmail" message="tns:IRetailSystem_SendCrmEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/SendCrmEmailResponse" message="tns:IRetailSystem_SendCrmEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudioMQuestionForAProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetStudioMQuestionForAProduct" message="tns:IRetailSystem_GetStudioMQuestionForAProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetStudioMQuestionForAProductResponse" message="tns:IRetailSystem_GetStudioMQuestionForAProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInLieuStandardPromotionItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetInLieuStandardPromotionItems" message="tns:IRetailSystem_GetInLieuStandardPromotionItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetInLieuStandardPromotionItemsResponse" message="tns:IRetailSystem_GetInLieuStandardPromotionItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleAccessModule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetRoleAccessModule" message="tns:IRetailSystem_GetRoleAccessModule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetRoleAccessModuleResponse" message="tns:IRetailSystem_GetRoleAccessModule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemRemoveReason">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetItemRemoveReason" message="tns:IRetailSystem_GetItemRemoveReason_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetItemRemoveReasonResponse" message="tns:IRetailSystem_GetItemRemoveReason_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsNeedSetDefaultAnswer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetItemsNeedSetDefaultAnswer" message="tns:IRetailSystem_GetItemsNeedSetDefaultAnswer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetItemsNeedSetDefaultAnswerResponse" message="tns:IRetailSystem_GetItemsNeedSetDefaultAnswer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDefaultAnswerForEstimateRevision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/SetDefaultAnswerForEstimateRevision" message="tns:IRetailSystem_SetDefaultAnswerForEstimateRevision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/SetDefaultAnswerForEstimateRevisionResponse" message="tns:IRetailSystem_SetDefaultAnswerForEstimateRevision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/RegisterEvent" message="tns:IRetailSystem_RegisterEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/RegisterEventResponse" message="tns:IRetailSystem_RegisterEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStudioMAppointmentTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetStudioMAppointmentTime" message="tns:IRetailSystem_GetStudioMAppointmentTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetStudioMAppointmentTimeResponse" message="tns:IRetailSystem_GetStudioMAppointmentTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateDetailsDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateDetailsDescription" message="tns:IRetailSystem_UpdateEstimateDetailsDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateDetailsDescriptionResponse" message="tns:IRetailSystem_UpdateEstimateDetailsDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveEstimateDetailItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/MoveEstimateDetailItem" message="tns:IRetailSystem_MoveEstimateDetailItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/MoveEstimateDetailItemResponse" message="tns:IRetailSystem_MoveEstimateDetailItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_GetDocumentInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/DocuSign_GetDocumentInfo" message="tns:IRetailSystem_DocuSign_GetDocumentInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/DocuSign_GetDocumentInfoResponse" message="tns:IRetailSystem_DocuSign_GetDocumentInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_PushDocumentToTheProcessQueue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/DocuSign_PushDocumentToTheProcessQueue" message="tns:IRetailSystem_DocuSign_PushDocumentToTheProcessQueue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/DocuSign_PushDocumentToTheProcessQueueResponse" message="tns:IRetailSystem_DocuSign_PushDocumentToTheProcessQueue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPromotionProductByMasterPromotionRevisionDetailsID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetPromotionProductByMasterPromotionRevisionDetailsID" message="tns:IRetailSystem_GetPromotionProductByMasterPromotionRevisionDetailsID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetPromotionProductByMasterPromotionRevisionDetailsIDResponse" message="tns:IRetailSystem_GetPromotionProductByMasterPromotionRevisionDetailsID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExistingPromotionProductByMasterPromotionRevisionDetailsID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetExistingPromotionProductByMasterPromotionRevisionDetailsID" message="tns:IRetailSystem_GetExistingPromotionProductByMasterPromotionRevisionDetailsID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetExistingPromotionProductByMasterPromotionRevisionDetailsIDResponse" message="tns:IRetailSystem_GetExistingPromotionProductByMasterPromotionRevisionDetailsID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateDetailsByIDString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateDetailsByIDString" message="tns:IRetailSystem_GetEstimateDetailsByIDString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateDetailsByIDStringResponse" message="tns:IRetailSystem_GetEstimateDetailsByIDString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMasterPromotionItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/DeleteMasterPromotionItem" message="tns:IRetailSystem_DeleteMasterPromotionItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/DeleteMasterPromotionItemResponse" message="tns:IRetailSystem_DeleteMasterPromotionItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_RemoveDocumentFromTheProcessQueue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/DocuSign_RemoveDocumentFromTheProcessQueue" message="tns:IRetailSystem_DocuSign_RemoveDocumentFromTheProcessQueue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/DocuSign_RemoveDocumentFromTheProcessQueueResponse" message="tns:IRetailSystem_DocuSign_RemoveDocumentFromTheProcessQueue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMContactForAccountAsSigner">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetCRMContactForAccountAsSigner" message="tns:IRetailSystem_GetCRMContactForAccountAsSigner_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetCRMContactForAccountAsSignerResponse" message="tns:IRetailSystem_GetCRMContactForAccountAsSigner_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_GetEnvelopeHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/DocuSign_GetEnvelopeHistory" message="tns:IRetailSystem_DocuSign_GetEnvelopeHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/DocuSign_GetEnvelopeHistoryResponse" message="tns:IRetailSystem_DocuSign_GetEnvelopeHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_GetEnvelopeHistoryByRevision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/DocuSign_GetEnvelopeHistoryByRevision" message="tns:IRetailSystem_DocuSign_GetEnvelopeHistoryByRevision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/DocuSign_GetEnvelopeHistoryByRevisionResponse" message="tns:IRetailSystem_DocuSign_GetEnvelopeHistoryByRevision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_ValidateSignerAndDocuemnt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/DocuSign_ValidateSignerAndDocuemnt" message="tns:IRetailSystem_DocuSign_ValidateSignerAndDocuemnt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/DocuSign_ValidateSignerAndDocuemntResponse" message="tns:IRetailSystem_DocuSign_ValidateSignerAndDocuemnt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSpecificJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/SearchSpecificJob" message="tns:IRetailSystem_SearchSpecificJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/SearchSpecificJobResponse" message="tns:IRetailSystem_SearchSpecificJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetEditEstimateUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/ResetEditEstimateUserID" message="tns:IRetailSystem_ResetEditEstimateUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/ResetEditEstimateUserIDResponse" message="tns:IRetailSystem_ResetEditEstimateUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyRounding">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/ApplyRounding" message="tns:IRetailSystem_ApplyRounding_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/ApplyRoundingResponse" message="tns:IRetailSystem_ApplyRounding_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateDisclaimerUpdateDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateDisclaimerUpdateDetails" message="tns:IRetailSystem_GetEstimateDisclaimerUpdateDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateDisclaimerUpdateDetailsResponse" message="tns:IRetailSystem_GetEstimateDisclaimerUpdateDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDisclaimerUpdateDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/SaveDisclaimerUpdateDetails" message="tns:IRetailSystem_SaveDisclaimerUpdateDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/SaveDisclaimerUpdateDetailsResponse" message="tns:IRetailSystem_SaveDisclaimerUpdateDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessUnits">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetBusinessUnits" message="tns:IRetailSystem_GetBusinessUnits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetBusinessUnitsResponse" message="tns:IRetailSystem_GetBusinessUnits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBCForecastDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetBCForecastDate" message="tns:IRetailSystem_GetBCForecastDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetBCForecastDateResponse" message="tns:IRetailSystem_GetBCForecastDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AcceptOriginalEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/AcceptOriginalEstimate" message="tns:IRetailSystem_AcceptOriginalEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/AcceptOriginalEstimateResponse" message="tns:IRetailSystem_AcceptOriginalEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignQueuedEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/AssignQueuedEstimate" message="tns:IRetailSystem_AssignQueuedEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/AssignQueuedEstimateResponse" message="tns:IRetailSystem_AssignQueuedEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignWorkingEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/AssignWorkingEstimate" message="tns:IRetailSystem_AssignWorkingEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/AssignWorkingEstimateResponse" message="tns:IRetailSystem_AssignWorkingEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CompleteEstimate" message="tns:IRetailSystem_CompleteEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CompleteEstimateResponse" message="tns:IRetailSystem_CompleteEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQueuedEstimates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetQueuedEstimates" message="tns:IRetailSystem_GetQueuedEstimates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetQueuedEstimatesResponse" message="tns:IRetailSystem_GetQueuedEstimates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedEstimates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetAssignedEstimates" message="tns:IRetailSystem_GetAssignedEstimates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetAssignedEstimatesResponse" message="tns:IRetailSystem_GetAssignedEstimates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateHeader">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateHeader" message="tns:IRetailSystem_GetEstimateHeader_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateHeaderResponse" message="tns:IRetailSystem_GetEstimateHeader_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateDetails" message="tns:IRetailSystem_GetEstimateDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateDetailsResponse" message="tns:IRetailSystem_GetEstimateDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimatesRevisions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimatesRevisions" message="tns:IRetailSystem_GetEstimatesRevisions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimatesRevisionsResponse" message="tns:IRetailSystem_GetEstimatesRevisions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UndoThisRevision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UndoThisRevision" message="tns:IRetailSystem_UndoThisRevision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UndoThisRevisionResponse" message="tns:IRetailSystem_UndoThisRevision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UndoThisRevisionValidate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UndoThisRevisionValidate" message="tns:IRetailSystem_UndoThisRevisionValidate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UndoThisRevisionValidateResponse" message="tns:IRetailSystem_UndoThisRevisionValidate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UndoCurrentMilestone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UndoCurrentMilestone" message="tns:IRetailSystem_UndoCurrentMilestone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UndoCurrentMilestoneResponse" message="tns:IRetailSystem_UndoCurrentMilestone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UndoSetAsContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UndoSetAsContract" message="tns:IRetailSystem_UndoSetAsContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UndoSetAsContractResponse" message="tns:IRetailSystem_UndoSetAsContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateDetails" message="tns:IRetailSystem_UpdateEstimateDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateDetailsResponse" message="tns:IRetailSystem_UpdateEstimateDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/DeleteProduct" message="tns:IRetailSystem_DeleteProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/DeleteProductResponse" message="tns:IRetailSystem_DeleteProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/InsertComment" message="tns:IRetailSystem_InsertComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/InsertCommentResponse" message="tns:IRetailSystem_InsertComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateComment" message="tns:IRetailSystem_UpdateComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateCommentResponse" message="tns:IRetailSystem_UpdateComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateStatus" message="tns:IRetailSystem_UpdateEstimateStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateStatusResponse" message="tns:IRetailSystem_UpdateEstimateStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateDifficultyRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateDifficultyRating" message="tns:IRetailSystem_UpdateEstimateDifficultyRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateDifficultyRatingResponse" message="tns:IRetailSystem_UpdateEstimateDifficultyRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQueueDifficultyRating">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateQueueDifficultyRating" message="tns:IRetailSystem_UpdateQueueDifficultyRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateQueueDifficultyRatingResponse" message="tns:IRetailSystem_UpdateQueueDifficultyRating_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarginReport_SaveDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/MarginReport_SaveDetails" message="tns:IRetailSystem_MarginReport_SaveDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/MarginReport_SaveDetailsResponse" message="tns:IRetailSystem_MarginReport_SaveDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarginReport_GetDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/MarginReport_GetDetails" message="tns:IRetailSystem_MarginReport_GetDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/MarginReport_GetDetailsResponse" message="tns:IRetailSystem_MarginReport_GetDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateDueDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateDueDate" message="tns:IRetailSystem_UpdateEstimateDueDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateDueDateResponse" message="tns:IRetailSystem_UpdateEstimateDueDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateAppointmentTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateAppointmentTime" message="tns:IRetailSystem_UpdateEstimateAppointmentTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateAppointmentTimeResponse" message="tns:IRetailSystem_UpdateEstimateAppointmentTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQueueDueDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateQueueDueDate" message="tns:IRetailSystem_UpdateQueueDueDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateQueueDueDateResponse" message="tns:IRetailSystem_UpdateQueueDueDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateEffectiveDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateEffectiveDate" message="tns:IRetailSystem_UpdateEstimateEffectiveDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateEstimateEffectiveDateResponse" message="tns:IRetailSystem_UpdateEstimateEffectiveDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByRegionAndRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetUsersByRegionAndRole" message="tns:IRetailSystem_GetUsersByRegionAndRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetUsersByRegionAndRoleResponse" message="tns:IRetailSystem_GetUsersByRegionAndRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByRegionAndRevisionType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetUsersByRegionAndRevisionType" message="tns:IRetailSystem_GetUsersByRegionAndRevisionType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetUsersByRegionAndRevisionTypeResponse" message="tns:IRetailSystem_GetUsersByRegionAndRevisionType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetCurrentUser" message="tns:IRetailSystem_GetCurrentUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetCurrentUserResponse" message="tns:IRetailSystem_GetCurrentUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetUserRoles" message="tns:IRetailSystem_GetUserRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetUserRolesResponse" message="tns:IRetailSystem_GetUserRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateStatuses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateStatuses" message="tns:IRetailSystem_GetEstimateStatuses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateStatusesResponse" message="tns:IRetailSystem_GetEstimateStatuses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusReasons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetStatusReasons" message="tns:IRetailSystem_GetStatusReasons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetStatusReasonsResponse" message="tns:IRetailSystem_GetStatusReasons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDifficultyRatings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetDifficultyRatings" message="tns:IRetailSystem_GetDifficultyRatings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetDifficultyRatingsResponse" message="tns:IRetailSystem_GetDifficultyRatings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRevisionTypeAccess">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetRevisionTypeAccess" message="tns:IRetailSystem_GetRevisionTypeAccess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetRevisionTypeAccessResponse" message="tns:IRetailSystem_GetRevisionTypeAccess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHomePrices">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetHomePrices" message="tns:IRetailSystem_GetHomePrices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetHomePricesResponse" message="tns:IRetailSystem_GetHomePrices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuditTrail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetAuditTrail" message="tns:IRetailSystem_GetAuditTrail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetAuditTrailResponse" message="tns:IRetailSystem_GetAuditTrail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompareEstimateDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CompareEstimateDetails" message="tns:IRetailSystem_CompareEstimateDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CompareEstimateDetailsResponse" message="tns:IRetailSystem_CompareEstimateDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompareEstimateHeader">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CompareEstimateHeader" message="tns:IRetailSystem_CompareEstimateHeader_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CompareEstimateHeaderResponse" message="tns:IRetailSystem_CompareEstimateHeader_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEstimateRevisionId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetLatestEstimateRevisionId" message="tns:IRetailSystem_GetLatestEstimateRevisionId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetLatestEstimateRevisionIdResponse" message="tns:IRetailSystem_GetLatestEstimateRevisionId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResubmittedEstimateCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetResubmittedEstimateCount" message="tns:IRetailSystem_GetResubmittedEstimateCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetResubmittedEstimateCountResponse" message="tns:IRetailSystem_GetResubmittedEstimateCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionTreeFromMasterHome">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetOptionTreeFromMasterHome" message="tns:IRetailSystem_GetOptionTreeFromMasterHome_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetOptionTreeFromMasterHomeResponse" message="tns:IRetailSystem_GetOptionTreeFromMasterHome_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckValidProductByRevision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CheckValidProductByRevision" message="tns:IRetailSystem_CheckValidProductByRevision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CheckValidProductByRevisionResponse" message="tns:IRetailSystem_CheckValidProductByRevision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionTreeAsOptionTreeProductsForEstimateItemReplace">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetOptionTreeAsOptionTreeProductsForEstimateItemReplace" message="tns:IRetailSystem_GetOptionTreeAsOptionTreeProductsForEstimateItemReplace_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetOptionTreeAsOptionTreeProductsForEstimateItemReplaceResponse" message="tns:IRetailSystem_GetOptionTreeAsOptionTreeProductsForEstimateItemReplace_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionTreeAsOptionTreeProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetOptionTreeAsOptionTreeProducts" message="tns:IRetailSystem_GetOptionTreeAsOptionTreeProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetOptionTreeAsOptionTreeProductsResponse" message="tns:IRetailSystem_GetOptionTreeAsOptionTreeProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionTreeFromAllProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetOptionTreeFromAllProducts" message="tns:IRetailSystem_GetOptionTreeFromAllProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetOptionTreeFromAllProductsResponse" message="tns:IRetailSystem_GetOptionTreeFromAllProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionTreeFromAllProductsExtended">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetOptionTreeFromAllProductsExtended" message="tns:IRetailSystem_GetOptionTreeFromAllProductsExtended_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetOptionTreeFromAllProductsExtendedResponse" message="tns:IRetailSystem_GetOptionTreeFromAllProductsExtended_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedPAG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetSelectedPAG" message="tns:IRetailSystem_GetSelectedPAG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetSelectedPAGResponse" message="tns:IRetailSystem_GetSelectedPAG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentsForAnEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetCommentsForAnEstimate" message="tns:IRetailSystem_GetCommentsForAnEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetCommentsForAnEstimateResponse" message="tns:IRetailSystem_GetCommentsForAnEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessPermission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetAccessPermission" message="tns:IRetailSystem_GetAccessPermission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetAccessPermissionResponse" message="tns:IRetailSystem_GetAccessPermission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateCount" message="tns:IRetailSystem_GetEstimateCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetEstimateCountResponse" message="tns:IRetailSystem_GetEstimateCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSelectedItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/SaveSelectedItem" message="tns:IRetailSystem_SaveSelectedItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/SaveSelectedItemResponse" message="tns:IRetailSystem_SaveSelectedItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEditItemDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/SaveEditItemDetails" message="tns:IRetailSystem_SaveEditItemDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/SaveEditItemDetailsResponse" message="tns:IRetailSystem_SaveEditItemDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/RemoveItem" message="tns:IRetailSystem_RemoveItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/RemoveItemResponse" message="tns:IRetailSystem_RemoveItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyItemFromOptionTreeToEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CopyItemFromOptionTreeToEstimate" message="tns:IRetailSystem_CopyItemFromOptionTreeToEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CopyItemFromOptionTreeToEstimateResponse" message="tns:IRetailSystem_CopyItemFromOptionTreeToEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyItemFromMasterHomeToEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CopyItemFromMasterHomeToEstimate" message="tns:IRetailSystem_CopyItemFromMasterHomeToEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CopyItemFromMasterHomeToEstimateResponse" message="tns:IRetailSystem_CopyItemFromMasterHomeToEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyItemFromAllProductsToEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CopyItemFromAllProductsToEstimate" message="tns:IRetailSystem_CopyItemFromAllProductsToEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CopyItemFromAllProductsToEstimateResponse" message="tns:IRetailSystem_CopyItemFromAllProductsToEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeNewOptionToEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/SynchronizeNewOptionToEstimate" message="tns:IRetailSystem_SynchronizeNewOptionToEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/SynchronizeNewOptionToEstimateResponse" message="tns:IRetailSystem_SynchronizeNewOptionToEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdditionalNotesTemplateAndProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetAdditionalNotesTemplateAndProducts" message="tns:IRetailSystem_GetAdditionalNotesTemplateAndProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetAdditionalNotesTemplateAndProductsResponse" message="tns:IRetailSystem_GetAdditionalNotesTemplateAndProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdditionalNotesTemplateAndProductsByRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetAdditionalNotesTemplateAndProductsByRegion" message="tns:IRetailSystem_GetAdditionalNotesTemplateAndProductsByRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetAdditionalNotesTemplateAndProductsByRegionResponse" message="tns:IRetailSystem_GetAdditionalNotesTemplateAndProductsByRegion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNoteTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateNoteTemplate" message="tns:IRetailSystem_UpdateNoteTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateNoteTemplateResponse" message="tns:IRetailSystem_UpdateNoteTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckNewNoteTemplateNameExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CheckNewNoteTemplateNameExists" message="tns:IRetailSystem_CheckNewNoteTemplateNameExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CheckNewNoteTemplateNameExistsResponse" message="tns:IRetailSystem_CheckNewNoteTemplateNameExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAdditonalNotesTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/AddAdditonalNotesTemplate" message="tns:IRetailSystem_AddAdditonalNotesTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/AddAdditonalNotesTemplateResponse" message="tns:IRetailSystem_AddAdditonalNotesTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSQSConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetSQSConfiguration" message="tns:IRetailSystem_GetSQSConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetSQSConfigurationResponse" message="tns:IRetailSystem_GetSQSConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesRegionByState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetSalesRegionByState" message="tns:IRetailSystem_GetSalesRegionByState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetSalesRegionByStateResponse" message="tns:IRetailSystem_GetSalesRegionByState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceRegionByState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetPriceRegionByState" message="tns:IRetailSystem_GetPriceRegionByState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetPriceRegionByStateResponse" message="tns:IRetailSystem_GetPriceRegionByState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSalesEstimateLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CreateSalesEstimateLog" message="tns:IRetailSystem_CreateSalesEstimateLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CreateSalesEstimateLogResponse" message="tns:IRetailSystem_CreateSalesEstimateLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetContractStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/SetContractStatus" message="tns:IRetailSystem_SetContractStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/SetContractStatusResponse" message="tns:IRetailSystem_SetContractStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveItemFromNotesTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/RemoveItemFromNotesTemplate" message="tns:IRetailSystem_RemoveItemFromNotesTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/RemoveItemFromNotesTemplateResponse" message="tns:IRetailSystem_RemoveItemFromNotesTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableItemsForNotesTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetAvailableItemsForNotesTemplate" message="tns:IRetailSystem_GetAvailableItemsForNotesTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetAvailableItemsForNotesTemplateResponse" message="tns:IRetailSystem_GetAvailableItemsForNotesTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItemToNotesTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/AddItemToNotesTemplate" message="tns:IRetailSystem_AddItemToNotesTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/AddItemToNotesTemplateResponse" message="tns:IRetailSystem_AddItemToNotesTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewNotesTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/AddNewNotesTemplate" message="tns:IRetailSystem_AddNewNotesTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/AddNewNotesTemplateResponse" message="tns:IRetailSystem_AddNewNotesTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveNotesTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/RemoveNotesTemplate" message="tns:IRetailSystem_RemoveNotesTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/RemoveNotesTemplateResponse" message="tns:IRetailSystem_RemoveNotesTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyNotesTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CopyNotesTemplate" message="tns:IRetailSystem_CopyNotesTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CopyNotesTemplateResponse" message="tns:IRetailSystem_CopyNotesTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTaskForContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CreateTaskForContract" message="tns:IRetailSystem_CreateTaskForContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CreateTaskForContractResponse" message="tns:IRetailSystem_CreateTaskForContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNotesTemplateItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateNotesTemplateItem" message="tns:IRetailSystem_UpdateNotesTemplateItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateNotesTemplateItemResponse" message="tns:IRetailSystem_UpdateNotesTemplateItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchroniseCustomerDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/SynchroniseCustomerDetails" message="tns:IRetailSystem_SynchroniseCustomerDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/SynchroniseCustomerDetailsResponse" message="tns:IRetailSystem_SynchroniseCustomerDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNonstandardCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetNonstandardCategory" message="tns:IRetailSystem_GetNonstandardCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetNonstandardCategoryResponse" message="tns:IRetailSystem_GetNonstandardCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNonstandardCategoryByState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetNonstandardCategoryByState" message="tns:IRetailSystem_GetNonstandardCategoryByState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetNonstandardCategoryByStateResponse" message="tns:IRetailSystem_GetNonstandardCategoryByState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNonstandardGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetNonstandardGroups" message="tns:IRetailSystem_GetNonstandardGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetNonstandardGroupsResponse" message="tns:IRetailSystem_GetNonstandardGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceDisplayCodes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetPriceDisplayCodes" message="tns:IRetailSystem_GetPriceDisplayCodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetPriceDisplayCodesResponse" message="tns:IRetailSystem_GetPriceDisplayCodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductImages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/GetProductImages" message="tns:IRetailSystem_GetProductImages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/GetProductImagesResponse" message="tns:IRetailSystem_GetProductImages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckEstimateLockStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/CheckEstimateLockStatus" message="tns:IRetailSystem_CheckEstimateLockStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/CheckEstimateLockStatusResponse" message="tns:IRetailSystem_CheckEstimateLockStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UnlockEstimate" message="tns:IRetailSystem_UnlockEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UnlockEstimateResponse" message="tns:IRetailSystem_UnlockEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateStudioMEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/ValidateStudioMEstimate" message="tns:IRetailSystem_ValidateStudioMEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/ValidateStudioMEstimateResponse" message="tns:IRetailSystem_ValidateStudioMEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItemAcceptance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRetailSystem/UpdateItemAcceptance" message="tns:IRetailSystem_UpdateItemAcceptance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRetailSystem/UpdateItemAcceptanceResponse" message="tns:IRetailSystem_UpdateItemAcceptance_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="dxWsBinding" type="tns:IRetailSystem">
+    <wsp:PolicyReference URI="#dxWsBinding_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetContractDraftActionAvailability">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetContractDraftActionAvailability" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinalContractActionAvailability">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetFinalContractActionAvailability" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerSupportActionAvailability">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetCustomerSupportActionAvailability" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesEstimatorActionAvailability">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetSalesEstimatorActionAvailability" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractDraftCreationVisibility">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetContractDraftCreationVisibility" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinalContractCreationVisibility">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetFinalContractCreationVisibility" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateRevisionStatus">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetEstimateRevisionStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSplitStudioMRevisions">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CreateSplitStudioMRevisions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MergeStudioMRevisions">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/MergeStudioMRevisions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateContractDraft">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CreateContractDraft" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFinalContract">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CreateFinalContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCscVariation">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CreateCscVariation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateStudioMRevision">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CreateStudioMRevision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateSetEstimateStatus">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/ValidateSetEstimateStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDocumentType">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetCustomerDocumentType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerDocumentDetails">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateCustomerDocumentDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDocumentDetails">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetCustomerDocumentDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRelevantPAGFromOnePAG">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetRelevantPAGFromOnePAG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateVariation">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CreateVariation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RejectVariation">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/RejectVariation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSelectedItemsFromOptionTreeToEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/SaveSelectedItemsFromOptionTreeToEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceSaveSelectedItemsFromOptionTreeToEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/ReplaceSaveSelectedItemsFromOptionTreeToEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckRevisionTypeAllowToAddNSR">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CheckRevisionTypeAllowToAddNSR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAcceptFlagForRevision">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/ValidateAcceptFlagForRevision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateStudioMRevisions">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/ValidateStudioMRevisions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAppointmentDate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/ValidateAppointmentDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextEstimateRevision">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetNextEstimateRevision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuditLogs">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetAuditLogs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletedItems">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetDeletedItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReAddDeletedEstimateItem">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/ReAddDeletedEstimateItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReAddDeletedMasterPromotionEstimateItem">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/ReAddDeletedMasterPromotionEstimateItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFacadeFromRevisonID">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetAllFacadeFromRevisonID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAvailableHomeByState">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetAllAvailableHomeByState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeFullNameByState">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetHomeFullNameByState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaNameWithAll">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetAreaNameWithAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupNameWithAll">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetGroupNameWithAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckFacadeConfigurationDifference">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CheckFacadeConfigurationDifference" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckHomeConfigurationDifference">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CheckHomeConfigurationDifference" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeFacade">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/ChangeFacade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeHome">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/ChangeHome" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractType">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetContractType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContractType">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateContractType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeName">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetHomeName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHomeName">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateHomeName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyEstimateCheckDifference">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CopyEstimateCheckDifference" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CopyEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaSurcharge">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetAreaSurcharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPagByID">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetPagByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpgradeOptionListForStandardInclusion">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetUpgradeOptionListForStandardInclusion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudioMQandA">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetStudioMQandA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sharepoint_GetFileList">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/Sharepoint_GetFileList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sharepoint_SharepointUploadFile">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/Sharepoint_SharepointUploadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sharepoint_DeleteFileFromSharepointLibrary">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/Sharepoint_DeleteFileFromSharepointLibrary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sharepoint_GetSalesDocumentType">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/Sharepoint_GetSalesDocumentType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNotificationEmail">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/SendNotificationEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCrmEmail">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/SendCrmEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudioMQuestionForAProduct">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetStudioMQuestionForAProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInLieuStandardPromotionItems">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetInLieuStandardPromotionItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleAccessModule">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetRoleAccessModule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemRemoveReason">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetItemRemoveReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemsNeedSetDefaultAnswer">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetItemsNeedSetDefaultAnswer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDefaultAnswerForEstimateRevision">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/SetDefaultAnswerForEstimateRevision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterEvent">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/RegisterEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStudioMAppointmentTime">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetStudioMAppointmentTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateDetailsDescription">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateEstimateDetailsDescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveEstimateDetailItem">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/MoveEstimateDetailItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_GetDocumentInfo">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/DocuSign_GetDocumentInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_PushDocumentToTheProcessQueue">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/DocuSign_PushDocumentToTheProcessQueue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPromotionProductByMasterPromotionRevisionDetailsID">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetPromotionProductByMasterPromotionRevisionDetailsID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExistingPromotionProductByMasterPromotionRevisionDetailsID">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetExistingPromotionProductByMasterPromotionRevisionDetailsID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateDetailsByIDString">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetEstimateDetailsByIDString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMasterPromotionItem">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/DeleteMasterPromotionItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_RemoveDocumentFromTheProcessQueue">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/DocuSign_RemoveDocumentFromTheProcessQueue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCRMContactForAccountAsSigner">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetCRMContactForAccountAsSigner" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_GetEnvelopeHistory">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/DocuSign_GetEnvelopeHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_GetEnvelopeHistoryByRevision">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/DocuSign_GetEnvelopeHistoryByRevision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocuSign_ValidateSignerAndDocuemnt">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/DocuSign_ValidateSignerAndDocuemnt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSpecificJob">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/SearchSpecificJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetEditEstimateUserID">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/ResetEditEstimateUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyRounding">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/ApplyRounding" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateDisclaimerUpdateDetails">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetEstimateDisclaimerUpdateDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDisclaimerUpdateDetails">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/SaveDisclaimerUpdateDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessUnits">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetBusinessUnits" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBCForecastDate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetBCForecastDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcceptOriginalEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/AcceptOriginalEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignQueuedEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/AssignQueuedEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignWorkingEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/AssignWorkingEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CompleteEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueuedEstimates">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetQueuedEstimates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedEstimates">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetAssignedEstimates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateHeader">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetEstimateHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateDetails">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetEstimateDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimatesRevisions">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetEstimatesRevisions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UndoThisRevision">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UndoThisRevision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UndoThisRevisionValidate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UndoThisRevisionValidate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UndoCurrentMilestone">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UndoCurrentMilestone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UndoSetAsContract">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UndoSetAsContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateDetails">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateEstimateDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProduct">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/DeleteProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertComment">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/InsertComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComment">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateStatus">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateEstimateStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateDifficultyRating">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateEstimateDifficultyRating" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQueueDifficultyRating">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateQueueDifficultyRating" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarginReport_SaveDetails">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/MarginReport_SaveDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarginReport_GetDetails">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/MarginReport_GetDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateDueDate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateEstimateDueDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateAppointmentTime">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateEstimateAppointmentTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQueueDueDate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateQueueDueDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstimateEffectiveDate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateEstimateEffectiveDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByRegionAndRole">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetUsersByRegionAndRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByRegionAndRevisionType">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetUsersByRegionAndRevisionType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUser">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetCurrentUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRoles">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetUserRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateStatuses">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetEstimateStatuses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatusReasons">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetStatusReasons" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDifficultyRatings">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetDifficultyRatings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRevisionTypeAccess">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetRevisionTypeAccess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomePrices">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetHomePrices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuditTrail">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetAuditTrail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompareEstimateDetails">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CompareEstimateDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompareEstimateHeader">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CompareEstimateHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEstimateRevisionId">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetLatestEstimateRevisionId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResubmittedEstimateCount">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetResubmittedEstimateCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionTreeFromMasterHome">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetOptionTreeFromMasterHome" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckValidProductByRevision">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CheckValidProductByRevision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionTreeAsOptionTreeProductsForEstimateItemReplace">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetOptionTreeAsOptionTreeProductsForEstimateItemReplace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionTreeAsOptionTreeProducts">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetOptionTreeAsOptionTreeProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionTreeFromAllProducts">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetOptionTreeFromAllProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptionTreeFromAllProductsExtended">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetOptionTreeFromAllProductsExtended" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectedPAG">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetSelectedPAG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommentsForAnEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetCommentsForAnEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessPermission">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetAccessPermission" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstimateCount">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetEstimateCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSelectedItem">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/SaveSelectedItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEditItemDetails">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/SaveEditItemDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveItem">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/RemoveItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyItemFromOptionTreeToEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CopyItemFromOptionTreeToEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyItemFromMasterHomeToEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CopyItemFromMasterHomeToEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyItemFromAllProductsToEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CopyItemFromAllProductsToEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeNewOptionToEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/SynchronizeNewOptionToEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdditionalNotesTemplateAndProducts">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetAdditionalNotesTemplateAndProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdditionalNotesTemplateAndProductsByRegion">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetAdditionalNotesTemplateAndProductsByRegion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNoteTemplate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateNoteTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckNewNoteTemplateNameExists">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CheckNewNoteTemplateNameExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAdditonalNotesTemplate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/AddAdditonalNotesTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSQSConfiguration">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetSQSConfiguration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesRegionByState">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetSalesRegionByState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceRegionByState">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetPriceRegionByState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSalesEstimateLog">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CreateSalesEstimateLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetContractStatus">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/SetContractStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveItemFromNotesTemplate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/RemoveItemFromNotesTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableItemsForNotesTemplate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetAvailableItemsForNotesTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddItemToNotesTemplate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/AddItemToNotesTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewNotesTemplate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/AddNewNotesTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveNotesTemplate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/RemoveNotesTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyNotesTemplate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CopyNotesTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTaskForContract">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CreateTaskForContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNotesTemplateItem">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateNotesTemplateItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SynchroniseCustomerDetails">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/SynchroniseCustomerDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonstandardCategory">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetNonstandardCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonstandardCategoryByState">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetNonstandardCategoryByState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNonstandardGroups">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetNonstandardGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceDisplayCodes">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetPriceDisplayCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductImages">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/GetProductImages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckEstimateLockStatus">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/CheckEstimateLockStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UnlockEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateStudioMEstimate">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/ValidateStudioMEstimate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItemAcceptance">
+      <soap12:operation soapAction="http://tempuri.org/IRetailSystem/UpdateItemAcceptance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RetailSystem">
+    <wsdl:port name="dxWsBinding" binding="tns:dxWsBinding">
+      <soap12:address location="http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://vm-crmapppre09.methomes.local:3639/RetailSystemService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

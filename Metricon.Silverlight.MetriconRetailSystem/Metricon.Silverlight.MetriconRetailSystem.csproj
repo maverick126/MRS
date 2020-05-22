@@ -1,0 +1,854 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8ACD2E48-3ECA-4B3E-8C9A-EAEBD85C0601}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Metricon.Silverlight.MetriconRetailSystem</RootNamespace>
+    <AssemblyName>Metricon.Silverlight.MetriconRetailSystem</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>&#xD;
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Metricon.Silverlight.MetriconRetailSystem.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Metricon.Silverlight.MetriconRetailSystem.App</SilverlightAppEntry>
+    <TestPageFileName>Metricon.Silverlight.MetriconRetailSystemTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>&#xD;
+    </LinkedServerProject>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile/>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="system">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"/>
+    <Reference Include="System.Windows.Controls.Navigation, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml"/>
+    <Reference Include="System.Windows.Browser">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Xml.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Data">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Docking">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Controls.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Controls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.MsRichTextBoxXaml">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Documents.FormatProviders.MsRichTextBoxXaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Proofing">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Documents.Proofing.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Proofing.Dictionaries.En-US">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Documents.Proofing.Dictionaries.En-US.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.PersistenceFramework">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.PersistenceFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Office_Blue">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Themes.Office_Blue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Vista">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Themes.Vista.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip">
+      <HintPath>..\ExternalBinaries\telerik\Silverlight\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\AddNotesTemplateItems.xaml.cs">
+      <DependentUpon>AddNotesTemplateItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\AddUpgradeFromStandardInclusion.xaml.cs">
+      <DependentUpon>AddUpgradeFromStandardInclusion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\AppOptionFromTree.xaml.cs">
+      <DependentUpon>AppOptionFromTree.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\AssignOwner.xaml.cs">
+      <DependentUpon>AssignOwner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\AssignToMe.xaml.cs">
+      <DependentUpon>AssignToMe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\AuditTrail.xaml.cs">
+      <DependentUpon>AuditTrail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\ChangeContractType.xaml.cs">
+      <DependentUpon>ChangeContractType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\ChangeFacade.xaml.cs">
+      <DependentUpon>ChangeFacade.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\ChangeHomeName.xaml.cs">
+      <DependentUpon>ChangeHomeName.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\CommenceWork.xaml.cs">
+      <DependentUpon>CommenceWork.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\CompareEstimates.xaml.cs">
+      <DependentUpon>CompareEstimates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\ComparisonPrint.xaml.cs">
+      <DependentUpon>ComparisonPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\ContractDraftActions.xaml.cs">
+      <DependentUpon>ContractDraftActions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\ChangeHome.xaml.cs">
+      <DependentUpon>ChangeHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\AddProductInLieuOfStandardPromotion.xaml.cs">
+      <DependentUpon>AddProductInLieuOfStandardPromotion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\CreateStudioMSplit.xaml.cs">
+      <DependentUpon>CreateStudioMSplit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\EnterMarginAttributes.xaml.cs">
+      <DependentUpon>EnterMarginAttributes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\VariationPrintSelection.xaml.cs">
+      <DependentUpon>VariationPrintSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\InternalPrintSelection.xaml.cs">
+      <DependentUpon>InternalPrintSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\UndoCurrentMilestoneConfirmation.xaml.cs">
+      <DependentUpon>UndoCurrentMilestoneConfirmation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\UndoSetContractConfirmation.xaml.cs">
+      <DependentUpon>UndoSetContractConfirmation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\UndoThisRevisionConfirmation.xaml.cs">
+      <DependentUpon>UndoThisRevisionConfirmation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\ReplaceAppOptionFromTree.xaml.cs">
+      <DependentUpon>ReplaceAppOptionFromTree.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\ReplaceEstimateItem.xaml.cs">
+      <DependentUpon>ReplaceEstimateItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\ShowValidationMessage2.xaml.cs">
+      <DependentUpon>ShowValidationMessage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\CopyEstimate.xaml.cs">
+      <DependentUpon>CopyEstimate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\CreateContract.xaml.cs">
+      <DependentUpon>CreateContract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\CreateRevisionConfirmation.xaml.cs">
+      <DependentUpon>CreateRevisionConfirmation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\CustomerPrintSelection.xaml.cs">
+      <DependentUpon>CustomerPrintSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\CustomerSign.xaml.cs">
+      <DependentUpon>CustomerSign.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\DeletedItemList.xaml.cs">
+      <DependentUpon>DeletedItemList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\DocuSignHistory.xaml.cs">
+      <DependentUpon>DocuSignHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\EstimateHistory.xaml.cs">
+      <DependentUpon>EstimateHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\ModifyComments.xaml.cs">
+      <DependentUpon>ModifyComments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\NewNotesTemplate.xaml.cs">
+      <DependentUpon>NewNotesTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\PrintPreview.xaml.cs">
+      <DependentUpon>PrintPreview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\RemoveItemReasonWindow.xaml.cs">
+      <DependentUpon>RemoveItemReasonWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\RemoveMasterPromotionItemWindow.xaml.cs">
+      <DependentUpon>RemoveMasterPromotionItemWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\SetAppointmentDate.xaml.cs">
+      <DependentUpon>SetAppointmentDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\SetCustomerDocument.xaml.cs">
+      <DependentUpon>SetCustomerDocument.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\SetDifficultyRating.xaml.cs">
+      <DependentUpon>SetDifficultyRating.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\SetDueDate.xaml.cs">
+      <DependentUpon>SetDueDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\SetEffectiveDate.xaml.cs">
+      <DependentUpon>SetEffectiveDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\SetEstimateStatus.xaml.cs">
+      <DependentUpon>SetEstimateStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\ShowImage.xaml.cs">
+      <DependentUpon>ShowImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\ShowValidationMessage.xaml.cs">
+      <DependentUpon>ShowValidationMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChildWindows\SpellCheck.xaml.cs">
+      <DependentUpon>SpellCheck.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Command\DelegateCommand.cs"/>
+    <Compile Include="Common\DropIndicationDetails.cs"/>
+    <Compile Include="Common\GridViewDragDropBehavior.cs"/>
+    <Compile Include="Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditOption.xaml.cs">
+      <DependentUpon>EditOption.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Utilities.cs"/>
+    <Compile Include="OnlinePriceBook.xaml.cs">
+      <DependentUpon>OnlinePriceBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Estimate.xaml.cs">
+      <DependentUpon>Estimate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateList.xaml.cs">
+      <DependentUpon>EstimateList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EstimateListGridViewDetails.xaml.cs">
+      <DependentUpon>EstimateListGridViewDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionHandler.cs"/>
+    <Compile Include="FirstPage.xaml.cs">
+      <DependentUpon>FirstPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerTools.xaml.cs">
+      <DependentUpon>ManagerTools.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs"/>
+    <Compile Include="Service References\MRSService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserValidation.xaml.cs">
+      <DependentUpon>UserValidation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ValueConverter\BooleanToVisibilityConverter.cs"/>
+    <Compile Include="ValueConverter\DateTimeToStringConverter.cs"/>
+    <Compile Include="ViewModels\AdditionalNotesStyle.cs"/>
+    <Compile Include="ViewModels\AddOptionViewModel.cs"/>
+    <Compile Include="ViewModels\ChangeFacadeViewModel.cs"/>
+    <Compile Include="ViewModels\ChangeHomeViewModel.cs"/>
+    <Compile Include="ViewModels\ReplaceEstimateItemViewModel.cs"/>
+    <Compile Include="ViewModels\DocusignHistoryViewModel.cs"/>
+    <Compile Include="ViewModels\DocuSignViewModel.cs"/>
+    <Compile Include="ViewModels\GridViewCustomPropertyProvider.cs"/>
+    <Compile Include="ViewModels\NotesTemplateItemsViewModel.cs"/>
+    <Compile Include="ViewModels\EstimateListViewModel.cs"/>
+    <Compile Include="ViewModels\EstimateViewModel.cs"/>
+    <Compile Include="ViewModels\MainPageViewModel.cs"/>
+    <Compile Include="ViewModels\NotesTemplateViewModel.cs"/>
+    <Compile Include="ViewModels\PAGViewModel.cs"/>
+    <Compile Include="ViewModels\ViewModelBase.cs"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="ChildWindows\AddNotesTemplateItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\AddUpgradeFromStandardInclusion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\AppOptionFromTree.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\AssignOwner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\AssignToMe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\AuditTrail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\ChangeContractType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\ChangeFacade.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\ChangeHomeName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\CommenceWork.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\CompareEstimates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\ComparisonPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\ContractDraftActions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\ChangeHome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChildWindows\AddProductInLieuOfStandardPromotion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChildWindows\CreateStudioMSplit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChildWindows\EnterMarginAttributes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\VariationPrintSelection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChildWindows\InternalPrintSelection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChildWindows\UndoCurrentMilestoneConfirmation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChildWindows\UndoSetContractConfirmation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\UndoThisRevisionConfirmation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChildWindows\ReplaceAppOptionFromTree.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChildWindows\ReplaceEstimateItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\ShowValidationMessage2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChildWindows\CopyEstimate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChildWindows\CreateContract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\CreateRevisionConfirmation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\CustomerPrintSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\CustomerSign.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\DeletedItemList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\DocuSignHistory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ChildWindows\EstimateHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\ModifyComments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\NewNotesTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\PrintPreview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\RemoveItemReasonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\RemoveMasterPromotionItemWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\SetAppointmentDate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\SetCustomerDocument.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\SetDifficultyRating.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\SetDueDate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\SetEffectiveDate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\SetEstimateStatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\ShowImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\ShowValidationMessage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChildWindows\SpellCheck.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditOption.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OnlinePriceBook.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Estimate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EstimateList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EstimateListGridViewDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FirstPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManagerTools.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserValidation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml"/>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.AuditLog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.ContractDraftActionAvailability.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.ContractType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.CRMContact.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.CustomerDocumentDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.CustomerSupportActionAvailability.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.DeletedItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.DifficultyRating.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.DocuSignDocStatusInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.DocuSignHistory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.EstimateComments.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.EstimateDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.EstimateDetailsComparison.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.EstimateDisclaimerUpdateDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.EstimateGridItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.EstimateHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.EstimateHeaderComparison.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.EstimateStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.FinalContractActionAvailability.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.GenericClassCodeName.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.HomePrice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.ItemRemoveReason.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.MarginReportDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.NextRevision.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.NonStandardCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.NonStandardGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.OptionTreeProducts.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.PAG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.PriceDisplayCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.ProductImage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.PromotionPAG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.RevisionType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.RevisionTypePermission.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.RoleAccessModule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.SalesEstimatorActionAvailability.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.SharepointDoc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.SharepointDocumentType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.SimplePAG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.SQSArea.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.SQSConfiguration.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.SQSGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.SQSHome.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.SQSSalesRegion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.StatusReason.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.StudioMItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.UserRole.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\Metricon.Silverlight.MetriconRetailSystem.MRSService.ValidationErrorMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MRSService\RetailSystem1.wsdl"/>
+    <None Include="Service References\MRSService\RetailSystemService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MRSService\RetailSystemService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MRSService\RetailSystemService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MRSService\RetailSystemService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MRSService\configuration91.svcinfo"/>
+    <None Include="Service References\MRSService\configuration.svcinfo"/>
+    <None Include="Service References\MRSService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MRSService\RetailSystemService1.disco"/>
+    <Resource Include="Images\metriconLogo.jpg"/>
+    <Resource Include="Images\add.png"/>
+    <Resource Include="Images\close.png"/>
+    <Resource Include="Images\new.png"/>
+    <Resource Include="Images\pdficon.PNG"/>
+    <Resource Include="Images\attach.png"/>
+    <Resource Include="Images\book_edit.png"/>
+    <Resource Include="Images\search.png"/>
+    <Resource Include="Images\arrow_rotate_clockwise.png"/>
+    <Resource Include="Images\cancel.png"/>
+    <Resource Include="Images\delete.png"/>
+    <Resource Include="Images\save.png"/>
+    <Resource Include="Images\accept.png"/>
+    <Resource Include="Images\back.png"/>
+    <Resource Include="Images\reject.png"/>
+    <Resource Include="Images\cart_edit.png"/>
+    <Resource Include="Images\comments.png"/>
+    <Resource Include="Images\printer.png"/>
+    <Resource Include="Images\information.png"/>
+    <Resource Include="Images\copy.png"/>
+    <Resource Include="Images\compare.png"/>
+    <Resource Include="Images\history.png"/>
+    <Resource Include="Images\page-shading.png"/>
+    <Resource Include="Images\exclamation.png"/>
+    <Resource Include="Images\control_pause_blue.png"/>
+    <Resource Include="Images\calendar.png"/>
+    <Resource Include="Images\color_swatch1.png"/>
+    <Resource Include="Images\inclusion.png"/>
+    <Resource Include="Images\upgrade.png"/>
+    <Resource Include="Images\lock_open.png"/>
+    <Resource Include="Images\appointment256.png"/>
+    <Resource Include="Images\accept256.png"/>
+    <Resource Include="Images\cancel256.png"/>
+    <Resource Include="Images\newjob256.png"/>
+    <Resource Include="Images\onhold256.png"/>
+    <Resource Include="Images\wip256.png"/>
+    <Resource Include="Images\Rejected256.png"/>
+    <Resource Include="Images\arrow_right.png"/>
+    <Resource Include="Images\help.png"/>
+    <Resource Include="Images\green_box1.png"/>
+    <Resource Include="Images\arrow_divide.png"/>
+    <Resource Include="Images\minus.png"/>
+    <Resource Include="Images\plus.png"/>
+    <Resource Include="Images\promotion.png"/>
+    <Resource Include="Images\color_swatch_gray1.png"/>
+    <Resource Include="Images\arrow_refresh.png"/>
+    <Resource Include="Images\link.png"/>
+    <Resource Include="Images\spacer.gif"/>
+    <Resource Include="Images\folder_table.png"/>
+    <Resource Include="Images\text-smallcaps-icon.png"/>
+    <Resource Include="Images\color_swatch.png"/>
+    <Resource Include="Images\color_swatch_gray.png"/>
+    <Resource Include="Images\green_box.png"/>
+    <Resource Include="Images\arrow_undo.png"/>
+    <Resource Include="Images\home_land_package.png"/>
+    <Resource Include="Images\user_go.png"/>
+    <Resource Include="Images\user8_16x16.gif"/>
+    <Resource Include="Images\delete_new.png"/>
+    <Resource Include="Images\MET16x16.jpg"/>
+    <Resource Include="Images\email_edit.png"/>
+    <Resource Include="Images\questionmark.jpg"/>
+    <Content Include="App_Readme\Elmah.txt"/>
+    <Content Include="ServiceReferences.ClientConfig">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bin\Debug\"/>
+    <Folder Include="Bin\Release\"/>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MRSService\"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SilverlightToolkit-Core" Version="4.2010.4"/>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets"/>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties/>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

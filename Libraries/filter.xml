@@ -1,0 +1,7 @@
+<filter>
+  <entities>
+    <entity>new_contract</entity>
+    <entity>new_workitem</entity>
+    <entity>connection</entity>
+  </entities>
+</filter>

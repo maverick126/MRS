@@ -1,0 +1,65 @@
+﻿<controls:ChildWindow x:Class="Metricon.Silverlight.MetriconRetailSystem.ChildWindows.PrintPreview"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+           Width="650" Height="240" 
+           Title="Print Preview">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0">
+            <TextBlock x:Name="txtMessage" Text="How would you like to print the Estimate?" FontWeight="Bold"></TextBlock> 
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Margin="75,0">
+            <CheckBox Name="checkBoxDoNotIncludeUOMAndQuantity" IsChecked="False">Do not print UOM and Quantity</CheckBox>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2" Margin="75,0">
+            <CheckBox Name="checkBoxDoNotIncludeProductNameAndCode" IsChecked="True">Do not print product name and code (Applies to Customer and Variation Copy only)</CheckBox>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="3" Margin="75,0">
+            <CheckBox Name="checkBoxDoNotIncludeContractPriceOnVariation" IsChecked="True">Do not print amended contract price (Applies to Variation Copy only)</CheckBox>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="4" Margin="75,0">
+            <CheckBox Name="checkBoxIncludeSpecifications" IsChecked="True">Include Specifications</CheckBox>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Orientation="Horizontal" Margin="0,10,0,0">
+            <telerik:RadButton x:Name="ExternalPrintButton" Click="ExternalPrintButton_Click" Width="120" Height="23">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../images/printer.png" Height="16" Width="16"></Image>
+                    <TextBlock Margin="10 0 0 0">Customer Copy</TextBlock>
+                </StackPanel>
+            </telerik:RadButton>
+            <telerik:RadButton x:Name="InternalPrintButton"  Click="InternalPrintButton_Click" Width="120" Height="23" Margin="10,0,0,0" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../images/printer.png" Height="16" Width="16"></Image>
+                    <TextBlock Margin="10 0 0 0">Internal Copy</TextBlock>
+                </StackPanel>
+            </telerik:RadButton>
+            <telerik:RadButton x:Name="StudioMPrintButton"  Click="StudioMPrintButton_Click" Width="120" Height="23" Margin="10,0,0,0" Visibility="Collapsed" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../images/color_swatch.png" Height="16" Width="16"></Image>
+                    <TextBlock Margin="10 0 0 0">Studio M Copy</TextBlock>
+                </StackPanel>
+            </telerik:RadButton>
+            <telerik:RadButton x:Name="ChangeOnlyButton"  Click="ChangeOnlyButton_Click" Width="130" Height="23" Margin="10,0,0,0" Visibility="Collapsed">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../images/arrow_divide.png" Height="16" Width="16"></Image>
+                    <TextBlock x:Name="lblprint" Margin="10 0 0 0">Variation Copy</TextBlock>
+                </StackPanel>
+            </telerik:RadButton>
+            <telerik:RadButton x:Name="CancelButton"  Click="CancelButton_Click" Width="90" Height="23" Margin="10,0,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../images/cancel.png" Height="16" Width="16"></Image>
+                    <TextBlock Margin="10 0 0 0">Cancel</TextBlock>
+                </StackPanel>
+            </telerik:RadButton>
+        </StackPanel>
+    </Grid>
+</controls:ChildWindow>

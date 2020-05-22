@@ -1,0 +1,57 @@
+﻿<controls:ChildWindow x:Class="Metricon.Silverlight.MetriconRetailSystem.ChildWindows.AddUpgradeFromStandardInclusion"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+           xmlns:vm="clr-namespace:Metricon.Silverlight.MetriconRetailSystem.ViewModels"  
+           xmlns:lc="clr-namespace:Metricon.Silverlight.MetriconRetailSystem"       
+           xmlns:sys="clr-namespace:System;assembly=mscorlib"                
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:converter="clr-namespace:Metricon.Silverlight.MetriconRetailSystem.ValueConverter"  
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="800" Height="600" 
+           Title="Add Upgrade From Standard Inclusion">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <TextBlock Margin="10,2,0,0" HorizontalAlignment="Left" Height="25" Width="750" TextWrapping="Wrap" VerticalAlignment="Top">Please select one upgrade option for the standard inclusion</TextBlock>
+        <TextBlock x:Name="txttitle" Margin="10,22,0,0" HorizontalAlignment="Left" Height="25" Width="750" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold"></TextBlock>
+            <telerik:RadGridView x:Name="PAGGrid" 
+                    ShowGroupPanel="False" 
+                    AutoGenerateColumns="False" 
+                    EnableRowVirtualization="True"
+                    IsReadOnly="True" Margin="0,50,0,39"
+                    >
+                <telerik:RadGridView.Columns>
+                    <telerik:GridViewDataColumn Header="" TextAlignment="Center" Width="30">
+                        <telerik:GridViewDataColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox x:Name="chkSelect" IsChecked="{Binding Selected,Mode=TwoWay}" Checked="chkSelect_Checked" />
+                            </DataTemplate>
+                        </telerik:GridViewDataColumn.CellTemplate>
+                    </telerik:GridViewDataColumn>
+                    <telerik:GridViewDataColumn DataMemberBinding="{Binding AreaName, Mode=OneWay}" IsReadOnly="True"  Header="Area Name"  Width="*">
+                        <telerik:GridViewDataColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding AreaName}" TextWrapping="Wrap" />
+                            </DataTemplate>
+                        </telerik:GridViewDataColumn.CellTemplate>
+                    </telerik:GridViewDataColumn>
+                    <telerik:GridViewDataColumn DataMemberBinding="{Binding GroupName, Mode=OneWay}" IsReadOnly="True"  Header="Group Name"  Width="*">
+                        <telerik:GridViewDataColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding GroupName}" TextWrapping="Wrap"/>
+                            </DataTemplate>
+                        </telerik:GridViewDataColumn.CellTemplate>
+                    </telerik:GridViewDataColumn>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding ProductName, Mode=OneWay}" IsReadOnly="True"  Header="Product Name"  Width="*">
+                    <telerik:GridViewDataColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ProductName}" TextWrapping="Wrap" />
+                        </DataTemplate>
+                    </telerik:GridViewDataColumn.CellTemplate>
+                </telerik:GridViewDataColumn>
+            </telerik:RadGridView.Columns>
+            </telerik:RadGridView>
+
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,10,10"   VerticalAlignment="Bottom" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right"  Margin="0,12,92,10" VerticalAlignment="Bottom" />
+    </Grid>
+</controls:ChildWindow>

@@ -1,0 +1,330 @@
+﻿<controls:ChildWindow x:Class="Metricon.Silverlight.MetriconRetailSystem.ChildWindows.AppOptionFromTree"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+           xmlns:vm="clr-namespace:Metricon.Silverlight.MetriconRetailSystem.ViewModels"  
+           xmlns:lc="clr-namespace:Metricon.Silverlight.MetriconRetailSystem"       
+           xmlns:sys="clr-namespace:System;assembly=mscorlib"                
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           xmlns:converter="clr-namespace:Metricon.Silverlight.MetriconRetailSystem.ValueConverter"  
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="1150" Height="600" 
+           Title="Add Products">
+    <controls:ChildWindow.Resources>
+        <converter:VisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <converter:BooleanToVisibilityCollapsedConverter x:Key="MyBooleanToVisibilityCollapsedConverter" />
+        <SolidColorBrush x:Key="GridLinesFill" Color="#FFB3B3B3"/>
+        <ControlTemplate x:Key="GridViewToggleButtonTemplate" TargetType="telerik:GridViewToggleButton">
+            <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                        </VisualState>
+                        <VisualState x:Name="MouseOver">
+                        </VisualState>
+                        <VisualState x:Name="Disabled"/>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="CheckStates">
+                        <VisualState x:Name="Checked">
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Duration="00:00:00.001"
+                                Storyboard.TargetName="plus"
+                                Storyboard.TargetProperty="(UIElement.Opacity)">
+                                    <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                                </DoubleAnimationUsingKeyFrames>
+                                <DoubleAnimationUsingKeyFrames
+                                BeginTime="00:00:00"
+                                Duration="00:00:00.001"
+                                Storyboard.TargetName="minus"
+                                Storyboard.TargetProperty="(UIElement.Opacity)">
+                                    <EasingDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Unchecked"/>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="FocusStates">
+                        <VisualState x:Name="Focused"/>
+                        <VisualState x:Name="Unfocused"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Grid>
+                    <Image x:Name="minus" Source="./images/minus.png" Height="24" Width="24"/>
+                    <Image x:Name="plus" Source="./images/plus.png" Height="24" Width="24"/>
+                </Grid>
+            </Border>
+        </ControlTemplate>
+        <Style TargetType="telerik:GridViewToggleButton">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="{StaticResource GridLinesFill}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Template" Value="{StaticResource GridViewToggleButtonTemplate}"/>
+            <Setter Property="PlusMinusTemplate" Value="{StaticResource GridViewToggleButtonTemplate}"/>
+        </Style>        
+    </controls:ChildWindow.Resources>
+    
+        <Grid x:Name="LayoutRoot" Margin="2">
+        <TextBlock Margin="10,2,0,0" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top">There are few other options you may want to select at this time. Please select and apply the change to the estimate.</TextBlock>
+        <telerik:RadTabControl BackgroundVisibility="Collapsed" x:Name="tabDesc" SelectionChanged="tab_SelectionChanged" Margin="5,35,5,5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <telerik:RadTabItem Padding="4 1" Name="tabmain">
+                <telerik:RadTabItem.Header>
+                    <TextBlock Text="Product Area Group" Margin="20 10 20 10" />
+                </telerik:RadTabItem.Header>
+                <telerik:RadTabItem.Content>
+                    <telerik:RadGridView x:Name="PAGGrid" 
+                            ItemsSource="{Binding OptionList}" 
+                            ShowGroupPanel="False" 
+                            AutoGenerateColumns="False" 
+                            EnableRowVirtualization="True"
+                            RowDetailsVisibilityChanged="OptionsGrid_RowDetailsVisibilityChanged"
+                            IsReadOnly="True" Margin="0 0 0 30"
+                            >
+                        <telerik:RadGridView.RowDetailsTemplate>
+                            <DataTemplate x:Name="RowDetailsProvider">
+                                <StackPanel Orientation="Horizontal" Margin="10 10 10 10">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="350"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="10"/>
+                                            <ColumnDefinition Width="330"/>
+                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Row="0" Grid.Column="1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="2"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="1"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="1"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="1"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="1"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="1"></RowDefinition>
+                                                <RowDefinition Height="23"></RowDefinition>
+                                                <RowDefinition Height="2"></RowDefinition>
+                                                <RowDefinition Height="23"></RowDefinition>
+                                                <RowDefinition Height="1"></RowDefinition>
+                                                <RowDefinition Height="23"></RowDefinition>
+                                                <RowDefinition Height="1"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="1"></RowDefinition>
+                                                <RowDefinition Height="20"></RowDefinition>
+                                                <RowDefinition Height="1"></RowDefinition>
+                                                <RowDefinition Height="23"></RowDefinition>
+                                                <RowDefinition Height="1"></RowDefinition>
+                                                <RowDefinition Height="23"></RowDefinition>
+                                                <RowDefinition Height="1"></RowDefinition>
+                                                <RowDefinition Height="23"></RowDefinition>
+                                                <RowDefinition Height="3"></RowDefinition>
+                                                <RowDefinition Height="23"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width=".1*"/>
+                                                <ColumnDefinition Width=".1*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock x:Name="txtEstimateDeatilsID" Grid.Row="0" Grid.Column="0" Text="{Binding EstimateDetailsId, Mode=OneWay}" MaxWidth="0" Width="0"></TextBlock>
+                                            <TextBlock Grid.Row="1" Grid.Column="0">Quantity:</TextBlock>
+                                            <TextBox x:Name="txtQuantity" Grid.Row="1" Grid.Column="1" Text="{Binding Quantity, Mode=TwoWay}" LostFocus="txtQuantity_LostFocus"></TextBox>
+                                            <TextBlock Grid.Row="3" Grid.Column="0">Unit Price(inc GST):</TextBlock>
+                                            <TextBox x:Name="txtPrice" Grid.Row="3" Grid.Column="1" Text="{Binding Price, Mode=TwoWay}" LostFocus="txtPrice_LostFocus"></TextBox>
+                                            <TextBlock Grid.Row="5" Grid.Column="0">Sub Total:</TextBlock>
+                                            <TextBox x:Name="txtSubtotal" Grid.Row="5" Grid.Column="1" Text="{Binding TotalPrice, Mode=OneWay, StringFormat=\{0:0.00\}}" ></TextBox>
+                                            <TextBlock Grid.Row="7" Grid.Column="0">Accepted:</TextBlock>
+                                            <CheckBox x:Name="chkAccepted" Grid.Row="7" Grid.Column="1" IsChecked="{Binding IsAccepted, Mode=TwoWay}"></CheckBox>
+                                            <TextBlock Grid.Row="9" Grid.Column="0">UOM:</TextBlock>
+                                            <TextBlock Grid.Row="9" Grid.Column="1" Text="{Binding Uom, Mode=OneWay}"></TextBlock>
+                                            <TextBlock Grid.Row="11" Grid.Column="0">Area:</TextBlock>
+                                            <telerik:RadComboBox Name="cmbCategory"  Grid.Row="11" Grid.Column="1" 
+                                                                                  ItemsSource="{Binding Path=EstimateNonStandardCategory, Mode=OneWay}"             
+                                                                                  SelectedValue="{Binding Path=AreaID, Mode=TwoWay}"
+                                                                                  SelectionChanged="cmbCategory_SelectionChanged"
+                                                                                  DisplayMemberPath="CategoryName"
+                                                                                  SelectedValuePath="CategoryId"/>
+                                            <TextBlock Grid.Row="13" Grid.Column="0">Group:</TextBlock>
+                                            <telerik:RadComboBox Name="cmbGroup"  Grid.Row="13" Grid.Column="1" 
+                                                                                  ItemsSource="{Binding Path=EstimateNonStandardGroup, Mode=OneWay}" 
+                                                                                  SelectedValue="{Binding Path=GroupID, Mode=TwoWay}"
+                                                                                  DisplayMemberPath="GroupName"
+                                                                                  SelectedValuePath="GroupId"/>
+                                            <TextBlock Grid.Row="15" Grid.Column="0">Price Display Code:</TextBlock>
+                                            <telerik:RadComboBox Name="cmbPriceDisplay"  Grid.Row="15" Grid.Column="1" 
+                                                                                  ItemsSource="{Binding Path=EstimateNonStandardPriceDisplayCode, Mode=OneWay}" 
+                                                                                  SelectedValue="{Binding Path=PriceDisplayCodeId, Mode=TwoWay}"
+                                                                                  DisplayMemberPath="PriceDisplayCodeDescription"
+                                                                                  SelectedValuePath="PriceDisplayCodeId"/>
+                                            <TextBlock x:Name="txtPriceDisplay" Grid.Row="15" Grid.Column="1" Text="{Binding PriceDisplayCodeDesc, Mode=OneWay}"></TextBlock>
+                                            <TextBlock Grid.Row="17" Grid.Column="0">Is Site Work Item:</TextBlock>
+                                            <CheckBox x:Name="chkSitework" Grid.Row="17" Grid.Column="1" IsChecked="{Binding IsSiteWork, Mode=TwoWay}"></CheckBox>
+                                            <TextBlock x:Name="lblderivedcost" Grid.Row="19" Grid.Column="0">Derived Cost:</TextBlock>
+                                            <CheckBox x:Name="chkDerivedCost" Grid.Row="19" Grid.Column="1" IsChecked="{Binding DerivedCost, Mode=OneWay}" IsEnabled="False" ></CheckBox>
+                                            <TextBlock x:Name="lblcostbtp" Grid.Row="21" Grid.Column="0" >Budgeted Unit Cost(ex GST):</TextBlock>
+                                            <TextBox x:Name="txtCostBTPExcGST" Grid.Row="21" Grid.Column="1" Text="{Binding CostBTPExcGST, Mode=TwoWay}"></TextBox>
+                                            <TextBlock x:Name="lblcostdbc" Grid.Row="23" Grid.Column="0" >Current Unit Cost(ex GST):</TextBlock>
+                                            <TextBox x:Name="txtCostDBCExcGST" Grid.Row="23" Grid.Column="1" Text="{Binding CostDBCExcGST, Mode=TwoWay}" LostFocus="txtDBCCostExcGST_LostFocus"></TextBox>
+                                            <TextBlock x:Name="lblmargin" Grid.Row="25" Grid.Column="0" >Margin %:</TextBlock>
+                                            <TextBox x:Name="txtMargin" Grid.Row="25" Grid.Column="1" Text="{Binding Margin, Mode=TwoWay}" LostFocus="txtMargin_LostFocus"></TextBox>
+                                            <StackPanel Grid.Row="25" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+                                            </StackPanel>
+                                            <TextBlock Name="txbproductid" Text="{Binding ProductId}" Grid.Row="12" Visibility="Collapsed"></TextBlock>
+                                        </Grid>
+                                        <Grid Grid.Row="0" Grid.Column="3">
+                                            <telerik:RadBusyIndicator Name="StudioMBusyIndicator" BusyContent="Loading..." IsBusy="False" >
+                                                <telerik:RadTabControl BackgroundVisibility="Collapsed" x:Name="tabDesc" Width="750">
+                                                    <telerik:RadTabItem Padding="4 1" Name="tabstandarddesc">
+                                                        <telerik:RadTabItem.Header>
+                                                            <TextBlock Text="Standard Description" Margin="20 10 20 10" />
+                                                        </telerik:RadTabItem.Header>
+                                                        <telerik:RadTabItem.Content>
+                                                            <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="#BFDBFF" BorderThickness="1,1" Margin="10" x:Name="txtDesc" Text="{Binding ProductDescription, Mode=TwoWay}" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" IsReadOnly="True"></TextBox>
+                                                        </telerik:RadTabItem.Content>
+                                                    </telerik:RadTabItem>
+                                                    <telerik:RadTabItem Padding="4 1" Name="tabadditionaldesc">
+                                                        <telerik:RadTabItem.Header>
+                                                            <Grid>
+                                                                <TextBlock Text="Additional Notes" Margin="10 0 15 0"/>
+                                                                <Image Source="../images/text-smallcaps-icon.png" Height="16" Width="16" Visibility="Collapsed" Name="imgAdditional" ToolTipService.ToolTip="There are additional notes." Margin="110 0 5 0"/>
+                                                            </Grid>
+                                                        </telerik:RadTabItem.Header>
+                                                        <telerik:RadTabItem.Content>
+                                                            <TextBox BorderBrush="#BFDBFF" BorderThickness="1,1" Margin="10" x:Name="txtAdditionalNotes" Width="auto" Text="{Binding AdditionalNotes, Mode=TwoWay}" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"></TextBox>
+                                                        </telerik:RadTabItem.Content>
+                                                    </telerik:RadTabItem>
+                                                    <telerik:RadTabItem Padding="4 1" Name="tabextradesc">
+                                                        <telerik:RadTabItem.Header>
+                                                            <Grid>
+                                                                <TextBlock Text="Extra Description" Margin="19 2 15 0" />
+                                                                <Image Source="../images/text-smallcaps-icon.png" Height="16" Width="16" Visibility="Collapsed" Name="imgExtra" ToolTipService.ToolTip="There is extra description." Margin="120 0 5 0"/>
+                                                            </Grid>
+                                                        </telerik:RadTabItem.Header>
+                                                        <telerik:RadTabItem.Content>
+                                                            <TextBox BorderBrush="#BFDBFF" BorderThickness="1,1" Margin="10" x:Name="txtExtraDesc" Width="auto" Text="{Binding ExtraDescription, Mode=TwoWay}" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"></TextBox>
+                                                        </telerik:RadTabItem.Content>
+                                                    </telerik:RadTabItem>
+                                                    <telerik:RadTabItem Padding="4 1" Name="tabinternaldesc">
+                                                        <telerik:RadTabItem.Header>
+                                                            <Grid>
+                                                                <TextBlock Text="Internal Notes" Margin="19 2 15 0" />
+                                                                <Image Source="../images/text-smallcaps-icon.png" Height="16" Width="16" Visibility="Collapsed" Name="imgInternal" ToolTipService.ToolTip="There is internal notes." Margin="135 0 5 0"/>
+                                                            </Grid>
+                                                        </telerik:RadTabItem.Header>
+                                                        <telerik:RadTabItem.Content>
+                                                            <TextBox BorderBrush="#BFDBFF" BorderThickness="1,1" Margin="10" x:Name="txtInternalDesc" Width="auto" Text="{Binding InternalDescription, Mode=TwoWay}" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"></TextBox>
+                                                        </telerik:RadTabItem.Content>
+                                                    </telerik:RadTabItem>
+                                                </telerik:RadTabControl>
+                                            </telerik:RadBusyIndicator>
+                                        </Grid>
+                                    </Grid>
+                                </StackPanel>
+                            </DataTemplate>
+                        </telerik:RadGridView.RowDetailsTemplate>
+                        <telerik:RadGridView.Columns>
+                            <telerik:GridViewToggleRowDetailsColumn />
+                            <telerik:GridViewDataColumn Header="" TextAlignment="Center" Width="30">
+                                <telerik:GridViewDataColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <CheckBox IsChecked="{Binding Selected,Mode=TwoWay}" />
+                                    </DataTemplate>
+                                </telerik:GridViewDataColumn.CellTemplate>
+                            </telerik:GridViewDataColumn>
+                            <telerik:GridViewDataColumn DataMemberBinding="{Binding AreaName, Mode=OneWay}" IsReadOnly="True"  Header="Area Name"  Width="*">
+                                <telerik:GridViewDataColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding AreaName}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </telerik:GridViewDataColumn.CellTemplate>
+                            </telerik:GridViewDataColumn>
+                            <telerik:GridViewDataColumn DataMemberBinding="{Binding GroupName, Mode=OneWay}" IsReadOnly="True"  Header="Group Name"  Width="*">
+                                <telerik:GridViewDataColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding GroupName}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </telerik:GridViewDataColumn.CellTemplate>
+                            </telerik:GridViewDataColumn>
+                            <telerik:GridViewDataColumn DataMemberBinding="{Binding DisplayAt, Mode=OneWay}" IsReadOnly="True"  Header="Display At"  Width="100">
+                                <telerik:GridViewDataColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DisplayAt}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </telerik:GridViewDataColumn.CellTemplate>
+                            </telerik:GridViewDataColumn>
+                            <telerik:GridViewDataColumn DataMemberBinding="{Binding Price, Mode=OneWay}" IsReadOnly="True"  Header="Price"  Width="100" HeaderTextAlignment="Right">
+                                <telerik:GridViewDataColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Price, Mode=OneWay, StringFormat=\{0:c2\}}" TextWrapping="Wrap" HorizontalAlignment="Right" />
+                                    </DataTemplate>
+                                </telerik:GridViewDataColumn.CellTemplate>
+                            </telerik:GridViewDataColumn>
+                            <telerik:GridViewDataColumn Width="*">
+                                <telerik:GridViewDataColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Name="InLieu" Visibility="{Binding IsInLieuExist, Converter={StaticResource BoolToVisibilityConverter}}">
+                                            <StackPanel>
+                                                <TextBlock Text="In Lieu Of" Width="75"  Visibility="{Binding IsInLieuExist, Converter={StaticResource BoolToVisibilityConverter}}" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Vertical">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="Standard" Width="55" Visibility="{Binding IsInLieuExistStandard, Converter={StaticResource BoolToVisibilityConverter}}" />
+                                                    <TextBlock Text="" Width="25" />
+                                                    <RadioButton GroupName="{Binding ProductAreaGroupID, Mode=OneWay}" IsChecked="{Binding Path=PriceStandardSelected, Mode=TwoWay}" Content="{Binding PriceStandard, Mode=OneWay, StringFormat=\{0:c2\}}" Visibility="{Binding IsInLieuExistStandard, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Right" />
+                                                </StackPanel>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="Promotion" Width="55" Visibility="{Binding IsInLieuExistPromo, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                                                    <TextBlock Text="" Width="25" />
+                                                    <RadioButton GroupName="{Binding ProductAreaGroupID, Mode=OneWay}" IsChecked="{Binding Path=PricePromoSelected, Mode=TwoWay}" Content="{Binding PricePromo, Mode=OneWay, StringFormat=\{0:c2\}}" Visibility="{Binding IsInLieuExistPromo, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Right" />
+                                                </StackPanel>
+                                                <StackPanel Orientation="Horizontal" Visibility="{Binding IsInLieuExist, Converter={StaticResource BoolToVisibilityConverter}}">
+                                                    <TextBlock Text="Additional" Width="55" />
+                                                    <Image Source="../images/questionmark.jpg" Height="20" Width="20" Name="imgAdditional" ToolTipService.ToolTip="Additional provision or installation charges may apply." />
+                                                    <TextBlock Text="" Width="5" />
+                                                    <RadioButton GroupName="{Binding ProductAreaGroupID, Mode=OneWay}" IsChecked="false" Content="" HorizontalAlignment="Right" />
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </telerik:GridViewDataColumn.CellTemplate>
+                            </telerik:GridViewDataColumn>
+                        </telerik:RadGridView.Columns>
+                    </telerik:RadGridView>
+                </telerik:RadTabItem.Content>
+            </telerik:RadTabItem>
+            <telerik:RadTabItem Padding="4 1" Name="studiomtab" Visibility="Collapsed">
+                <telerik:RadTabItem.Header>
+                    <TextBlock Text="Studio M" Margin="19 2 19 0" />
+                </telerik:RadTabItem.Header>
+                <telerik:RadTabItem.Content>
+                    <Grid Name="studiomgrid" Width="auto" Height="auto" Margin="5 2 19 30" HorizontalAlignment="Left">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10"></RowDefinition>
+                            <RowDefinition Height="22"></RowDefinition>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="330"></ColumnDefinition>
+                            <ColumnDefinition Width="10"></ColumnDefinition>
+                            <ColumnDefinition Width="420"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Border VerticalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="4" Height="3" BorderThickness="2" BorderBrush="AliceBlue"></Border>
+                        <Grid x:Name="QAGrid" Grid.Row="3" Grid.ColumnSpan="4" Height="Auto" Width="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" ShowGridLines="True">
+
+                        </Grid>
+                    </Grid>
+                </telerik:RadTabItem.Content>
+            </telerik:RadTabItem>
+        </telerik:RadTabControl>
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,10,10"   VerticalAlignment="Bottom"/>
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,92,10"  VerticalAlignment="Bottom"/>
+    </Grid>
+</controls:ChildWindow>

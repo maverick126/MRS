@@ -1,0 +1,106 @@
+﻿<controls:ChildWindow x:Class="Metricon.Silverlight.MetriconRetailSystem.ChildWindows.ShowValidationMessage2"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto"
+           Title="">
+    <Grid x:Name="LayoutRoot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <telerik:RadGridView x:Name="errorGrid" ShowGroupPanel="False" 
+                            AutoGenerateColumns="False"
+                            EnableRowVirtualization="False"
+                            RowIndicatorVisibility="Collapsed" 
+                            RowLoaded="errorGrid_RowLoaded"
+                            HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinHeight="300" MaxHeight="500">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Path=EstimateDetailsID, Mode=OneWay}" Header="ID" Width="0" IsReadOnly="True" IsVisible="False"/>
+                <telerik:GridViewDataColumn Header=""  Width="30"  IsReadOnly="True" >
+                    <telerik:GridViewDataColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding ErrorIcon}" Height="16" Width="16" ToolTipService.ToolTip="{Binding ErrorIconToolTips}"/>
+                        </DataTemplate>
+                    </telerik:GridViewDataColumn.CellTemplate>
+                </telerik:GridViewDataColumn>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Path=Area, Mode=OneWay}" Header="Area" Width="100" IsReadOnly="True" TextWrapping="Wrap"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Path=Group, Mode=OneWay}" Header="Group" Width="100" IsReadOnly="True" TextWrapping="Wrap"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Path=PossibleUpgrade, Mode=OneWay}" Header="Product" Width="200" IsReadOnly="True" TextWrapping="Wrap"/>
+                <telerik:GridViewDataColumn DataMemberBinding="{Binding Path=ErrorMessage, Mode=OneWay}" Header="Error Message" Width="300" IsReadOnly="True" TextWrapping="Wrap"/>
+                <telerik:GridViewColumn>
+                    <telerik:GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                    <ColumnDefinition Width="70"></ColumnDefinition>
+                                    <ColumnDefinition Width="70"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <HyperlinkButton Click="HyperlinkButton_AddClick" IsEnabled="{Binding Path=AddVisible}"  Grid.Column="0" ToolTipService.ToolTip="Add this Standard Inclusion to estimate.">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="20"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                        <Image Source="../images/add.png" Height="16" Width="16" Grid.Column="0"  Opacity="{Binding Path=AddImageOpacity}"/>
+                                        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Opacity="{Binding Path=AddImageOpacity}">Add</TextBlock>
+                                </Grid>
+                            </HyperlinkButton>
+                                <HyperlinkButton Click="HyperlinkButton_UpgradeClick" IsEnabled="{Binding Path=UpgradeVisible}"  Grid.Column="1" ToolTipService.ToolTip="Select a upgrade option.">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20"></ColumnDefinition>
+                                            <ColumnDefinition Width="80"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="../images/upgrade.png" Height="16" Width="16" Grid.Column="0"  Opacity="{Binding Path=UpgradeImageOpacity}"/>
+                                        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Opacity="{Binding Path=UpgradeImageOpacity}">Upgrade</TextBlock>
+                                    </Grid>
+                                </HyperlinkButton>
+                                <HyperlinkButton Click="HyperlinkButton_AnswerClick" IsEnabled="{Binding Path=AnswerVisible}"  Grid.Column="2" ToolTipService.ToolTip="Answer Studio M questions.">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20"></ColumnDefinition>
+                                            <ColumnDefinition Width="80"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="../images/color_swatch.png" Height="16" Width="16" Grid.Column="0"  Opacity="{Binding Path=AnswerImageOpacity}"/>
+                                        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Opacity="{Binding Path=AnswerImageOpacity}">Answer</TextBlock>
+                                    </Grid>
+                                </HyperlinkButton>
+                            </Grid>
+                        </DataTemplate>
+                    </telerik:GridViewColumn.CellTemplate>
+                </telerik:GridViewColumn>
+                <!--<telerik:GridViewColumn>
+                    <telerik:GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <HyperlinkButton Click="HyperlinkButton_UpgradeClick" Visibility="{Binding Path=UpgradeVisible}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="20"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="../images/upgrade.png" Height="16" Width="16" Grid.Column="0" ToolTipService.ToolTip="Select a upgrade option."/>
+                                    <TextBlock Grid.Column="1" HorizontalAlignment="Left">Upgrade</TextBlock>
+                                </Grid>
+                            </HyperlinkButton>
+                        </DataTemplate>
+                    </telerik:GridViewColumn.CellTemplate>
+                </telerik:GridViewColumn>-->                
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+        <telerik:RadButton x:Name="ContinueButton" Click="ContinueButton_Click" Width="95" Height="23" HorizontalAlignment="Right"  Grid.Row="1" Margin="0,0,90,0" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../images/arrow_right.png" Height="16" Width="16"></Image>
+                <TextBlock Margin="10 0 0 0">Continue</TextBlock>
+            </StackPanel>
+        </telerik:RadButton>        
+        <telerik:RadButton x:Name="CancelButton" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right"  Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../images/cancel.png" Height="16" Width="16"></Image>
+                <TextBlock Margin="10 0 0 0">Close</TextBlock>
+            </StackPanel>
+        </telerik:RadButton>
+    </Grid>
+</controls:ChildWindow>

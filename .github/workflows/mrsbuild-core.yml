@@ -1,0 +1,63 @@
+name: MRS Build
+
+on:
+  push:
+    branches: [ XIRUS ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: windows-latest  # For a list of available runner types, refer to  # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
+      - name: Setup MSBuild.exe
+        uses: microsoft/setup-msbuild@v1            
+
+      # Install the .NET Core workload
+      - name: Install .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.101      
+
+      # Install Silverlight Toolkit
+      #- name: Install Silverlight Toolkit
+      #  run: dotnet add package SilverlightToolkit-All --version 4.2010.4
+
+      # - name: Install MS SilverLight SDK
+      #   run: msiexec /i silverlight.msi ALLUSERS=2 /qn /LiV Silverlight5.log
+      #   working-directory: ExternalBinaries
+
+      #- name: Sleep for 60s
+      #   uses: juliangruber/sleep-action@v1
+      #   with:
+      #     time: 60s
+
+      #- name: Check SilverLight Install
+      #  run: type Silverlight5.log
+      #  working-directory: ExternalBinaries          
+
+      # call dotnet restore
+      - name: dotnet restore
+        run: dotnet restore       
+
+      #- name: Restore NuGet Packages
+      #  run: nuget restore PMO-006\packages.config -PackagesDirectory packages\
+      - name: MRS Solution Build
+        run: msbuild $env:Solution_Path -p:Configuration=Release -p:DeployOnBuild=True -p:PackageAsSingleFile=true -p:IgnoreDeployManagedRuntimeVersion=True -p:PackageFileName=$env:TargetPkgFileName
+        env:
+          Solution_Path: MetriconRetailSystem.sln
+          TargetPkgFileName: MRS-${{ github.run_id }}.zip 
+
+      # Upload the MSIX package: https://github.com/marketplace/actions/upload-artifact
+      - name: Upload MRS build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: MRS Package ${{ github.run_id }}
+          path: Metricon.WCF.MetriconRetailSystem.Host\MRS-${{ github.run_id }}.*        

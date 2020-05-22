@@ -1,0 +1,23 @@
+﻿<controls:ChildWindow x:Class="Metricon.Silverlight.MetriconRetailSystem.ChildWindows.ComparisonPrint"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+           Width="530" Height="100"  
+           Title="Print Estimate Comparison">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0">
+            <TextBlock x:Name="txtMessage" Text="How would you like to print the Estimate Comparison?" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Orientation="Horizontal">
+            <telerik:RadButton x:Name="FullComparisonPrintButton" Content="Full Comparison" Click="FullComparisonPrintButton_Click" Width="100" Height="23" />
+            <telerik:RadButton x:Name="DifferentOnlyPrintButton" Content="Difference Only" Click="DifferentOnlyPrintButton_Click" Width="100" Height="23" Margin="10,0,0,0" />
+            <telerik:RadButton x:Name="FilterPrintButton" Content="As per Filter Below" Click="FilterPrintButton_Click" Width="110" Height="23" Margin="10,0,0,0" />
+            <telerik:RadButton x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="100" Height="23" Margin="10,0,0,0" />
+        </StackPanel>
+    </Grid>
+</controls:ChildWindow>

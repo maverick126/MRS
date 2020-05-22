@@ -1,0 +1,32 @@
+﻿<controls:ChildWindow x:Class="Metricon.Silverlight.MetriconRetailSystem.ChildWindows.SetDueDate"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"                       
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="400" Height="200" 
+           Title="Setting Estimate {0} Due Date">
+    <telerik:RadBusyIndicator x:Name="BusyIndicator1" BusyContent="Saving Estimate...">
+        <Grid x:Name="LayoutRoot" Margin="2">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock x:Name="txtMessage" Text="Estimate {0} Due Date : " FontWeight="Bold"></TextBlock>
+                <telerik:RadDatePicker Name="dDueDate" Width="150" SelectableDateStart="10/07/2014"></telerik:RadDatePicker>
+            </StackPanel>
+            <telerik:RadButton x:Name="CancelButton" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../images/cancel.png" Height="16" Width="16"></Image>
+                    <TextBlock Margin="10 0 0 0">Cancel</TextBlock>
+                </StackPanel>
+            </telerik:RadButton>
+            <telerik:RadButton x:Name="OKButton" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../images/save.png" Height="16" Width="16"></Image>
+                    <TextBlock Margin="10 0 0 0">OK</TextBlock>
+                </StackPanel>
+            </telerik:RadButton>
+        </Grid>
+    </telerik:RadBusyIndicator>
+</controls:ChildWindow>

@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="Metricon.Silverlight.MetriconRetailSystem.EditOption"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:Metricon.Silverlight.MetriconRetailSystem.ViewModels" 
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"              
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+    xmlns:telerikGrid="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.GridView"             
+    mc:Ignorable="d"
+    d:DesignHeight="180">
+    <UserControl.Resources>      
+        <vm:EstimateViewModel x:Key="EstimateVM"></vm:EstimateViewModel>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="2"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".1*"/>
+                    <ColumnDefinition Width=".1*"/>
+                </Grid.ColumnDefinitions>
+                <!--<TextBlock Grid.Row="1" Grid.Column="0">Area Name:</TextBlock>
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding AreaName, Mode=TwoWay}"></TextBox>
+                <TextBlock Grid.Row="2" Grid.Column="0">Group Name:</TextBlock>
+                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding GroupName, Mode=TwoWay}"></TextBox>
+                <TextBlock Grid.Row="3" Grid.Column="0">Product Name:</TextBlock>
+                <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ProductName, Mode=TwoWay}"></TextBox>-->
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding EstimateDetailsId, Mode=OneWay}" MaxWidth="0" Width="0" x:Name="txtEstimateDeatilsID"></TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="0">Quantity:</TextBlock>
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Quantity, Mode=TwoWay}" x:Name="txtQuantity"></TextBox>
+                <TextBlock Grid.Row="3" Grid.Column="0">Price:</TextBlock>
+                <TextBox Grid.Row="3" Grid.Column="1"  x:Name="txtPrice" Text="{Binding Price, Mode=TwoWay}"></TextBox>
+                <telerik:RadButton Grid.Row="5" Grid.Column="0" Width="120"   HorizontalAlignment="Left" Click="btnCheck_Click">Check Spelling</telerik:RadButton>
+                <!--<telerik:RadButton Grid.Row="5" Grid.Column="1" Width="120"   HorizontalAlignment="Left" Content="Save" Command="{Binding UpdateDetailsCommand, Source={StaticResource EstimateVM}}"  CommandParameter="{Binding}" ></telerik:RadButton>-->
+                <telerik:RadButton Grid.Row="5" Grid.Column="1" Width="120"   HorizontalAlignment="Left" Click="btnSave_Click">Save</telerik:RadButton>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <telerik:RadTabControl BackgroundVisibility="Collapsed" x:Name="tabDesc" Width="auto">
+                    <telerik:RadTabItem Padding="4 1">
+                        <telerik:RadTabItem.Header>
+                            <TextBlock Text="Standard Description" Margin="20 10 20 10" />
+                        </telerik:RadTabItem.Header>
+                        <telerik:RadTabItem.Content>
+                            <TextBox Grid.Row="0" Grid.Column="1" BorderBrush="#BFDBFF" BorderThickness="1,1" Margin="10" x:Name="txtDesc" Width="auto" Text="{Binding ProductDescription, Mode=OneWay}" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" IsReadOnly="True"></TextBox>
+                        </telerik:RadTabItem.Content>
+                    </telerik:RadTabItem>
+                    <telerik:RadTabItem Padding="4 1">
+                        <telerik:RadTabItem.Header>
+                            <TextBlock Text="Extra Description" Margin="19 2 19 0" />
+                        </telerik:RadTabItem.Header>
+                        <telerik:RadTabItem.Content>
+                            <TextBox BorderBrush="#BFDBFF" BorderThickness="1,1" Margin="10" x:Name="txtExtraDesc" Width="auto" Text="{Binding ExtraDescription, Mode=TwoWay}" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"></TextBox>
+                        </telerik:RadTabItem.Content>
+                    </telerik:RadTabItem>
+                    <telerik:RadTabItem Padding="4 1">
+                        <telerik:RadTabItem.Header>
+                            <TextBlock Text="Internal Desctiption" Margin="19 2 19 0" />
+                        </telerik:RadTabItem.Header>
+                        <telerik:RadTabItem.Content>
+                            <TextBox BorderBrush="#BFDBFF" BorderThickness="1,1" Margin="10" x:Name="txtInternalDesc" Width="auto" Text="{Binding InternalDescription, Mode=TwoWay}" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"></TextBox>
+                        </telerik:RadTabItem.Content>
+                    </telerik:RadTabItem>                    
+                </telerik:RadTabControl>
+            </Grid>
+        </Grid>
+
+
+    </Grid>
+</UserControl>
