@@ -840,9 +840,6 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\MRSService\"/>
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="SilverlightToolkit-Core" Version="*"/>
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets"/>
   <ProjectExtensions>
     <VisualStudio>

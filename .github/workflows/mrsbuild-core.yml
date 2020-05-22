@@ -42,8 +42,8 @@ jobs:
       #  working-directory: ExternalBinaries          
 
       # call dotnet restore
-      - name: dotnet restore
-        run: dotnet restore       
+      - name: install silverlight
+        run: choco -y install silverlight  
 
       #- name: Restore NuGet Packages
       #  run: nuget restore PMO-006\packages.config -PackagesDirectory packages\
